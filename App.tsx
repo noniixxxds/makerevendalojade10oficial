@@ -4,7 +4,9 @@ import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, CHECKOUT_LINK } from './constants';
 import { CountdownTimer } from './components/CountdownTimer';
 import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
-import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, ArrowRight } from 'lucide-react';
+import { SalesNotification } from './components/SalesNotification';
+import { CouponPopup } from './components/CouponPopup';
+import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown } from 'lucide-react';
 
 function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -15,6 +17,8 @@ function App() {
 
   return (
     <div className="font-sans text-gray-800 bg-gray-50 pb-20 md:pb-0">
+      <SalesNotification />
+      <CouponPopup />
       
       {/* 1. HEADLINE + HERO */}
       <header className="bg-gradient-to-b from-brand-pink to-pink-700 text-white text-center pt-8 pb-12 px-4 relative overflow-hidden">
@@ -25,6 +29,15 @@ function App() {
           <h1 className="font-heading font-extrabold text-3xl md:text-5xl leading-tight mb-4">
             "Descubra a Lista Secreta de Fornecedores que as Donas de Loja de R$10 <span className="bg-white text-brand-pink px-1">Escondem de Você</span>"
           </h1>
+          
+          {/* WHATSAPP BADGE */}
+          <div className="flex items-center justify-center mb-6">
+             <div className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm md:text-base flex items-center shadow-lg animate-bounce">
+               <MessageCircle className="w-5 h-5 mr-2" fill="white" />
+               Acesso enviado na hora no seu WhatsApp!
+             </div>
+          </div>
+
           <p className="text-lg md:text-xl text-pink-100 mb-6 font-medium">
             Monte sua revenda em casa investindo menos que uma pizza.
           </p>
@@ -68,18 +81,30 @@ function App() {
       <section className="py-8 bg-brand-bg">
         <div className="text-center mb-6 px-4">
           <h3 className="font-heading font-bold text-2xl text-gray-800">
-            Elas confiaram e a vida mudou 👇
+            Elas já receberam no Zap e amaram 👇
           </h3>
-          <p className="text-sm text-gray-500 mt-1">Deslize para ver mais resultados reais</p>
+          <p className="text-sm text-gray-500 mt-1">Deslize para ver as mensagens reais</p>
         </div>
 
         <div className="flex overflow-x-auto pb-8 px-4 space-x-4 hide-scrollbar snap-x">
            {/* Duplicate array for seamless feel mock */}
-           {[...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
+           {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
              <TestimonialCard key={i} {...t} />
            ))}
         </div>
       </section>
+
+      {/* BOTÃO FURA-FILA PARA ANSIOSOS */}
+      <div className="w-full bg-brand-bg pb-10 px-4 flex flex-col items-center">
+         <a
+           href="#oferta"
+           className="group bg-[#25D366] hover:bg-green-600 text-white font-extrabold text-lg md:text-xl py-4 px-8 rounded-full shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] transform transition duration-200 hover:scale-105 flex items-center gap-2 animate-pulse"
+         >
+           QUERO A LISTA AGORA ⚡
+           <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+         </a>
+         <p className="text-xs text-gray-500 mt-3">Clique para pular a explicação e ir para o cupom</p>
+      </div>
 
       {/* 4. O QUE VOCÊ RECEBE (Product Showcase) */}
       <section className="py-12 px-4 max-w-4xl mx-auto">
@@ -121,17 +146,26 @@ function App() {
           ))}
         </div>
 
-        <div className="mt-8 bg-brand-light p-4 rounded-lg flex items-start space-x-3">
-          <Lock className="w-6 h-6 text-brand-pink flex-shrink-0 mt-1" />
-          <div>
-            <h4 className="font-bold text-brand-dark">Lista Testada e Aprovada</h4>
-            <p className="text-sm text-gray-700">Todos os 38 contatos foram verificados em 2025. Nada de número desligado ou golpe.</p>
-          </div>
+        <div className="mt-8 flex flex-col md:flex-row gap-4">
+            <div className="flex-1 bg-brand-light p-4 rounded-lg flex items-start space-x-3">
+                <Lock className="w-6 h-6 text-brand-pink flex-shrink-0 mt-1" />
+                <div>
+                    <h4 className="font-bold text-brand-dark">Lista Testada</h4>
+                    <p className="text-sm text-gray-700">Todos os 38 contatos foram verificados.</p>
+                </div>
+            </div>
+            <div className="flex-1 bg-green-100 p-4 rounded-lg flex items-start space-x-3 border border-green-200">
+                <MessageCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                <div>
+                    <h4 className="font-bold text-green-800">Envio no WhatsApp</h4>
+                    <p className="text-sm text-green-700">Você recebe o link no seu Zap na hora.</p>
+                </div>
+            </div>
         </div>
       </section>
 
       {/* 5. OFFER + URGENCY */}
-      <section className="py-12 px-4 bg-gradient-to-b from-gray-900 to-gray-800 text-white text-center rounded-t-[3rem] relative shadow-[0_-10px_40px_rgba(0,0,0,0.3)]">
+      <section id="oferta" className="py-12 px-4 bg-gradient-to-b from-gray-900 to-gray-800 text-white text-center rounded-t-[3rem] relative shadow-[0_-10px_40px_rgba(0,0,0,0.3)]">
         <div className="max-w-2xl mx-auto">
           <h3 className="font-hand text-4xl text-brand-pink mb-2 animate-pulse">
             É agora ou nunca, minha flor!
@@ -153,12 +187,12 @@ function App() {
             href={CHECKOUT_LINK}
             className="block w-full max-w-md mx-auto bg-brand-pink hover:bg-pink-600 text-white font-bold text-xl py-5 px-8 rounded-full shadow-[0_0_20px_rgba(255,0,127,0.6)] transition-transform transform hover:scale-105 hover:-translate-y-1 animate-pulse-fast mb-4"
           >
-            QUERO MINHA LISTA AGORA
+             RECEBER NO MEU WHATSAPP
           </a>
           
           <div className="flex items-center justify-center space-x-4 text-xs text-gray-400">
              <span className="flex items-center"><ShieldCheck className="w-3 h-3 mr-1" /> Compra Segura</span>
-             <span className="flex items-center"><CheckCircle className="w-3 h-3 mr-1" /> Acesso Imediato</span>
+             <span className="flex items-center"><CheckCircle className="w-3 h-3 mr-1" /> Chega no Zap</span>
           </div>
         </div>
       </section>
@@ -174,9 +208,6 @@ function App() {
             <h4 className="text-center font-bold text-xl mt-4 mb-2 text-brand-dark">Eu confio tanto que assumo o risco</h4>
             <p className="text-center text-gray-700 mb-4">
               Se você comprar a lista, ligar para os fornecedores e achar que não valeu a pena, eu devolvo seus <strong>R$ 7,99</strong> NA HORA.
-            </p>
-            <p className="text-center font-bold text-red-600 text-sm bg-white p-2 rounded border border-red-100">
-              + TE FAÇO UM PIX DE R$ 20,00 PELO TRANSTORNO.
             </p>
             <p className="text-center text-xs text-gray-500 mt-2">É sério. Eu não brinco com o sonho de ninguém.</p>
           </div>

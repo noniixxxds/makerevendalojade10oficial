@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CHECKOUT_LINK } from '../constants';
 
@@ -7,6 +8,7 @@ export const StickyCTA = () => {
       <div className="flex flex-col">
          <span className="text-xs text-gray-500 line-through">De R$ 17,90</span>
          <span className="text-xl font-bold text-brand-pink">Por R$ 7,99</span>
+         <span className="text-[10px] text-green-600 font-extrabold flex items-center animate-pulse"><span className="mr-1">📲</span> Chega no Zap</span>
       </div>
       <a href={CHECKOUT_LINK} className="bg-brand-pink text-white font-bold py-3 px-6 rounded-full shadow-lg animate-pulse">
         QUERO AGORA

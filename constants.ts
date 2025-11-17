@@ -1,4 +1,5 @@
 
+
 export const CHECKOUT_LINK = "https://pay.kirvano.com/a39cd2c2-492c-42f6-b29e-f4046aaf666c";
 
 export const PRODUCTS = [
@@ -90,6 +91,10 @@ export const PRODUCTS = [
 
 export const FAQ_ITEMS = [
   {
+    question: "Como recebo o acesso?",
+    answer: "É automático, meu amor! Assim que confirmar o pagamento, o sistema envia para o seu E-mail E também para o seu WHATSAPP na hora. Você já abre a lista no celular e começa a chamar os fornecedores."
+  },
+  {
     question: "Tenho medo de comprar e não receber, é seguro?",
     answer: "Minha filha, eu te entendo. A internet tá cheia de golpe. Mas aqui a gente usa a Kirvano, que é a plataforma mais segura do Brasil. O dinheiro nem vem pra mim agora, fica guardado lá. Se você não gostar, é só apertar um botão."
   },
@@ -114,20 +119,20 @@ export const FAQ_ITEMS = [
     answer: "Vai! Porque maquiagem se vende sozinha. É só você postar a foto (que os fornecedores mandam) no seu Status do WhatsApp que as vizinhas já começam a pedir."
   },
   {
-    question: "Como recebo o acesso?",
-    answer: "Assim que o pagamento confirmar (Pix é na hora), chega um e-mail meu pra você com o link. É automático, 24h por dia."
-  },
-  {
     question: "E se eu não gostar?",
     answer: "Se você não gostar, eu devolvo seus R$7,99 e ainda te faço um Pix de R$20,00 do meu bolso pelo seu tempo perdido. É o quanto eu confio nessa lista."
   }
 ];
 
 export const TESTIMONIALS = [
+  { name: "Cliente Satisfeita", text: "Conseguir linda! ❤️", type: "whatsapp" },
+  { name: "Maria Paula", text: "Perfeito! Muito obrigada 🙏", type: "whatsapp" },
+  { name: "Dani Ferreira", img: "https://i.postimg.cc/FzCT75jk/582148552-868423898872479-3396241599108394350-n.jpg", text: "Gente, é real! Chegou agorinha no meu zap.", type: "photo" },
   { name: "Jéssica Silva", text: "Amigaaaa do céu! Fiz meu primeiro pedido de 100 reais e vendi tudo em 2 dias. Tô chocada!", type: "text" },
-  { name: "Ana Clara", text: "Esse fornecedor de batom a 2 reais salvou meu aluguel esse mês. Deus te abençoe!", type: "text" },
+  { name: "Ana C.", text: "Perfeito", type: "whatsapp" },
+  { name: "Amanda Souza", img: "https://i.postimg.cc/Bb7mX9xL/582333586-813971864892131-8108173947280786291-n-(1).jpg", text: "Já separei os que vou chamar hoje!", type: "photo" },
   { name: "Marcela Dias", audioTime: "0:42", text: "Obrigada por não esconder o ouro igual as outras...", type: "audio" },
-  { name: "Patrícia Gomes", img: "https://picsum.photos/100/100?random=20", text: "Olha minha banca montada! Tudo fornecedor da sua lista.", type: "photo" },
+  { name: "Patrícia Gomes", img: "https://i.postimg.cc/9FKjnsv4/Captura-de-tela-2025-11-17-101009.png", text: "Olha minha banca montada! Tudo fornecedor da sua lista.", type: "photo" },
   { name: "Roberta M.", text: "Eu achava que era golpe por ser barato, mas chegou tudo certinho. Já tô na terceira compra.", type: "text" },
   { name: "Fernanda S.", audioTime: "1:15", text: "Menina, o lucro é absurdo. Comprei a 5 e vendi a 20.", type: "audio" },
 ];

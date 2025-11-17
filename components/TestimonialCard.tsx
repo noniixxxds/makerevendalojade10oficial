@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface TestimonialProps {
@@ -9,6 +10,43 @@ interface TestimonialProps {
 }
 
 export const TestimonialCard: React.FC<TestimonialProps> = ({ name, text, type, audioTime, img }) => {
+  if (type === 'whatsapp') {
+    return (
+      <div className="min-w-[280px] md:min-w-[320px] bg-[#E5DDD5] p-4 rounded-xl shadow-md border border-gray-200 mx-2 flex flex-col relative overflow-hidden">
+        {/* Background Pattern Simulation */}
+        <div className="absolute inset-0 opacity-10 bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')]"></div>
+        
+        <div className="flex items-center mb-4 relative z-10 border-b border-black/5 pb-2">
+          <div className="w-8 h-8 rounded-full bg-gray-300 overflow-hidden mr-2 border border-white">
+             <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${name}`} alt={name} />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold text-gray-800 text-xs">{name}</span>
+            <span className="text-[10px] text-gray-500">online agora</span>
+          </div>
+        </div>
+
+        <div className="relative z-10 flex flex-col space-y-2">
+           {/* Seller Bubble */}
+           <div className="self-end bg-[#d9fdd3] text-gray-800 p-2 rounded-lg rounded-tr-none shadow-sm text-xs max-w-[85%]">
+              Te enviei o acesso! Me avisa se deu certo? 😘
+              <div className="text-[9px] text-gray-400 text-right mt-1 flex justify-end items-center gap-0.5">
+                10:24 <span className="text-blue-400">✓✓</span>
+              </div>
+           </div>
+
+           {/* Buyer Bubble */}
+           <div className="self-start bg-white text-gray-800 p-2 rounded-lg rounded-tl-none shadow-sm text-sm max-w-[90%]">
+              {text}
+              <div className="text-[9px] text-gray-400 text-right mt-1">
+                10:25
+              </div>
+           </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-w-[280px] md:min-w-[320px] bg-white p-4 rounded-xl shadow-md border border-gray-100 mx-2 flex flex-col">
       <div className="flex items-center mb-3">
@@ -37,7 +75,7 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({ name, text, type, 
       {type === 'photo' && img && (
         <div className="mt-2">
             <p className="text-gray-700 text-sm mb-2">"{text}"</p>
-            <img src={img} alt="Prova social" className="w-full h-32 object-cover rounded-lg" />
+            <img src={img} alt="Prova social" className="w-full h-48 object-cover object-top rounded-lg" />
         </div>
       )}
       
