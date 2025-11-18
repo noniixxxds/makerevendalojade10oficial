@@ -30,12 +30,26 @@ function App() {
             "Descubra a Lista Secreta de Fornecedores que as Donas de Loja de R$10 <span className="bg-white text-brand-pink px-1">Escondem de Você</span>"
           </h1>
           
-          {/* WHATSAPP BADGE */}
-          <div className="flex items-center justify-center mb-6">
-             <div className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm md:text-base flex items-center shadow-lg animate-bounce">
+          {/* WHATSAPP BADGE + GIF DEMO */}
+          <div className="flex flex-col items-center justify-center mb-8">
+             <div className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm md:text-base flex items-center shadow-lg animate-bounce mb-6 z-10 relative">
                <MessageCircle className="w-5 h-5 mr-2" fill="white" />
                Acesso enviado na hora no seu WhatsApp!
              </div>
+
+             {/* GIF Container - Phone Mockup Style */}
+             <div className="relative w-[260px] rounded-[2.5rem] border-8 border-gray-900 bg-gray-900 shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                {/* Notch */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-5 bg-gray-900 rounded-b-xl z-20"></div>
+                
+                {/* Screen Content */}
+                <img 
+                  src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWJ3c2E0emxpdDF6a3ZsbWljNTRzNGZ6cmhrYXhjeXFobnp6ZWdlaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/y0arF4lGb1PN6xwDva/giphy.gif" 
+                  alt="Demonstração recebendo a lista no WhatsApp" 
+                  className="w-full h-auto rounded-[2rem] scale-[1.02]"
+                />
+             </div>
+             <p className="text-xs text-white/80 mt-3 font-medium animate-pulse">👆 Veja como é fácil receber</p>
           </div>
 
           <p className="text-lg md:text-xl text-pink-100 mb-6 font-medium">
