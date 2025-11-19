@@ -71,7 +71,7 @@ export const CouponPopup = () => {
               onClick={() => setIsOpen(false)}
               className="w-full bg-brand-pink text-white font-bold py-3.5 rounded-full shadow-lg hover:bg-pink-700 transition-all transform hover:scale-105 active:scale-95"
             >
-              USAR MEU DESCONTO AGORA
+              Não Quero Benefícios
             </button>
           </div>
         </div>
