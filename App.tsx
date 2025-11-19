@@ -90,7 +90,7 @@ function App() {
               Até que um dia, Deus colocou uma cliente antiga no meu caminho. Ela sentiu minha dor e me passou o contato de <strong>UM fornecedor</strong> do Brás. Com os últimos trocados, comprei 10 batons. Vendi tudo em 2 horas na porta da escola.
             </p>
             <p className="font-bold text-brand-dark text-lg border-b-2 border-brand-light inline-block pb-1">
-              Hoje, eu reuni não só aquele, mas os 38 melhores fornecedores que mudaram a minha vida, pra você não passar pelo que eu passei.
+              Hoje, eu reuni não só aquele, mas os melhores fornecedores que mudaram a minha vida, pra você não passar pelo que eu passei.
             </p>
           </div>
         </div>
