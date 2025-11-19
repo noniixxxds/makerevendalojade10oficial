@@ -63,7 +63,7 @@ function App() {
           
           {/* Author Profile */}
           <div className="flex items-center justify-center space-x-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 max-w-md mx-auto">
-             <img src="https://picsum.photos/id/338/150/150" alt="Camila Vendedora" className="w-16 h-16 rounded-full border-2 border-white shadow-md" />
+             <img src="https://i.pinimg.com/736x/12/36/49/12364993ce081c392822839bbd083312.jpg" alt="Camila Vendedora" className="w-16 h-16 rounded-full border-2 border-white shadow-md object-cover" />
              <div className="text-left">
                <p className="font-bold text-white text-sm">Com Camila, sua mentora</p>
                <p className="text-xs text-pink-200">Ex-desempregada, hoje dona de 3 lojas.</p>
