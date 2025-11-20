@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, CHECKOUT_LINK } from './constants';
 import { CountdownTimer } from './components/CountdownTimer';
@@ -69,10 +70,10 @@ function App() {
           
           {/* Author Profile */}
           <div className="flex items-center justify-center space-x-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 max-w-md mx-auto">
-             <img src="https://i.pinimg.com/736x/12/36/49/12364993ce081c392822839bbd083312.jpg" alt="Camila Vendedora" className="w-16 h-16 rounded-full border-2 border-white shadow-md object-cover" />
+             <img src="https://i.postimg.cc/jq75SSvD/image.png" alt="Sônia Prado" className="w-16 h-16 rounded-full border-2 border-white shadow-md object-cover" />
              <div className="text-left">
-               <p className="font-bold text-white text-sm">Com Camila, sua mentora</p>
-               <p className="text-xs text-pink-200">Ex-desempregada, hoje dona de 3 lojas.</p>
+               <p className="font-bold text-white text-sm">Com Sônia, da fase difícil à independência</p>
+               <p className="text-xs text-pink-200">Uma história marcada por fé, recomeço e provisão.</p>
              </div>
           </div>
         </div>
@@ -83,21 +84,35 @@ function App() {
       {/* 2. MINI-STORYTELLING (The Hook) */}
       <section className="py-10 px-4 max-w-3xl mx-auto">
         <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl border-l-4 border-brand-pink relative -mt-16 z-20">
-          <h2 className="font-hand text-3xl text-brand-dark mb-4">Minha filha, escuta o que eu vou te contar...</h2>
+          <span className="bg-brand-light text-brand-dark px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">História Real</span>
+          <h2 className="font-heading font-bold text-2xl md:text-3xl text-gray-800 mb-6 leading-tight">
+            Baseada em uma história real de recomeço com <span className="text-brand-pink">maquiagem acessível</span>
+          </h2>
           
-          <div className="space-y-4 text-gray-700 leading-relaxed">
+          <div className="space-y-5 text-gray-700 leading-relaxed text-lg">
             <p>
-              <strong className="text-brand-pink">Era 2021.</strong> Eu estava grávida de 8 meses, meu marido tinha acabado de perder o emprego e a gente só tinha <span className="bg-yellow-100 px-1 font-bold">R$ 47,00 na conta</span>.
-            </p>
-            <p>
-              Eu chorava no banheiro pra ele não ver. Tentei vender de tudo, mas os fornecedores que eu achava no Google eram caros ou golpistas. Perdi o pouco que tinha comprando "listas" que não funcionavam.
+              Existem momentos em que a vida parece desabar de uma vez só. Foi exatamente isso que aconteceu com <strong className="text-brand-dark">Sônia Prado</strong>.
             </p>
             <p>
-              Até que um dia, Deus colocou uma cliente antiga no meu caminho. Ela sentiu minha dor e me passou o contato de <strong>UM fornecedor</strong> do Brás. Com os últimos trocados, comprei 10 batons. Vendi tudo em 2 horas na porta da escola.
+              Ela vendeu a casa que levou anos para conquistar para investir na Bolsa de Valores... e acabou perdendo praticamente tudo. A perda foi tão grande que afetou todas as áreas da sua vida: suas finanças, seu emocional, seu relacionamento e até sua saúde mental. Em suas próprias palavras, <span className="bg-red-50 text-red-800 px-1 font-medium">foi desesperador.</span>
             </p>
-            <p className="font-bold text-brand-dark text-lg border-b-2 border-brand-light inline-block pb-1">
-              Hoje, eu reuni não só aquele, mas os melhores fornecedores que mudaram a minha vida, pra você não passar pelo que eu passei.
+            <p>
+              Mas a história da Sônia não termina na dor. Em meio ao caos, ela decidiu agir com coragem. Inspirada pelo exemplo da irmã que trabalhava com maquiagem acessível, Sônia juntou o pouco que restava e abriu uma pequena loja no centro de Campo Grande, onde vendia <strong className="bg-yellow-200 text-black px-1">todas as maquiagens a R$10.</strong>
             </p>
+            <p>
+              O que parecia um último suspiro de esperança se transformou em um novo começo. Mulheres passaram a entrar, conhecer, comprar, indicar. A loja começou a se movimentar, a ganhar vida, a gerar renda.
+            </p>
+            <p>
+              Sônia ainda não recuperou tudo o que perdeu. Mas algo muito mais valioso foi restaurado: <span className="font-hand text-2xl text-brand-pink font-bold block mt-2">sua dignidade, sua esperança e sua fé no amanhã.</span>
+            </p>
+
+            <div className="bg-brand-bg p-4 rounded-lg border border-brand-light italic text-gray-600 mt-4">
+              <p className="mb-2">"A Bíblia diz que Deus é especialista em transformar cinzas em alegria. E mesmo que o nome Dele não apareça em todas as manchetes, Ele continua agindo através de decisões corajosas."</p>
+              <p className="mt-3 font-medium text-brand-dark">📖 “Porque sou eu que conheço os planos que tenho para vocês — planos de fazê-los prosperar e não de causar dano, planos de dar-lhes esperança e um futuro.”</p>
+              <p className="text-right text-xs font-bold text-brand-dark mt-1">— Jeremias 29:11</p>
+            </div>
+
+            <p className="text-[10px] text-gray-400 text-center uppercase tracking-widest mt-4">Fonte: Campo Grande News – História real de Sônia Prado (Campo Grande/MS)</p>
           </div>
         </div>
       </section>
