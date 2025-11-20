@@ -120,7 +120,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "E se eu não gostar?",
-    answer: "Se você não gostar, eu devolvo seus R$7,99 e ainda te faço um Pix de R$20,00 do meu bolso pelo seu tempo perdido. É o quanto eu confio nessa lista."
+    answer: "Se você não gostar, eu devolvo seus R$7,99."
   }
 ];
 
