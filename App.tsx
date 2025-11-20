@@ -41,6 +41,12 @@ function App() {
                 {/* Notch */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-5 bg-gray-900 rounded-b-xl z-20"></div>
                 
+                {/* Status Badge - Acesso Liberado */}
+                <div className="absolute top-7 left-1/2 transform -translate-x-1/2 z-30 bg-black/80 text-white px-3 py-1 rounded-full text-[9px] font-bold flex items-center gap-1.5 shadow-md border border-white/10 whitespace-nowrap">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
+                  acesso liberado em segundos
+                </div>
+
                 {/* Suporte 24h Sticker */}
                 <div className="absolute top-16 -right-3 z-30 bg-yellow-400 text-pink-900 text-[8px] font-black px-3 py-1 shadow-lg transform rotate-6 border-2 border-white rounded-lg flex items-center gap-1">
                    <Headset size={12} />
