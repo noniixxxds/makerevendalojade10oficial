@@ -42,7 +42,7 @@ function App() {
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-5 bg-gray-900 rounded-b-xl z-20"></div>
                 
                 {/* Suporte 24h Sticker */}
-                <div className="absolute top-12 -right-3 z-30 bg-yellow-400 text-pink-900 text-[10px] font-black px-3 py-1 shadow-lg transform rotate-6 border-2 border-white rounded-lg flex items-center gap-1">
+                <div className="absolute top-16 -right-3 z-30 bg-yellow-400 text-pink-900 text-[8px] font-black px-3 py-1 shadow-lg transform rotate-6 border-2 border-white rounded-lg flex items-center gap-1">
                    <Headset size={12} />
                    SUPORTE 24H
                 </div>

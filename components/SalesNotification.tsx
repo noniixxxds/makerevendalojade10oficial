@@ -6,7 +6,7 @@ const NOTIFICATIONS = [
   { 
     id: 1,
     name: "Alerta de Vendas", 
-    text: "Mais 6 pessoas compraram a lista", 
+    text: "Mais 15 pessoas compraram a lista", 
     time: "nos últimos 2 min",
     type: "alert",
     icon: "🔥" 
