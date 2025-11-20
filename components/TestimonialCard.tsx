@@ -73,14 +73,20 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({ name, text, type, 
       {type === 'audio' && <p className="text-xs text-gray-500 mt-2 italic">Transcriçao: "{text}"</p>}
 
       {type === 'photo' && img && (
-        <div className="mt-2">
-            <p className="text-gray-700 text-sm mb-2">"{text}"</p>
-            <img src={img} alt="Prova social" className="w-full h-48 object-cover object-top rounded-lg" />
+        <div className="mt-1">
+            <div className="bg-[#f0fdf4] border border-green-200 p-2 mb-2 rounded-lg flex items-center gap-2 justify-center relative">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                </span>
+                <span className="font-extrabold text-green-600 text-[10px] uppercase tracking-wider">Acesso Liberado em Segundos</span>
+            </div>
+            <img src={img} alt="Prova social" className="w-full h-48 object-cover object-top rounded-lg shadow-sm" />
         </div>
       )}
       
       <div className="mt-auto pt-3 text-xs text-gray-400 text-right">
-        Há 2 horas
+        Postado há 2 horas
       </div>
     </div>
   );

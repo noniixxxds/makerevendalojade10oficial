@@ -121,9 +121,9 @@ function App() {
       <section className="py-8 bg-brand-bg">
         <div className="text-center mb-6 px-4">
           <h3 className="font-heading font-bold text-2xl text-gray-800">
-            Elas já receberam no Zap e amaram 👇
+            Monitoramento de Entregas no Zap: Recentes 👇
           </h3>
-          <p className="text-sm text-gray-500 mt-1">Deslize para ver as mensagens reais</p>
+          <p className="text-sm text-gray-500 mt-1">Veja quem acabou de receber o acesso no Zap</p>
         </div>
 
         <div className="flex overflow-x-auto pb-8 px-4 space-x-4 hide-scrollbar snap-x">
@@ -190,7 +190,7 @@ function App() {
             <div className="flex-1 bg-brand-light p-4 rounded-lg flex items-start space-x-3">
                 <Lock className="w-6 h-6 text-brand-pink flex-shrink-0 mt-1" />
                 <div>
-                    <h4 className="font-bold text-brand-dark">Lista Testada</h4>
+                    <h4 className="font-bold text-brand-dark">Lista Verificada</h4>
                     <p className="text-sm text-gray-700">Todos os contatos foram verificados.</p>
                 </div>
             </div>

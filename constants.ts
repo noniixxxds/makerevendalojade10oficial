@@ -1,5 +1,6 @@
 
 
+
 export const CHECKOUT_LINK = "https://pay.kirvano.com/a39cd2c2-492c-42f6-b29e-f4046aaf666c";
 
 export const PRODUCTS = [
@@ -125,12 +126,12 @@ export const FAQ_ITEMS = [
 ];
 
 export const TESTIMONIALS = [
-  { name: "Carla Dias", img: "https://i.postimg.cc/pV5zHkzQ/image.png", text: "Menina, olha o tanto que chegou! Chocada com a rapidez.", type: "photo" },
-  { name: "Bruna S.", img: "https://i.postimg.cc/DycFDkjw/image.png", text: "Chegou tudo certinho! A qualidade é incrível, já vendi quase tudo.", type: "photo" },
-  { name: "Renata F.", img: "https://i.postimg.cc/Zq58Gd8B/image.png", text: "Gente, que tudo! Veio muito bem embalado. Obrigada pela indicação!", type: "photo" },
-  { name: "Larissa B.", img: "https://i.postimg.cc/x8tsY8V2/image.png", text: "Tudo certo por aqui! Já entrei em contato com os fornecedores.", type: "photo" },
-  { name: "Juliana M.", img: "https://i.postimg.cc/j5rtmxb6/image.png", text: "Já arrumando tudo pra vender amanhã. Obrigada, Camila!", type: "photo" },
-  { name: "Amanda Souza", img: "https://i.postimg.cc/Bb7mX9xL/582333586-813971864892131-8108173947280786291-n-(1).jpg", text: "Já separei os que vou chamar hoje!", type: "photo" },
-  { name: "Patrícia Gomes", img: "https://i.postimg.cc/9FKjnsv4/Captura-de-tela-2025-11-17-101009.png", text: "Olha minha banca montada! Tudo fornecedor da sua lista.", type: "photo" },
-  { name: "Dani Ferreira", img: "https://i.postimg.cc/FzCT75jk/582148552-868423898872479-3396241599108394350-n.jpg", text: "Gente, é real! Chegou agorinha no meu zap.", type: "photo" },
+  { name: "Carla Dias", img: "https://i.postimg.cc/pV5zHkzQ/image.png", text: "Mal recebi a lista e já tô acessando agora mesmo! Chocada com a rapidez.", type: "photo" },
+  { name: "Bruna S.", img: "https://i.postimg.cc/DycFDkjw/image.png", text: "Comecei com medo, mas investi pouquinho e olha a qualidade das mercadorias! Apaixonada.", type: "photo" },
+  { name: "Renata F.", img: "https://i.postimg.cc/Zq58Gd8B/image.png", text: "Eu achava que era golpe, paguei pra ver e agora não para de chegar encomenda aqui em casa.", type: "photo" },
+  { name: "Larissa B.", img: "https://i.postimg.cc/x8tsY8V2/image.png", text: "Peguei o dinheiro do lanche, investi na lista e já tô montando meu império!", type: "photo" },
+  { name: "Juliana M.", img: "https://i.postimg.cc/j5rtmxb6/image.png", text: "Arrumando tudo pra vender amanhã! É sobre não dar desculpas e fazer acontecer.", type: "photo" },
+  { name: "Amanda Souza", img: "https://i.postimg.cc/Bb7mX9xL/582333586-813971864892131-8108173947280786291-n-(1).jpg", text: "Garanti a lista hoje cedo e já chamei os fornecedores. Bora vencer!", type: "photo" },
+  { name: "Patrícia Gomes", img: "https://i.postimg.cc/9FKjnsv4/Captura-de-tela-2025-11-17-101009.png", text: "Gente, olha essa banca! Tudo montado com os fornecedores de R$ 2,00 da lista. Surreal!", type: "photo" },
+  { name: "Dani Ferreira", img: "https://i.postimg.cc/FzCT75jk/582148552-868423898872479-3396241599108394350-n.jpg", text: "Tava ansiosa, mas o acesso chegou no Zap, abri a lista e já tô faturando!", type: "photo" },
 ];
