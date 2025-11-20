@@ -176,7 +176,7 @@ function App() {
                 <Lock className="w-6 h-6 text-brand-pink flex-shrink-0 mt-1" />
                 <div>
                     <h4 className="font-bold text-brand-dark">Lista Testada</h4>
-                    <p className="text-sm text-gray-700">Todos os 38 contatos foram verificados.</p>
+                    <p className="text-sm text-gray-700">Todos os contatos foram verificados.</p>
                 </div>
             </div>
             <div className="flex-1 bg-green-100 p-4 rounded-lg flex items-start space-x-3 border border-green-200">
