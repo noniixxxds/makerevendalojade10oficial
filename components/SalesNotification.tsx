@@ -13,7 +13,7 @@ const NOTIFICATIONS = [
   },
   { 
     id: 2,
-    name: "Julia M.", 
+    name: "Tatiane Souza", 
     text: "acabou de comprar", 
     time: "Agora mesmo", 
     type: "person",
@@ -21,7 +21,7 @@ const NOTIFICATIONS = [
   },
   { 
     id: 3,
-    name: "Fernanda S.", 
+    name: "Marta Alves", 
     text: "recebeu o acesso no Zap", 
     time: "Há 1 minuto", 
     type: "person",
@@ -29,7 +29,7 @@ const NOTIFICATIONS = [
   },
   { 
     id: 4,
-    name: "Amanda R. de SP", 
+    name: "Gracielly Oliveira", 
     text: "garantiu a oferta", 
     time: "Há 3 minutos", 
     type: "person",
