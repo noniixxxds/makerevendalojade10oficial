@@ -133,9 +133,4 @@ export const TESTIMONIALS = [
   { name: "Amanda Souza", img: "https://i.postimg.cc/Bb7mX9xL/582333586-813971864892131-8108173947280786291-n-(1).jpg", text: "Já separei os que vou chamar hoje!", type: "photo" },
   { name: "Patrícia Gomes", img: "https://i.postimg.cc/9FKjnsv4/Captura-de-tela-2025-11-17-101009.png", text: "Olha minha banca montada! Tudo fornecedor da sua lista.", type: "photo" },
   { name: "Dani Ferreira", img: "https://i.postimg.cc/FzCT75jk/582148552-868423898872479-3396241599108394350-n.jpg", text: "Gente, é real! Chegou agorinha no meu zap.", type: "photo" },
-  { name: "Jéssica Silva", text: "Amigaaaa do céu! Fiz meu primeiro pedido de 100 reais e vendi tudo em 2 dias. Tô chocada!", type: "text" },
-  { name: "Ana C.", text: "Perfeito", type: "whatsapp" },
-  { name: "Marcela Dias", audioTime: "0:42", text: "Obrigada por não esconder o ouro igual as outras...", type: "audio" },
-  { name: "Roberta M.", text: "Eu achava que era golpe por ser barato, mas chegou tudo certinho. Já tô na terceira compra.", type: "text" },
-  { name: "Fernanda S.", audioTime: "1:15", text: "Menina, o lucro é absurdo. Comprei a 5 e vendi a 20.", type: "audio" },
 ];
