@@ -125,14 +125,17 @@ export const FAQ_ITEMS = [
 ];
 
 export const TESTIMONIALS = [
-  { name: "Cliente Satisfeita", text: "Conseguir linda! ❤️", type: "whatsapp" },
-  { name: "Maria Paula", text: "Perfeito! Muito obrigada 🙏", type: "whatsapp" },
+  { name: "Carla Dias", img: "https://i.postimg.cc/pV5zHkzQ/image.png", text: "Menina, olha o tanto que chegou! Chocada com a rapidez.", type: "photo" },
+  { name: "Bruna S.", img: "https://i.postimg.cc/DycFDkjw/image.png", text: "Chegou tudo certinho! A qualidade é incrível, já vendi quase tudo.", type: "photo" },
+  { name: "Renata F.", img: "https://i.postimg.cc/Zq58Gd8B/image.png", text: "Gente, que tudo! Veio muito bem embalado. Obrigada pela indicação!", type: "photo" },
+  { name: "Larissa B.", img: "https://i.postimg.cc/x8tsY8V2/image.png", text: "Tudo certo por aqui! Já entrei em contato com os fornecedores.", type: "photo" },
+  { name: "Juliana M.", img: "https://i.postimg.cc/j5rtmxb6/image.png", text: "Já arrumando tudo pra vender amanhã. Obrigada, Camila!", type: "photo" },
+  { name: "Amanda Souza", img: "https://i.postimg.cc/Bb7mX9xL/582333586-813971864892131-8108173947280786291-n-(1).jpg", text: "Já separei os que vou chamar hoje!", type: "photo" },
+  { name: "Patrícia Gomes", img: "https://i.postimg.cc/9FKjnsv4/Captura-de-tela-2025-11-17-101009.png", text: "Olha minha banca montada! Tudo fornecedor da sua lista.", type: "photo" },
   { name: "Dani Ferreira", img: "https://i.postimg.cc/FzCT75jk/582148552-868423898872479-3396241599108394350-n.jpg", text: "Gente, é real! Chegou agorinha no meu zap.", type: "photo" },
   { name: "Jéssica Silva", text: "Amigaaaa do céu! Fiz meu primeiro pedido de 100 reais e vendi tudo em 2 dias. Tô chocada!", type: "text" },
   { name: "Ana C.", text: "Perfeito", type: "whatsapp" },
-  { name: "Amanda Souza", img: "https://i.postimg.cc/Bb7mX9xL/582333586-813971864892131-8108173947280786291-n-(1).jpg", text: "Já separei os que vou chamar hoje!", type: "photo" },
   { name: "Marcela Dias", audioTime: "0:42", text: "Obrigada por não esconder o ouro igual as outras...", type: "audio" },
-  { name: "Patrícia Gomes", img: "https://i.postimg.cc/9FKjnsv4/Captura-de-tela-2025-11-17-101009.png", text: "Olha minha banca montada! Tudo fornecedor da sua lista.", type: "photo" },
   { name: "Roberta M.", text: "Eu achava que era golpe por ser barato, mas chegou tudo certinho. Já tô na terceira compra.", type: "text" },
   { name: "Fernanda S.", audioTime: "1:15", text: "Menina, o lucro é absurdo. Comprei a 5 e vendi a 20.", type: "audio" },
 ];
