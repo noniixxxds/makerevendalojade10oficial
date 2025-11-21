@@ -83,36 +83,42 @@ function App() {
 
       {/* 2. MINI-STORYTELLING (The Hook) */}
       <section className="py-10 px-4 max-w-3xl mx-auto">
-        <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl border-l-4 border-brand-pink relative -mt-16 z-20">
-          <span className="bg-brand-light text-brand-dark px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">História Real</span>
-          <h2 className="font-heading font-bold text-2xl md:text-3xl text-gray-800 mb-6 leading-tight">
-            Baseada em uma história real de recomeço com <span className="text-brand-pink">maquiagem acessível</span>
+        <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-brand-pink relative -mt-16 z-20 overflow-hidden">
+           {/* Background subtle touch */}
+           <div className="absolute top-0 right-0 opacity-5 -mr-10 -mt-10">
+              <Heart size={150} />
+           </div>
+
+          <span className="bg-brand-light text-brand-dark px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-5 inline-block border border-pink-100">
+            História Real
+          </span>
+          
+          <h2 className="font-heading font-bold text-xl md:text-2xl text-gray-800 mb-6 leading-tight">
+            Baseada em uma história real de recomeço com <span className="text-brand-pink underline decoration-pink-200 decoration-4 underline-offset-4">maquiagem acessível</span>
           </h2>
           
-          <div className="space-y-5 text-gray-700 leading-relaxed text-lg">
+          <div className="space-y-5 text-gray-600 text-sm md:text-base leading-relaxed">
             <p>
-              Existem momentos em que a vida parece desabar de uma vez só. Foi exatamente isso que aconteceu com <strong className="text-brand-dark">Sônia Prado</strong>.
+              Existem momentos em que a vida parece desabar. Foi o que aconteceu com <strong className="text-gray-800">Sônia Prado</strong>.
             </p>
             <p>
-              Ela vendeu a casa que levou anos para conquistar para investir na Bolsa de Valores... e acabou perdendo praticamente tudo. A perda foi tão grande que afetou todas as áreas da sua vida: suas finanças, seu emocional, seu relacionamento e até sua saúde mental. Em suas próprias palavras, <span className="bg-red-50 text-red-800 px-1 font-medium">foi desesperador.</span>
+              Ela vendeu a casa para investir na Bolsa e perdeu tudo. O impacto foi devastador: nas finanças, no emocional e na saúde. Em suas palavras, <span className="bg-red-50 text-red-800 px-1 rounded font-medium">foi desesperador.</span>
+            </p>
+            <p className="pl-4 border-l-2 border-brand-pink/30">
+              Mas ao invés de desistir, Sônia agiu. Inspirada na irmã, juntou o que restava e abriu uma pequena loja vendendo <strong className="bg-yellow-100 text-gray-900 px-1">maquiagens a R$10.</strong>
             </p>
             <p>
-              Mas a história da Sônia não termina na dor. Em meio ao caos, ela decidiu agir com coragem. Inspirada pelo exemplo da irmã que trabalhava com maquiagem acessível, Sônia juntou o pouco que restava e abriu uma pequena loja no centro de Campo Grande, onde vendia <strong className="bg-yellow-200 text-black px-1">todas as maquiagens a R$10.</strong>
-            </p>
-            <p>
-              O que parecia um último suspiro de esperança se transformou em um novo começo. Mulheres passaram a entrar, conhecer, comprar, indicar. A loja começou a se movimentar, a ganhar vida, a gerar renda.
-            </p>
-            <p>
-              Sônia ainda não recuperou tudo o que perdeu. Mas algo muito mais valioso foi restaurado: <span className="font-hand text-2xl text-brand-pink font-bold block mt-2">sua dignidade, sua esperança e sua fé no amanhã.</span>
+              O que era um último suspiro virou um novo começo. A loja encheu, o dinheiro girou e Sônia recuperou algo valioso: <span className="text-brand-pink font-bold">sua dignidade e fé.</span>
             </p>
 
-            <div className="bg-brand-bg p-4 rounded-lg border border-brand-light italic text-gray-600 mt-4">
-              <p className="mb-2">"A Bíblia diz que Deus é especialista em transformar cinzas em alegria. E mesmo que o nome Dele não apareça em todas as manchetes, Ele continua agindo através de decisões corajosas."</p>
-              <p className="mt-3 font-medium text-brand-dark">📖 “Porque sou eu que conheço os planos que tenho para vocês — planos de fazê-los prosperar e não de causar dano, planos de dar-lhes esperança e um futuro.”</p>
-              <p className="text-right text-xs font-bold text-brand-dark mt-1">— Jeremias 29:11</p>
+            <div className="bg-brand-bg/50 p-5 rounded-xl border border-brand-light mt-2 relative">
+              <p className="italic text-gray-700 font-medium mb-3 text-center">
+                "Deus é especialista em transformar cinzas em alegria. Ele continua agindo através de decisões corajosas."
+              </p>
+              <div className="flex items-center justify-center gap-2 text-xs text-brand-dark/70 font-bold uppercase tracking-wide border-t border-brand-dark/10 pt-3">
+                <span>📖 Jeremias 29:11</span>
+              </div>
             </div>
-
-            <p className="text-[10px] text-gray-400 text-center uppercase tracking-widest mt-4">Fonte: Campo Grande News – História real de Sônia Prado (Campo Grande/MS)</p>
           </div>
         </div>
       </section>
@@ -120,10 +126,10 @@ function App() {
       {/* 3. PROVA SOCIAL MASSIVA (Carousel) */}
       <section className="py-8 bg-brand-bg">
         <div className="text-center mb-6 px-4">
-          <h3 className="font-heading font-bold text-2xl text-gray-800">
-            Monitoramento de Entregas no Zap: Recentes 👇
+          <h3 className="font-heading font-bold text-xl md:text-2xl text-gray-800 flex items-center justify-center gap-2">
+            Monitoramento de Entregas Recentes no Zap <span className="animate-pulse text-green-500">●</span>
           </h3>
-          <p className="text-sm text-gray-500 mt-1">Veja quem acabou de receber o acesso no Zap</p>
+          <p className="text-sm text-gray-500 mt-1">Atualizado em tempo real</p>
         </div>
 
         <div className="flex overflow-x-auto pb-8 px-4 space-x-4 hide-scrollbar snap-x">
