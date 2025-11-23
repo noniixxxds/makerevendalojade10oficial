@@ -1,6 +1,3 @@
-
-
-
 export const CHECKOUT_LINK = "https://pay.kirvano.com/a39cd2c2-492c-42f6-b29e-f4046aaf666c";
 
 export const PRODUCTS = [
@@ -121,7 +118,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "E se eu não gostar?",
-    answer: "Se você não gostar, eu devolvo seus R$7,99."
+    answer: "Se você não gostar, eu devolvo seus R$17,99."
   }
 ];
 

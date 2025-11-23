@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, CHECKOUT_LINK } from './constants';
 import { CountdownTimer } from './components/CountdownTimer';
@@ -223,8 +222,8 @@ function App() {
           <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 inline-block w-full max-w-md mb-8">
             <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Cupom Aplicado: <span className="text-green-400 font-bold">DESCONTOLOJADE10</span></p>
             <div className="flex items-center justify-center space-x-4 mb-4">
-              <span className="text-2xl text-gray-500 line-through font-medium">R$ 29,90</span>
-              <span className="text-6xl font-extrabold text-brand-pink drop-shadow-lg">R$ 7,99</span>
+              <span className="text-2xl text-gray-500 line-through font-medium">R$ 49,90</span>
+              <span className="text-6xl font-extrabold text-brand-pink drop-shadow-lg">R$ 17,99</span>
             </div>
             <CountdownTimer />
           </div>
@@ -253,7 +252,7 @@ function App() {
             </div>
             <h4 className="text-center font-bold text-xl mt-4 mb-2 text-brand-dark">Eu confio tanto que assumo o risco</h4>
             <p className="text-center text-gray-700 mb-4">
-              Se você comprar a lista, ligar para os fornecedores e achar que não valeu a pena, eu devolvo seus <strong>R$ 7,99</strong> NA HORA.
+              Se você comprar a lista, ligar para os fornecedores e achar que não valeu a pena, eu devolvo seus <strong>R$ 17,99</strong> NA HORA.
             </p>
             <p className="text-center text-xs text-gray-500 mt-2">É sério. Eu não brinco com o sonho de ninguém.</p>
           </div>
