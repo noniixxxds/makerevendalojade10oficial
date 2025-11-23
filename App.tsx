@@ -41,13 +41,13 @@ function App() {
                 {/* Notch */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-5 bg-gray-900 rounded-b-xl z-20"></div>
                 
-                {/* Status Badge - Acesso Liberado (NOVO) */}
+                {/* Status Badge - Acesso Liberado */}
                 <div className="absolute top-7 left-1/2 transform -translate-x-1/2 z-30 bg-black/80 text-white px-3 py-1 rounded-full text-[9px] font-bold flex items-center gap-1.5 shadow-md border border-white/10 whitespace-nowrap">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
                   acesso liberado em segundos
                 </div>
 
-                {/* Suporte 24h Sticker (AJUSTADO) */}
+                {/* Suporte 24h Sticker */}
                 <div className="absolute top-16 -right-3 z-30 bg-yellow-400 text-pink-900 text-[8px] font-black px-3 py-1 shadow-lg transform rotate-6 border-2 border-white rounded-lg flex items-center gap-1">
                    <Headset size={12} />
                    SUPORTE 24H
@@ -104,7 +104,7 @@ function App() {
               Ela vendeu a casa para investir na Bolsa e perdeu tudo. O impacto foi devastador: nas finanças, no emocional e na saúde. Em suas palavras, <span className="bg-red-50 text-red-800 px-1 rounded font-medium">foi desesperador.</span>
             </p>
             <p className="pl-4 border-l-2 border-brand-pink/30">
-              Mas ao invés de desistir, Sônia agiu. Inspirada na irmã, juntou o que restava e abriu uma pequena loja vendendo <strong className="bg-yellow-100 text-gray-900 px-1">maquiagens a R$10.</strong>
+              Mas ao invés de desistir, Sônia agiu. Inspirada na irmã, juntou o que restava e abriu uma pequena loja vendendo <strong className="bg-yellow-100 text-gray-900 px-1">maquiagens.</strong>
             </p>
             <p>
               O que era um último suspiro virou um novo começo. A loja encheu, o dinheiro girou e Sônia recuperou algo valioso: <span className="text-brand-pink font-bold">sua dignidade e fé.</span>
@@ -172,10 +172,11 @@ function App() {
                   IMAGEM DOS FORNECEDORES
                </div>
 
+               {/* GIF INSERIDO AQUI */}
                <img 
                  src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmh0Y3Uxbm53dG93NDI3MnJjZzgwbHFldXI3cjJhMzBydGJpd2c2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Wfkq7BCVzOUwu1mqD/giphy.gif" 
                  alt="Unboxing fornecedor maquiagem" 
-                 className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity"
+                 className="w-full h-auto object-cover blur-[2px] brightness-[0.6] contrast-125 group-hover:blur-0 group-hover:brightness-100 transition-all duration-700"
                />
 
                {/* Caption overlay */}
@@ -195,14 +196,15 @@ function App() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {PRODUCTS.map((product, index) => (
-            <div key={index} className="bg-white p-3 rounded-lg shadow-sm border border-gray-200 hover:border-brand-pink transition-all hover:shadow-md group relative overflow-visible">
+            <div key={index} className="bg-white p-3 pb-8 rounded-lg shadow-sm border border-gray-200 hover:border-brand-pink transition-all hover:shadow-md group relative overflow-visible">
+              
               {/* Dynamic Badge - Red Sticker Style */}
               {product.badge ? (
-                <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-extrabold w-12 h-12 flex items-center justify-center text-center rounded-full shadow-md z-10 animate-pulse leading-tight border-2 border-white">
+                <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-extrabold w-12 h-12 flex items-center justify-center text-center rounded-full shadow-md z-30 animate-pulse leading-tight border-2 border-white">
                   {product.badge.replace(' ', '\n')}
                 </div>
               ) : (
-                <div className="absolute top-0 left-0 bg-green-500 text-white text-[9px] font-bold px-2 py-1 rounded-br-lg z-10">
+                <div className="absolute top-0 left-0 bg-green-500 text-white text-[9px] font-bold px-2 py-1 rounded-br-lg z-30">
                   LUCRO 400%
                 </div>
               )}
@@ -210,6 +212,7 @@ function App() {
               <div className="aspect-square overflow-hidden rounded-md mb-3 bg-gray-100 relative">
                 <img src={product.img} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               </div>
+
               <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-0.5">{product.brand}</p>
               <h4 className="font-bold text-gray-800 text-sm leading-tight mb-1 h-9 overflow-hidden">{product.name}</h4>
               <div className="flex items-end justify-between mt-2">

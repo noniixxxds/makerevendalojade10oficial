@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { CheckCircle } from 'lucide-react';
 
 interface TestimonialProps {
   name: string;
@@ -85,8 +85,14 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({ name, text, type, 
         </div>
       )}
       
-      <div className="mt-auto pt-3 text-xs text-gray-400 text-right">
+      <div className="mt-auto pt-3 text-xs text-gray-400 text-right pb-1">
         Postado há 2 horas
+      </div>
+
+      {/* Trust Strip */}
+      <div className="bg-green-50 border-t border-green-100 -mx-4 -mb-4 py-2 px-4 rounded-b-xl flex items-center justify-center gap-1.5 mt-2">
+          <CheckCircle size={12} className="text-green-600 fill-green-100" />
+          <span className="text-[10px] font-extrabold text-green-700 uppercase tracking-wider">Acesso Entregue com Sucesso</span>
       </div>
     </div>
   );
