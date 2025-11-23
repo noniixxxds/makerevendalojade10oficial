@@ -5,7 +5,7 @@ import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
 import { SalesNotification } from './components/SalesNotification';
 import { CouponPopup } from './components/CouponPopup';
-import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset } from 'lucide-react';
+import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen } from 'lucide-react';
 
 function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -126,7 +126,7 @@ function App() {
       <section className="py-8 bg-brand-bg">
         <div className="text-center mb-6 px-4">
           <h3 className="font-heading font-bold text-xl md:text-2xl text-gray-800 flex items-center justify-center gap-2">
-            Monitoramento de Entregas Recentes no Zap <span className="animate-pulse text-green-500">●</span>
+            Monitoramento de Entregas no Zap <span className="animate-pulse text-green-500">●</span>
           </h3>
           <p className="text-sm text-gray-500 mt-1">Atualizado em tempo real</p>
         </div>
@@ -157,6 +157,41 @@ function App() {
           Olha o preço que você vai pagar nas peças:
         </h3>
         <p className="text-center text-gray-600 mb-8">Você paga centavos e revende por R$ 10,00, R$ 15,00 ou mais.</p>
+
+        {/* --- ESTRATÉGIA VISUAL: GIF DE ESTOQUE REAL (SNEAK PEEK) --- */}
+        <div className="flex justify-center mb-12 relative z-10">
+           <div className="relative w-[280px] rounded-2xl overflow-hidden border-[6px] border-gray-800 shadow-2xl bg-gray-100 rotate-1 hover:rotate-0 transition-transform duration-500 group">
+               {/* Phone Header */}
+               <div className="bg-gray-800 h-6 w-full flex justify-center items-center">
+                   <div className="w-16 h-1 bg-gray-600 rounded-full"></div>
+               </div>
+               
+               {/* Flutuante "Flagra" */}
+               <div className="absolute top-10 right-2 z-10 bg-white/95 text-brand-pink font-extrabold text-[10px] px-3 py-1.5 rounded-lg shadow-md border border-pink-100 transform rotate-3 flex items-center gap-1">
+                  <span>🎥</span>
+                  IMAGEM DOS FORNECEDORES
+               </div>
+
+               <img 
+                 src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmh0Y3Uxbm53dG93NDI3MnJjZzgwbHFldXI3cjJhMzBydGJpd2c2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Wfkq7BCVzOUwu1mqD/giphy.gif" 
+                 alt="Unboxing fornecedor maquiagem" 
+                 className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity"
+               />
+
+               {/* Caption overlay */}
+               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pt-12 text-white text-center">
+                   <div className="flex items-center justify-center gap-2 mb-1">
+                      <PackageOpen size={16} className="text-yellow-400" />
+                      <p className="text-xs font-bold text-yellow-300 uppercase tracking-wide animate-pulse">Chegou Reposição!</p>
+                   </div>
+                   <p className="text-[10px] text-gray-200">É mercadoria de verdade chegando todo dia.</p>
+               </div>
+           </div>
+           
+           {/* Background Glow Effect */}
+           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-brand-pink/20 blur-[50px] -z-10 rounded-full animate-pulse"></div>
+        </div>
+        {/* --- FIM DO GIF ESTRATÉGICO --- */}
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {PRODUCTS.map((product, index) => (
