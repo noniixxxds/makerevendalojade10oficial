@@ -14,10 +14,10 @@ function App() {
   const [isCouponOpen, setIsCouponOpen] = useState(false);
 
   useEffect(() => {
-    // Timer para aparecer o popup de Cupom (10 segundos)
+    // Timer para aparecer o popup de Cupom (7 segundos)
     const timer = setTimeout(() => {
       setIsCouponOpen(true);
-    }, 10000);
+    }, 7000);
     return () => clearTimeout(timer);
   }, []);
 
