@@ -8,84 +8,84 @@ export const PRODUCTS = [
     brand: "Febella",
     cost: "1,85", 
     img: "https://i.postimg.cc/KYyP8Hh4/Captura-de-tela-2025-11-17-090715.png",
-    badge: null
+    badge: "BLACK FRIDAY"
   },
   { 
     name: "Lápis Kajal Retrátil Preto", 
     brand: "Vivai",
     cost: "2,50", 
     img: "https://i.postimg.cc/ZRmzj4t4/Captura-de-tela-2025-11-17-091419.png",
-    badge: null
+    badge: "OFERTA BLACK"
   },
   { 
     name: "Brilho Moranguinho Retrô", 
     brand: "Vivai",
     cost: "1,99", 
     img: "https://i.postimg.cc/RZwPdfM1/Captura-de-tela-2025-11-17-091740.png",
-    badge: null
+    badge: "BLACK FRIDAY"
   },
   { 
     name: "Teddy Gloss (Ursinho)", 
     brand: "Vivai",
     cost: "3,90", 
     img: "https://i.postimg.cc/020nJvZv/Captura-de-tela-2025-11-17-092035.png",
-    badge: null
+    badge: "PREÇO DE CUSTO"
   },
   { 
     name: "Mousse de Limpeza Facial", 
     brand: "Face Beautiful",
     cost: "6,90", 
     img: "https://i.postimg.cc/NFgy33Ts/Captura-de-tela-2025-11-17-092227.png",
-    badge: "26% OFF"
+    badge: "BLACK FRIDAY"
   },
   { 
     name: "Pó Banana Translúcido", 
     brand: "Vivai",
     cost: "4,50", 
     img: "https://i.postimg.cc/hGcq1KRs/Captura-de-tela-2025-11-17-092434.png",
-    badge: null
+    badge: "SUPER OFERTA"
   },
   { 
     name: "Sabonete Facial Pump", 
     brand: "Love Girl",
     cost: "5,90", 
     img: "https://i.postimg.cc/XNdSmZ74/Captura-de-tela-2025-11-17-092647.png",
-    badge: "25% OFF"
+    badge: "BLACK FRIDAY"
   },
   { 
     name: "Esponja Gota Chanfrada", 
     brand: "Cres.",
     cost: "1,75", 
     img: "https://i.postimg.cc/ncFR2MXg/Captura-de-tela-2025-11-17-092843.png",
-    badge: null
+    badge: "LIQUIDAÇÃO"
   },
   { 
     name: "Batom My Little Princess", 
     brand: "Vivai",
     cost: "2,99", 
     img: "https://i.postimg.cc/VN8b906J/Captura-de-tela-2025-11-17-093023.png",
-    badge: "25% OFF"
+    badge: "BLACK FRIDAY"
   },
   { 
     name: "Blush Compacto Uni", 
     brand: "Vivai",
     cost: "3,50", 
     img: "https://i.postimg.cc/6QWp5rqv/Captura-de-tela-2025-11-17-093136.png",
-    badge: null
+    badge: "OFERTA RELÂMPAGO"
   },
   { 
     name: "Lápis Preto c/ Apontador", 
     brand: "Bella Femme",
     cost: "1,50", 
     img: "https://i.postimg.cc/XvPqHZNX/Captura-de-tela-2025-11-17-093302.png",
-    badge: null
+    badge: "BLACK FRIDAY"
   },
   { 
     name: "Delineador Líquido Ultra", 
     brand: "Vivai",
     cost: "3,80", 
     img: "https://i.postimg.cc/CxXp9b8c/Captura-de-tela-2025-11-17-093511.png",
-    badge: null
+    badge: "PREÇO BAIXO"
   },
 ];
 
@@ -93,6 +93,10 @@ export const FAQ_ITEMS = [
   {
     question: "Como recebo o acesso?",
     answer: "É automático, meu amor! Assim que confirmar o pagamento, o sistema envia para o seu E-mail E também para o seu WHATSAPP na hora. Você já abre a lista no celular e começa a chamar os fornecedores."
+  },
+  {
+    question: "O preço vai baixar mais na Black Friday?",
+    answer: "Não, amor! Esse é o MENOR preço da história (R$ 3,99). É literalmente preço de custo para você começar agora."
   },
   {
     question: "Tenho medo de comprar e não receber, é seguro?",
@@ -115,12 +119,8 @@ export const FAQ_ITEMS = [
     answer: "Atualizadíssima! Eu mesma ligo pra cada um todo mês pra saber se os preços continuam bons. Você não vai pegar número que não existe, eu garanto."
   },
   {
-    question: "Eu nunca vendi nada, vou conseguir?",
-    answer: "Vai! Porque maquiagem se vende sozinha. É só você postar a foto (que os fornecedores mandam) no seu Status do WhatsApp que as vizinhas já começam a pedir."
-  },
-  {
     question: "E se eu não gostar?",
-    answer: "Se você não gostar, eu devolvo seus R$17,99. Eu assumo o risco porque sei que funciona."
+    answer: "Se você não gostar, eu devolvo seus R$ 3,99. Eu assumo o risco porque sei que funciona."
   }
 ];
 

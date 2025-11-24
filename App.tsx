@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from 'react';
 import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, CHECKOUT_LINK } from './constants';
 import { CountdownTimer } from './components/CountdownTimer';
@@ -5,32 +7,21 @@ import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
 import { SalesNotification } from './components/SalesNotification';
 import { CouponPopup } from './components/CouponPopup';
-import { SupportPopup } from './components/SupportPopup';
-import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen, Gift, Smartphone, Calculator, BookOpen } from 'lucide-react';
+import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen, Gift, Smartphone, Calculator, BookOpen, Flame } from 'lucide-react';
 
 function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   
   // Controle de Estado dos Popups
-  const [isSupportOpen, setIsSupportOpen] = useState(false);
   const [isCouponOpen, setIsCouponOpen] = useState(false);
 
   useEffect(() => {
-    // 5 segundos para aparecer o primeiro popup (Suporte) após carregamento
+    // Timer para aparecer o popup de Cupom (10 segundos)
     const timer = setTimeout(() => {
-      setIsSupportOpen(true);
-    }, 5000);
+      setIsCouponOpen(true);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
-
-  const handleCloseSupport = () => {
-    setIsSupportOpen(false);
-    // Só inicia a contagem do segundo popup (Cupom) após o primeiro ser fechado
-    // 9 segundos de intervalo conforme solicitado
-    setTimeout(() => {
-      setIsCouponOpen(true);
-    }, 9000);
-  };
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -41,28 +32,32 @@ function App() {
       <SalesNotification />
       
       {/* Popups controlados pelo App */}
-      <SupportPopup isOpen={isSupportOpen} onClose={handleCloseSupport} />
       <CouponPopup isOpen={isCouponOpen} onClose={() => setIsCouponOpen(false)} />
       
-      {/* 1. HEADLINE + HERO */}
-      <header className="bg-gradient-to-b from-brand-pink to-pink-700 text-white text-center pt-8 pb-12 px-4 relative overflow-hidden">
+      {/* FAIXA BLACK FRIDAY */}
+      <div className="bg-black text-yellow-400 text-center py-2 px-2 text-[10px] md:text-xs font-black uppercase tracking-widest animate-pulse sticky top-0 z-40 border-b border-yellow-600/50">
+         🔥 Black November: O preço vai subir a qualquer momento! 🔥
+      </div>
+
+      {/* 1. HEADLINE + HERO (BLACK THEME) */}
+      <header className="bg-gradient-to-b from-gray-900 via-purple-900 to-brand-pink text-white text-center pt-8 pb-12 px-4 relative overflow-hidden">
         <div className="max-w-2xl mx-auto relative z-10">
-          <div className="inline-block bg-yellow-300 text-pink-800 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 shadow-lg transform -rotate-2">
-            ⚠️ Atenção: Oportunidade Única
+          <div className="inline-block bg-black border border-yellow-400 text-yellow-400 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-6 shadow-[0_0_15px_rgba(250,204,21,0.5)] transform -rotate-1">
+             ⚡ OFERTA ANTECIPADA DE BLACK FRIDAY
           </div>
-          <h1 className="font-heading font-extrabold text-3xl md:text-5xl leading-tight mb-4">
-            "Descubra a Lista Secreta de Fornecedores que as Donas de Loja de R$10 <span className="bg-white text-brand-pink px-1">Escondem de Você</span>"
+          <h1 className="font-heading font-extrabold text-3xl md:text-5xl leading-tight mb-4 drop-shadow-xl">
+            "Descubra a Lista Secreta de Fornecedores que as Donas de Loja de R$10 <span className="bg-yellow-400 text-black px-1 italic">Escondem de Você</span>"
           </h1>
           
           {/* WHATSAPP BADGE + GIF DEMO */}
           <div className="flex flex-col items-center justify-center mb-8">
-             <div className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm md:text-base flex items-center shadow-lg animate-bounce mb-6 z-10 relative">
+             <div className="bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm md:text-base flex items-center shadow-lg animate-bounce mb-6 z-10 relative border-2 border-green-400">
                <MessageCircle className="w-5 h-5 mr-2" fill="white" />
                Acesso enviado na hora no seu WhatsApp!
              </div>
 
              {/* GIF Container - Phone Mockup Style */}
-             <div className="relative w-[260px] rounded-[2.5rem] border-8 border-gray-900 bg-gray-900 shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500">
+             <div className="relative w-[260px] rounded-[2.5rem] border-8 border-gray-900 bg-gray-900 shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 ring-4 ring-purple-500/30">
                 {/* Notch */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-5 bg-gray-900 rounded-b-xl z-20"></div>
                 
@@ -93,11 +88,11 @@ function App() {
           </p>
           
           {/* Author Profile */}
-          <div className="flex items-center justify-center space-x-4 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 max-w-md mx-auto">
-             <img src="https://i.postimg.cc/jq75SSvD/image.png" alt="Sônia Prado" className="w-16 h-16 rounded-full border-2 border-white shadow-md object-cover" />
+          <div className="flex items-center justify-center space-x-4 bg-black/30 backdrop-blur-sm p-4 rounded-xl border border-white/10 max-w-md mx-auto hover:bg-black/40 transition-colors">
+             <img src="https://i.postimg.cc/jq75SSvD/image.png" alt="Sônia Prado" className="w-16 h-16 rounded-full border-2 border-purple-400 shadow-md object-cover" />
              <div className="text-left">
                <p className="font-bold text-white text-sm">Com Sônia, da fase difícil à independência</p>
-               <p className="text-xs text-pink-200">Uma história marcada por fé, recomeço e provisão.</p>
+               <p className="text-xs text-purple-200">Uma história marcada por fé, recomeço e provisão.</p>
              </div>
           </div>
         </div>
@@ -170,7 +165,7 @@ function App() {
            href="#oferta"
            className="group bg-[#25D366] hover:bg-green-600 text-white font-extrabold text-lg md:text-xl py-4 px-8 rounded-full shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] transform transition duration-200 hover:scale-105 flex items-center gap-2 animate-pulse"
          >
-           QUERO A LISTA AGORA ⚡
+           QUERO A OFERTA BLACK AGORA ⚡
            <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
          </a>
          <p className="text-xs text-gray-500 mt-3">Clique para pular a explicação e ir para o cupom</p>
@@ -178,8 +173,11 @@ function App() {
 
       {/* 4. O QUE VOCÊ RECEBE (Product Showcase) */}
       <section className="py-12 px-4 max-w-4xl mx-auto">
+        <div className="flex justify-center mb-4">
+            <span className="bg-black text-white px-3 py-1 rounded text-xs font-black uppercase tracking-widest border border-gray-700">Black November</span>
+        </div>
         <h3 className="font-heading font-extrabold text-center text-2xl md:text-3xl text-brand-dark mb-2">
-          Olha o preço que você vai pagar nas peças:
+          Preços de <span className="text-black bg-yellow-300 px-1">Black Friday</span> o ano todo:
         </h3>
         <p className="text-center text-gray-600 mb-8">Você paga centavos e revende por R$ 10,00, R$ 15,00 ou mais.</p>
 
@@ -208,24 +206,24 @@ function App() {
                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pt-12 text-white text-center">
                    <div className="flex items-center justify-center gap-2 mb-1">
                       <PackageOpen size={16} className="text-yellow-400" />
-                      <p className="text-xs font-bold text-yellow-300 uppercase tracking-wide animate-pulse">Chegou Reposição!</p>
+                      <p className="text-xs font-bold text-yellow-300 uppercase tracking-wide animate-pulse">Chegou Reposição Black!</p>
                    </div>
                    <p className="text-[10px] text-gray-200">É mercadoria de verdade chegando todo dia.</p>
                </div>
            </div>
            
            {/* Background Glow Effect */}
-           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-brand-pink/20 blur-[50px] -z-10 rounded-full animate-pulse"></div>
+           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-purple-600/20 blur-[50px] -z-10 rounded-full animate-pulse"></div>
         </div>
         {/* --- FIM DO GIF ESTRATÉGICO --- */}
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {PRODUCTS.map((product, index) => (
-            <div key={index} className="bg-white p-3 pb-8 rounded-lg shadow-sm border border-gray-200 hover:border-brand-pink transition-all hover:shadow-md group relative overflow-visible">
+            <div key={index} className="bg-white p-3 pb-8 rounded-lg shadow-sm border border-gray-200 hover:border-black transition-all hover:shadow-xl group relative overflow-visible">
               
-              {/* Dynamic Badge - Red Sticker Style */}
+              {/* Dynamic Badge - Black Friday Style */}
               {product.badge ? (
-                <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-extrabold w-12 h-12 flex items-center justify-center text-center rounded-full shadow-md z-30 animate-pulse leading-tight border-2 border-white">
+                <div className="absolute -top-3 -right-3 bg-black text-yellow-400 text-[9px] font-black w-14 h-14 flex items-center justify-center text-center rounded-full shadow-lg z-30 animate-pulse leading-tight border-2 border-white transform rotate-12">
                   {product.badge.replace(' ', '\n')}
                 </div>
               ) : (
@@ -246,7 +244,7 @@ function App() {
                    <span className="text-xs text-gray-400 line-through">R$ 15,00</span>
                 </div>
                 <div className="flex flex-col items-end">
-                   <span className="text-[10px] text-brand-pink font-bold">Custo</span>
+                   <span className="text-[10px] text-brand-pink font-bold">Custo Black</span>
                    <span className="text-lg font-extrabold text-brand-pink leading-none">R$ {product.cost}</span>
                 </div>
               </div>
@@ -255,7 +253,7 @@ function App() {
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row gap-4">
-            <div className="flex-1 bg-brand-light p-4 rounded-lg flex items-start space-x-3">
+            <div className="flex-1 bg-brand-light p-4 rounded-lg flex items-start space-x-3 border border-pink-100">
                 <Lock className="w-6 h-6 text-brand-pink flex-shrink-0 mt-1" />
                 <div>
                     <h4 className="font-bold text-brand-dark">Lista Verificada</h4>
@@ -333,55 +331,58 @@ function App() {
       </section>
 
       {/* --- NOVO BLOCO: BÔNUS (The Stack) --- */}
-      <section className="py-12 px-4 bg-gray-50 border-t border-b border-gray-200">
-         <div className="max-w-3xl mx-auto">
+      <section className="py-12 px-4 bg-gray-900 border-t border-b border-gray-800 text-white relative overflow-hidden">
+         {/* Decoration */}
+         <div className="absolute top-0 right-0 w-64 h-64 bg-brand-pink/20 blur-[100px] pointer-events-none"></div>
+
+         <div className="max-w-3xl mx-auto relative z-10">
             <div className="text-center mb-8">
-               <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">
-                  Somente Hoje
+               <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-2 inline-block animate-pulse">
+                  Exclusivo Black Friday
                </span>
-               <h3 className="font-heading font-extrabold text-2xl md:text-3xl text-gray-800">
+               <h3 className="font-heading font-extrabold text-2xl md:text-3xl text-white">
                   Leve <span className="text-brand-pink">3 Presentes</span> de Graça
                </h3>
-               <p className="text-gray-600 mt-2">Eu preparei esses manuais para você não ter medo de começar.</p>
+               <p className="text-gray-400 mt-2">Só nessa oferta de Black Friday eu liberei tudo isso:</p>
             </div>
 
             <div className="space-y-4">
                {/* Bonus 1 */}
-               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
+               <div className="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
                   <div className="absolute top-0 right-0 bg-brand-pink text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
-                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
                      <Smartphone className="text-brand-pink w-6 h-6" />
                   </div>
                   <div>
-                     <h4 className="font-bold text-gray-800 text-sm">Scripts de Venda Prontos</h4>
-                     <p className="text-xs text-gray-500">Copie e cole minhas mensagens no Zap para vender sem ser chata.</p>
-                     <p className="text-[10px] text-gray-400 mt-1 line-through">Valor: R$ 29,90</p>
+                     <h4 className="font-bold text-white text-sm">Scripts de Venda Prontos</h4>
+                     <p className="text-xs text-gray-400">Copie e cole minhas mensagens no Zap para vender sem ser chata.</p>
+                     <p className="text-[10px] text-gray-500 mt-1 line-through">Valor: R$ 29,90</p>
                   </div>
                </div>
 
                {/* Bonus 2 */}
-               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
+               <div className="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
                    <div className="absolute top-0 right-0 bg-brand-pink text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
-                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                     <Calculator className="text-blue-600 w-6 h-6" />
+                   <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
+                     <Calculator className="text-blue-400 w-6 h-6" />
                   </div>
                   <div>
-                     <h4 className="font-bold text-gray-800 text-sm">Calculadora de Lucro</h4>
-                     <p className="text-xs text-gray-500">Saiba exatamente por quanto vender cada peça para ter lucro.</p>
-                     <p className="text-[10px] text-gray-400 mt-1 line-through">Valor: R$ 19,90</p>
+                     <h4 className="font-bold text-white text-sm">Calculadora de Lucro</h4>
+                     <p className="text-xs text-gray-400">Saiba exatamente por quanto vender cada peça para ter lucro.</p>
+                     <p className="text-[10px] text-gray-500 mt-1 line-through">Valor: R$ 19,90</p>
                   </div>
                </div>
 
                {/* Bonus 3 */}
-               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
+               <div className="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
                   <div className="absolute top-0 right-0 bg-brand-pink text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
-                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                     <BookOpen className="text-yellow-600 w-6 h-6" />
+                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
+                     <BookOpen className="text-yellow-400 w-6 h-6" />
                   </div>
                   <div>
-                     <h4 className="font-bold text-gray-800 text-sm">Guia: Perdendo a Vergonha</h4>
-                     <p className="text-xs text-gray-500">Técnicas simples para oferecer seus produtos com confiança.</p>
-                     <p className="text-[10px] text-gray-400 mt-1 line-through">Valor: R$ 27,00</p>
+                     <h4 className="font-bold text-white text-sm">Guia: Perdendo a Vergonha</h4>
+                     <p className="text-xs text-gray-400">Técnicas simples para oferecer seus produtos com confiança.</p>
+                     <p className="text-[10px] text-gray-500 mt-1 line-through">Valor: R$ 27,00</p>
                   </div>
                </div>
             </div>
@@ -389,29 +390,37 @@ function App() {
       </section>
 
       {/* 5. OFFER + URGENCY */}
-      <section id="oferta" className="py-12 px-4 bg-gradient-to-b from-gray-900 to-gray-800 text-white text-center rounded-t-[3rem] relative shadow-[0_-10px_40px_rgba(0,0,0,0.3)]">
+      <section id="oferta" className="py-12 px-4 bg-gradient-to-b from-black to-gray-900 text-white text-center rounded-t-[3rem] relative shadow-[0_-10px_40px_rgba(0,0,0,0.3)] mt-[-2rem]">
         <div className="max-w-2xl mx-auto">
-          <h3 className="font-hand text-4xl text-brand-pink mb-2 animate-pulse">
+           <div className="flex justify-center mb-4">
+              <span className="bg-yellow-400 text-black px-4 py-1 rounded-full font-black uppercase text-sm animate-bounce flex items-center gap-2">
+                 <Flame className="w-4 h-4" /> Oferta Black
+              </span>
+           </div>
+          <h3 className="font-hand text-4xl text-brand-pink mb-2">
             É agora ou nunca, minha flor!
           </h3>
           <p className="text-gray-300 mb-6">
-            Essa oferta só vale enquanto o botão estiver rosa. Eu não posso garantir esse preço amanhã.
+            Essa oferta de <strong className="text-white">Black November</strong> pode sair do ar a qualquer momento.
           </p>
 
-          <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 inline-block w-full max-w-md mb-8">
-            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Cupom Aplicado: <span className="text-green-400 font-bold">DESCONTOLOJADE10</span></p>
+          <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 inline-block w-full max-w-md mb-8 relative overflow-hidden">
+             {/* Ribbon */}
+             <div className="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg">90% OFF</div>
+
+            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Cupom Black: <span className="text-yellow-400 font-bold">DESCONTOLOJADE10</span></p>
             
             {/* STACK RECAP */}
-            <div className="text-left bg-black/20 p-3 rounded-lg mb-4 text-xs space-y-1 text-gray-300">
-               <div className="flex justify-between"><span>✅ Lista de Fornecedores</span> <span className="line-through opacity-50">R$ 49,90</span></div>
+            <div className="text-left bg-black/40 p-3 rounded-lg mb-4 text-xs space-y-1 text-gray-300 border border-white/5">
+               <div className="flex justify-between"><span>✅ Lista de Fornecedores</span> <span className="line-through opacity-50">R$ 7,99</span></div>
                <div className="flex justify-between"><span>🎁 Bônus 1: Scripts de Venda</span> <span className="text-green-400">GRÁTIS</span></div>
                <div className="flex justify-between"><span>🎁 Bônus 2: Calculadora</span> <span className="text-green-400">GRÁTIS</span></div>
                <div className="flex justify-between"><span>🎁 Bônus 3: Guia Vergonha Zero</span> <span className="text-green-400">GRÁTIS</span></div>
             </div>
 
             <div className="flex items-center justify-center space-x-4 mb-4">
-              <span className="text-2xl text-gray-500 line-through font-medium">R$ 97,90</span>
-              <span className="text-6xl font-extrabold text-brand-pink drop-shadow-lg">R$ 17,99</span>
+              <span className="text-2xl text-gray-500 line-through font-medium">R$ 7,99</span>
+              <span className="text-6xl font-extrabold text-brand-pink drop-shadow-lg">R$ 3,99</span>
             </div>
             <CountdownTimer />
           </div>
@@ -421,7 +430,7 @@ function App() {
             className="block w-full max-w-md mx-auto bg-[#25D366] hover:bg-green-600 text-white font-bold text-xl py-5 px-8 rounded-full shadow-[0_4px_15px_rgba(37,211,102,0.6)] transition-transform transform hover:scale-105 hover:-translate-y-1 animate-pulse-fast mb-4 flex items-center justify-center gap-3"
           >
              <MessageCircle className="w-8 h-8" fill="white" />
-             RECEBER TUDO NO MEU ZAP
+             GARANTIR OFERTA NO WHATSAPP
           </a>
           
           <div className="flex items-center justify-center space-x-4 text-xs text-gray-400">
@@ -441,7 +450,7 @@ function App() {
             </div>
             <h4 className="text-center font-bold text-xl mt-4 mb-2 text-brand-dark">Eu confio tanto que assumo o risco</h4>
             <p className="text-center text-gray-700 mb-4">
-              Se você comprar a lista, ligar para os fornecedores e achar que não valeu a pena, eu devolvo seus <strong>R$ 17,99</strong> NA HORA.
+              Se você comprar a lista, ligar para os fornecedores e achar que não valeu a pena, eu devolvo seus <strong>R$ 3,99</strong> NA HORA.
             </p>
             <p className="text-center text-xs text-gray-500 mt-2">É sério. Eu não brinco com o sonho de ninguém.</p>
           </div>
@@ -491,42 +500,19 @@ function App() {
              href="https://wa.me/5511980219977?text=Oi,%20tenho%20uma%20dúvida%20sobre%20a%20lista%20de%20fornecedores"
              target="_blank"
              rel="noopener noreferrer"
-             className="inline-flex items-center justify-center gap-2 text-green-700 bg-white px-6 py-3 rounded-full border border-green-200 shadow-sm hover:bg-green-50 hover:scale-105 transition-all font-bold text-sm"
+             className="inline-flex items-center justify-center gap-2 text-green-700 font-bold hover:text-green-800 transition-colors"
            >
-             <MessageCircle size={20} className="fill-green-100" />
-             Falar com Suporte: (11) 98021-9977
+             <MessageCircle size={18} />
+             Chamar no WhatsApp
            </a>
         </div>
       </section>
 
-      {/* 8. FOOTER PROOF */}
-      <footer className="bg-gray-100 pt-12 pb-24 md:pb-12 px-4 border-t border-gray-200">
-        <div className="max-w-4xl mx-auto">
-          
-          <h4 className="text-center font-bold text-gray-500 mb-6 uppercase text-sm tracking-widest">Mais gente chegando agora:</h4>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mb-8 opacity-75">
-             {/* Generating random avatars for extra social proof feeling */}
-             {Array.from({ length: 10 }).map((_, i) => (
-               <div key={i} className="flex items-center space-x-2 bg-white p-2 rounded border border-gray-200">
-                 <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i + 50}`} className="w-8 h-8 rounded-full" alt="Avatar" />
-                 <div className="flex flex-col">
-                   <span className="text-[10px] font-bold text-gray-600">Comprou agora</span>
-                   <span className="text-[8px] text-green-500">Verificado</span>
-                 </div>
-               </div>
-             ))}
-          </div>
-          
-          <div className="text-center text-xs text-gray-400 space-y-2">
-            <p>© 2025 Lista de Fornecedores Oficial.</p>
-            <p>Este site não tem vínculo com o Facebook ou Instagram.</p>
-            <p className="max-w-md mx-auto">
-              Os resultados podem variar de pessoa para pessoa. O sucesso depende da sua dedicação. Mas com fornecedor barato, metade do caminho já tá andado!
-            </p>
-          </div>
-        </div>
+      <footer className="bg-gray-900 text-white py-8 text-center text-xs">
+        <p className="mb-2">© 2024 Sônia Prado - Todos os direitos reservados.</p>
+        <p className="text-gray-500">Este site não faz parte do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.</p>
       </footer>
-
+      
       <StickyCTA />
     </div>
   );
