@@ -197,7 +197,7 @@ function App() {
                <img 
                  src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmh0Y3Uxbm53dG93NDI3MnJjZzgwbHFldXI3cjJhMzBydGJpd2c2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Wfkq7BCVzOUwu1mqD/giphy.gif" 
                  alt="Unboxing fornecedor maquiagem" 
-                 className="w-full h-auto object-cover blur-[2px] brightness-[0.9] contrast-110 group-hover:blur-0 group-hover:brightness-100 transition-all duration-700"
+                 className="w-full h-auto object-cover blur-[5px] brightness-[0.9] contrast-110 transition-all duration-700"
                />
 
                {/* Caption overlay */}
