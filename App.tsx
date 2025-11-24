@@ -7,7 +7,7 @@ import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
 import { SalesNotification } from './components/SalesNotification';
 import { CouponPopup } from './components/CouponPopup';
-import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen, Gift, Smartphone, Calculator, BookOpen, Flame } from 'lucide-react';
+import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen, Gift, Smartphone, Calculator, BookOpen, Flame, Star } from 'lucide-react';
 
 function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -406,16 +406,69 @@ function App() {
 
           <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 inline-block w-full max-w-md mb-8 relative overflow-hidden">
              {/* Ribbon */}
-             <div className="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg">90% OFF</div>
+             <div className="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg z-20">90% OFF</div>
 
             <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Cupom Black: <span className="text-yellow-400 font-bold">DESCONTOLOJADE10</span></p>
             
-            {/* STACK RECAP */}
-            <div className="text-left bg-black/40 p-3 rounded-lg mb-4 text-xs space-y-1 text-gray-300 border border-white/5">
-               <div className="flex justify-between"><span>✅ Lista de Fornecedores</span> <span className="line-through opacity-50">R$ 7,99</span></div>
-               <div className="flex justify-between"><span>🎁 Bônus 1: Scripts de Venda</span> <span className="text-green-400">GRÁTIS</span></div>
-               <div className="flex justify-between"><span>🎁 Bônus 2: Calculadora</span> <span className="text-green-400">GRÁTIS</span></div>
-               <div className="flex justify-between"><span>🎁 Bônus 3: Guia Vergonha Zero</span> <span className="text-green-400">GRÁTIS</span></div>
+            {/* STACK RECAP (NEW VISUAL) */}
+            <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl border border-white/10 p-4 mb-6 text-left shadow-inner">
+               <div className="flex items-center gap-2 mb-3 border-b border-white/10 pb-2">
+                  <span className="bg-green-500 w-2 h-2 rounded-full animate-pulse"></span>
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Resumo do Pacote</p>
+               </div>
+
+               <div className="space-y-3">
+                  {/* Item Principal */}
+                  <div className="flex justify-between items-center group">
+                     <div className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-brand-pink mt-0.5 flex-shrink-0" />
+                        <div>
+                           <p className="text-sm font-bold text-white leading-tight">Lista de Fornecedores 2.0</p>
+                           <p className="text-[10px] text-gray-400">Acesso Vitalício + Atualizações</p>
+                        </div>
+                     </div>
+                     <div className="text-right flex-shrink-0">
+                        <p className="text-[10px] text-red-400 line-through">R$ 7,99</p>
+                        <p className="text-sm font-bold text-green-400">R$ 3,99</p>
+                     </div>
+                  </div>
+
+                  {/* Bônus 1 */}
+                  <div className="flex justify-between items-center opacity-80">
+                     <div className="flex items-center gap-2">
+                        <Gift className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                        <p className="text-xs text-gray-300">Bônus: Scripts de Venda</p>
+                     </div>
+                     <span className="bg-green-500/20 text-green-400 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-500/30">GRÁTIS</span>
+                  </div>
+
+                  {/* Bônus 2 */}
+                  <div className="flex justify-between items-center opacity-80">
+                     <div className="flex items-center gap-2">
+                        <Gift className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                        <p className="text-xs text-gray-300">Bônus: Calculadora de Lucro</p>
+                     </div>
+                     <span className="bg-green-500/20 text-green-400 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-500/30">GRÁTIS</span>
+                  </div>
+
+                   {/* Bônus 3 */}
+                  <div className="flex justify-between items-center opacity-80">
+                     <div className="flex items-center gap-2">
+                        <Gift className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                        <p className="text-xs text-gray-300">Bônus: Guia Vergonha Zero</p>
+                     </div>
+                     <span className="bg-green-500/20 text-green-400 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-500/30">GRÁTIS</span>
+                  </div>
+               </div>
+
+               {/* Total Line */}
+               <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
+                  <p className="text-xs text-gray-400">Valor Total:</p>
+                  <div className="text-right">
+                     <p className="text-xl font-black text-brand-pink leading-none">R$ 3,99</p>
+                     <p className="text-[9px] text-gray-500">ou 1x no cartão</p>
+                  </div>
+               </div>
             </div>
 
             <div className="flex items-center justify-center space-x-4 mb-4">
