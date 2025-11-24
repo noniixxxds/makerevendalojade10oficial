@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, CHECKOUT_LINK } from './constants';
 import { CountdownTimer } from './components/CountdownTimer';
@@ -428,7 +426,7 @@ function App() {
                         </div>
                      </div>
                      <div className="text-right flex-shrink-0">
-                        <p className="text-[10px] text-red-400 line-through">R$ 7,99</p>
+                        <p className="text-[10px] text-red-400 line-through">R$ 17,99</p>
                         <p className="text-sm font-bold text-green-400">R$ 3,99</p>
                      </div>
                   </div>
@@ -472,7 +470,7 @@ function App() {
             </div>
 
             <div className="flex items-center justify-center space-x-4 mb-4">
-              <span className="text-2xl text-gray-500 line-through font-medium">R$ 7,99</span>
+              <span className="text-2xl text-gray-500 line-through font-medium">R$ 17,99</span>
               <span className="text-6xl font-extrabold text-brand-pink drop-shadow-lg">R$ 3,99</span>
             </div>
             <CountdownTimer />
