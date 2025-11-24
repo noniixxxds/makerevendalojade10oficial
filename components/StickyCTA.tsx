@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { CHECKOUT_LINK } from '../constants';
+import { MessageCircle } from 'lucide-react';
 
 export const StickyCTA = () => {
   return (
@@ -10,7 +11,8 @@ export const StickyCTA = () => {
          <span className="text-xl font-bold text-brand-pink">Por R$ 17,99</span>
          <span className="text-[10px] text-green-600 font-extrabold flex items-center animate-pulse"><span className="mr-1">📲</span> Chega no Zap</span>
       </div>
-      <a href={CHECKOUT_LINK} className="bg-brand-pink text-white font-bold py-3 px-6 rounded-full shadow-lg animate-pulse">
+      <a href={CHECKOUT_LINK} className="bg-[#25D366] hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg animate-pulse flex items-center gap-2">
+        <MessageCircle size={20} fill="white" />
         QUERO AGORA
       </a>
     </div>

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Gift, Copy, X, Check } from 'lucide-react';
 import { CHECKOUT_LINK } from '../constants';
@@ -7,10 +8,10 @@ export const CouponPopup = () => {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    // Aparece após 8 segundos
+    // Aparece após 15 segundos (para dar tempo do Popup de Suporte aparecer antes)
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 8000);
+    }, 15000);
 
     return () => clearTimeout(timer);
   }, []);

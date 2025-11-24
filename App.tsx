@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, CHECKOUT_LINK } from './constants';
 import { CountdownTimer } from './components/CountdownTimer';
@@ -5,7 +6,8 @@ import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
 import { SalesNotification } from './components/SalesNotification';
 import { CouponPopup } from './components/CouponPopup';
-import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen } from 'lucide-react';
+import { SupportPopup } from './components/SupportPopup';
+import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen, Gift, Smartphone, Calculator, BookOpen } from 'lucide-react';
 
 function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -17,6 +19,7 @@ function App() {
   return (
     <div className="font-sans text-gray-800 bg-gray-50 pb-20 md:pb-0">
       <SalesNotification />
+      <SupportPopup />
       <CouponPopup />
       
       {/* 1. HEADLINE + HERO */}
@@ -247,6 +250,122 @@ function App() {
         </div>
       </section>
 
+      {/* 4.5 SUPORTE ANTES DO ROADMAP */}
+      <section className="bg-[#f0fdf4] border-y border-green-100 py-8 px-4">
+         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 text-center md:text-left">
+            <div className="flex flex-col md:flex-row items-center gap-3">
+               <div className="bg-white p-3 rounded-full shadow-sm border border-green-200 animate-pulse">
+                  <Headset className="w-6 h-6 text-green-600" />
+               </div>
+               <div>
+                  <h4 className="font-heading font-bold text-green-900 text-lg">Precisa tirar alguma dúvida?</h4>
+                  <p className="text-sm text-green-700">Chame nosso suporte oficial antes de comprar.</p>
+               </div>
+            </div>
+            
+            <a 
+               href="https://wa.me/5511980219977?text=Oi,%20tenho%20uma%20dúvida%20sobre%20a%20lista"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="bg-[#25D366] hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-green-200 transform transition hover:scale-105 flex items-center gap-2"
+            >
+               <MessageCircle size={20} fill="white" />
+               CLIQUE AQUI
+            </a>
+         </div>
+      </section>
+
+      {/* --- NOVO BLOCO: PASSO A PASSO (Roadmap) --- */}
+      <section className="py-10 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+           <h3 className="font-heading font-extrabold text-center text-2xl text-gray-800 mb-8">
+             Como funciona? <span className="text-brand-pink">É simples assim:</span>
+           </h3>
+           
+           <div className="flex flex-col md:flex-row justify-center items-center gap-6 relative">
+              {/* Linha Conectora (Desktop) */}
+              <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gray-100 -z-0"></div>
+
+              {/* Passo 1 */}
+              <div className="relative z-10 flex flex-col items-center text-center max-w-[200px]">
+                 <div className="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-3 border-4 border-white">1</div>
+                 <h4 className="font-bold text-gray-800 mb-1">Receba no Zap</h4>
+                 <p className="text-xs text-gray-500">O acesso chega automaticamente no seu WhatsApp e E-mail.</p>
+              </div>
+
+              {/* Passo 2 */}
+              <div className="relative z-10 flex flex-col items-center text-center max-w-[200px]">
+                 <div className="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-3 border-4 border-white">2</div>
+                 <h4 className="font-bold text-gray-800 mb-1">Chame os Lojistas</h4>
+                 <p className="text-xs text-gray-500">Escolha os produtos de R$ 2,00 e faça seu pedido pelo celular.</p>
+              </div>
+
+              {/* Passo 3 */}
+              <div className="relative z-10 flex flex-col items-center text-center max-w-[200px]">
+                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-3 border-4 border-white">3</div>
+                 <h4 className="font-bold text-gray-800 mb-1">Lucre 400%</h4>
+                 <p className="text-xs text-gray-500">Venda para amigas e vizinhas com lucro absurdo.</p>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      {/* --- NOVO BLOCO: BÔNUS (The Stack) --- */}
+      <section className="py-12 px-4 bg-gray-50 border-t border-b border-gray-200">
+         <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+               <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+                  Somente Hoje
+               </span>
+               <h3 className="font-heading font-extrabold text-2xl md:text-3xl text-gray-800">
+                  Leve <span className="text-brand-pink">3 Presentes</span> de Graça
+               </h3>
+               <p className="text-gray-600 mt-2">Eu preparei esses manuais para você não ter medo de começar.</p>
+            </div>
+
+            <div className="space-y-4">
+               {/* Bonus 1 */}
+               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
+                  <div className="absolute top-0 right-0 bg-brand-pink text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
+                  <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
+                     <Smartphone className="text-brand-pink w-6 h-6" />
+                  </div>
+                  <div>
+                     <h4 className="font-bold text-gray-800 text-sm">Scripts de Venda Prontos</h4>
+                     <p className="text-xs text-gray-500">Copie e cole minhas mensagens no Zap para vender sem ser chata.</p>
+                     <p className="text-[10px] text-gray-400 mt-1 line-through">Valor: R$ 29,90</p>
+                  </div>
+               </div>
+
+               {/* Bonus 2 */}
+               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
+                   <div className="absolute top-0 right-0 bg-brand-pink text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
+                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                     <Calculator className="text-blue-600 w-6 h-6" />
+                  </div>
+                  <div>
+                     <h4 className="font-bold text-gray-800 text-sm">Calculadora de Lucro</h4>
+                     <p className="text-xs text-gray-500">Saiba exatamente por quanto vender cada peça para ter lucro.</p>
+                     <p className="text-[10px] text-gray-400 mt-1 line-through">Valor: R$ 19,90</p>
+                  </div>
+               </div>
+
+               {/* Bonus 3 */}
+               <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
+                  <div className="absolute top-0 right-0 bg-brand-pink text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
+                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                     <BookOpen className="text-yellow-600 w-6 h-6" />
+                  </div>
+                  <div>
+                     <h4 className="font-bold text-gray-800 text-sm">Guia: Perdendo a Vergonha</h4>
+                     <p className="text-xs text-gray-500">Técnicas simples para oferecer seus produtos com confiança.</p>
+                     <p className="text-[10px] text-gray-400 mt-1 line-through">Valor: R$ 27,00</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
       {/* 5. OFFER + URGENCY */}
       <section id="oferta" className="py-12 px-4 bg-gradient-to-b from-gray-900 to-gray-800 text-white text-center rounded-t-[3rem] relative shadow-[0_-10px_40px_rgba(0,0,0,0.3)]">
         <div className="max-w-2xl mx-auto">
@@ -259,8 +378,17 @@ function App() {
 
           <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 inline-block w-full max-w-md mb-8">
             <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Cupom Aplicado: <span className="text-green-400 font-bold">DESCONTOLOJADE10</span></p>
+            
+            {/* STACK RECAP */}
+            <div className="text-left bg-black/20 p-3 rounded-lg mb-4 text-xs space-y-1 text-gray-300">
+               <div className="flex justify-between"><span>✅ Lista de Fornecedores</span> <span className="line-through opacity-50">R$ 49,90</span></div>
+               <div className="flex justify-between"><span>🎁 Bônus 1: Scripts de Venda</span> <span className="text-green-400">GRÁTIS</span></div>
+               <div className="flex justify-between"><span>🎁 Bônus 2: Calculadora</span> <span className="text-green-400">GRÁTIS</span></div>
+               <div className="flex justify-between"><span>🎁 Bônus 3: Guia Vergonha Zero</span> <span className="text-green-400">GRÁTIS</span></div>
+            </div>
+
             <div className="flex items-center justify-center space-x-4 mb-4">
-              <span className="text-2xl text-gray-500 line-through font-medium">R$ 49,90</span>
+              <span className="text-2xl text-gray-500 line-through font-medium">R$ 97,90</span>
               <span className="text-6xl font-extrabold text-brand-pink drop-shadow-lg">R$ 17,99</span>
             </div>
             <CountdownTimer />
@@ -268,9 +396,10 @@ function App() {
 
           <a 
             href={CHECKOUT_LINK}
-            className="block w-full max-w-md mx-auto bg-brand-pink hover:bg-pink-600 text-white font-bold text-xl py-5 px-8 rounded-full shadow-[0_0_20px_rgba(255,0,127,0.6)] transition-transform transform hover:scale-105 hover:-translate-y-1 animate-pulse-fast mb-4"
+            className="block w-full max-w-md mx-auto bg-[#25D366] hover:bg-green-600 text-white font-bold text-xl py-5 px-8 rounded-full shadow-[0_4px_15px_rgba(37,211,102,0.6)] transition-transform transform hover:scale-105 hover:-translate-y-1 animate-pulse-fast mb-4 flex items-center justify-center gap-3"
           >
-             RECEBER NO MEU WHATSAPP
+             <MessageCircle className="w-8 h-8" fill="white" />
+             RECEBER TUDO NO MEU ZAP
           </a>
           
           <div className="flex items-center justify-center space-x-4 text-xs text-gray-400">
@@ -329,11 +458,47 @@ function App() {
             </div>
           ))}
         </div>
+        
+        {/* Support Block in FAQ */}
+        <div className="mt-8 p-6 bg-[#f0fdf4] rounded-2xl border border-green-100 text-center shadow-sm">
+           <p className="text-gray-700 font-medium mb-4">
+             Ainda está com o coração apertado ou com dúvida? <br/>
+             <span className="text-sm text-gray-500">Fica tranquila, eu mesma te respondo no Zap:</span>
+           </p>
+           <a 
+             href="https://wa.me/5511980219977?text=Oi,%20tenho%20uma%20dúvida%20sobre%20a%20lista%20de%20fornecedores"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="inline-flex items-center justify-center gap-2 text-green-700 bg-white px-6 py-3 rounded-full border border-green-200 shadow-sm hover:bg-green-50 hover:scale-105 transition-all font-bold text-sm"
+           >
+             <MessageCircle size={20} className="fill-green-100" />
+             Falar com Suporte: (11) 98021-9977
+           </a>
+        </div>
       </section>
 
       {/* 8. FOOTER PROOF */}
       <footer className="bg-gray-100 pt-12 pb-24 md:pb-12 px-4 border-t border-gray-200">
         <div className="max-w-4xl mx-auto">
+          
+          {/* Footer Support */}
+          <div className="flex flex-col items-center justify-center mb-10 pb-10 border-b border-gray-300">
+             <div className="flex items-center gap-2 text-gray-500 mb-3">
+               <Headset size={24} />
+               <span className="font-bold text-lg">Precisa de ajuda com seu pedido?</span>
+             </div>
+             <p className="text-gray-400 text-sm mb-4 max-w-xs text-center">
+               Se você comprou e não chegou, ou se o cartão não tá passando, me chama que eu resolvo na hora.
+             </p>
+             <a 
+               href="https://wa.me/5511980219977" 
+               className="text-green-600 font-bold bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm flex items-center gap-2 hover:bg-green-50 transition-colors"
+             >
+               <MessageCircle size={18} />
+               Suporte Oficial: (11) 98021-9977
+             </a>
+          </div>
+
           <h4 className="text-center font-bold text-gray-500 mb-6 uppercase text-sm tracking-widest">Mais gente chegando agora:</h4>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mb-8 opacity-75">
              {/* Generating random avatars for extra social proof feeling */}
