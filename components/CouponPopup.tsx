@@ -8,7 +8,9 @@ export const CouponPopup = () => {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    // Aparece após 15 segundos (para dar tempo do Popup de Suporte aparecer antes)
+    // Popup de Suporte aparece aos 4s.
+    // Definimos aqui 15s para garantir um intervalo de 11s entre os popups.
+    // Isso evita que o usuário se sinta bombardeado.
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 15000);
