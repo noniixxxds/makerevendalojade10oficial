@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, CHECKOUT_LINK } from './constants';
 import { CountdownTimer } from './components/CountdownTimer';
 import { TestimonialCard } from './components/TestimonialCard';
@@ -11,6 +10,27 @@ import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageC
 
 function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  
+  // Controle de Estado dos Popups
+  const [isSupportOpen, setIsSupportOpen] = useState(false);
+  const [isCouponOpen, setIsCouponOpen] = useState(false);
+
+  useEffect(() => {
+    // 5 segundos para aparecer o primeiro popup (Suporte) após carregamento
+    const timer = setTimeout(() => {
+      setIsSupportOpen(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleCloseSupport = () => {
+    setIsSupportOpen(false);
+    // Só inicia a contagem do segundo popup (Cupom) após o primeiro ser fechado
+    // 9 segundos de intervalo conforme solicitado
+    setTimeout(() => {
+      setIsCouponOpen(true);
+    }, 9000);
+  };
 
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -19,8 +39,10 @@ function App() {
   return (
     <div className="font-sans text-gray-800 bg-gray-50 pb-20 md:pb-0">
       <SalesNotification />
-      <SupportPopup />
-      <CouponPopup />
+      
+      {/* Popups controlados pelo App */}
+      <SupportPopup isOpen={isSupportOpen} onClose={handleCloseSupport} />
+      <CouponPopup isOpen={isCouponOpen} onClose={() => setIsCouponOpen(false)} />
       
       {/* 1. HEADLINE + HERO */}
       <header className="bg-gradient-to-b from-brand-pink to-pink-700 text-white text-center pt-8 pb-12 px-4 relative overflow-hidden">
@@ -481,24 +503,6 @@ function App() {
       <footer className="bg-gray-100 pt-12 pb-24 md:pb-12 px-4 border-t border-gray-200">
         <div className="max-w-4xl mx-auto">
           
-          {/* Footer Support */}
-          <div className="flex flex-col items-center justify-center mb-10 pb-10 border-b border-gray-300">
-             <div className="flex items-center gap-2 text-gray-500 mb-3">
-               <Headset size={24} />
-               <span className="font-bold text-lg">Precisa de ajuda com seu pedido?</span>
-             </div>
-             <p className="text-gray-400 text-sm mb-4 max-w-xs text-center">
-               Se você comprou e não chegou, ou se o cartão não tá passando, me chama que eu resolvo na hora.
-             </p>
-             <a 
-               href="https://wa.me/5511980219977" 
-               className="text-green-600 font-bold bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm flex items-center gap-2 hover:bg-green-50 transition-colors"
-             >
-               <MessageCircle size={18} />
-               Suporte Oficial: (11) 98021-9977
-             </a>
-          </div>
-
           <h4 className="text-center font-bold text-gray-500 mb-6 uppercase text-sm tracking-widest">Mais gente chegando agora:</h4>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-2 mb-8 opacity-75">
              {/* Generating random avatars for extra social proof feeling */}

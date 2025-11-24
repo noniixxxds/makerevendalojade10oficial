@@ -1,19 +1,12 @@
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { MessageCircle, X, PackageCheck } from 'lucide-react';
 
-export const SupportPopup = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface SupportPopupProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
 
-  useEffect(() => {
-    // Aparece rápido (4 segundos) para tirar a dúvida de entrega logo de cara
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 4000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
+export const SupportPopup: React.FC<SupportPopupProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
@@ -22,7 +15,7 @@ export const SupportPopup = () => {
         
         {/* Close Button */}
         <button 
-          onClick={() => setIsOpen(false)} 
+          onClick={onClose} 
           className="absolute top-3 right-3 text-gray-300 hover:text-gray-500 p-1 hover:bg-gray-100 rounded-full transition-colors"
         >
           <X size={20} />
@@ -57,7 +50,7 @@ export const SupportPopup = () => {
         
         <button 
           className="text-xs text-gray-400 hover:text-gray-600 underline transition-colors"
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
         >
            Não tenho dúvidas, quero comprar agora.
         </button>

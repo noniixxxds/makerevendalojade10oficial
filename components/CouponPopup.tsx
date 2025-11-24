@@ -1,22 +1,14 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Gift, Copy, X, Check } from 'lucide-react';
 import { CHECKOUT_LINK } from '../constants';
 
-export const CouponPopup = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface CouponPopupProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const CouponPopup: React.FC<CouponPopupProps> = ({ isOpen, onClose }) => {
   const [copied, setCopied] = useState(false);
-
-  useEffect(() => {
-    // Popup de Suporte aparece aos 4s.
-    // Definimos aqui 15s para garantir um intervalo de 11s entre os popups.
-    // Isso evita que o usuário se sinta bombardeado.
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 15000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const copyCoupon = () => {
     navigator.clipboard.writeText("DESCONTOLOJADE10");
@@ -32,7 +24,7 @@ export const CouponPopup = () => {
         
         {/* Close Button */}
         <button 
-          onClick={() => setIsOpen(false)} 
+          onClick={onClose} 
           className="absolute top-3 right-3 text-gray-300 hover:text-gray-500 p-1 hover:bg-gray-100 rounded-full transition-colors"
         >
           <X size={20} />
@@ -101,7 +93,7 @@ export const CouponPopup = () => {
         
         <p 
           className="text-[10px] text-gray-400 mt-3 cursor-pointer hover:underline hover:text-gray-600 transition-colors"
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
         >
            Não quero desconto, prefiro pagar o preço normal.
         </p>
