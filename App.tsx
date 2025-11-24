@@ -26,47 +26,47 @@ function App() {
   };
 
   return (
-    <div className="font-sans text-gray-800 bg-gray-50 pb-20 md:pb-0">
+    <div className="font-sans text-gray-800 bg-[#fff0f5] pb-20 md:pb-0">
       <SalesNotification />
       
       {/* Popups controlados pelo App */}
       <CouponPopup isOpen={isCouponOpen} onClose={() => setIsCouponOpen(false)} />
       
-      {/* FAIXA BLACK FRIDAY */}
-      <div className="bg-black text-yellow-400 text-center py-2 px-2 text-[10px] md:text-xs font-black uppercase tracking-widest animate-pulse sticky top-0 z-40 border-b border-yellow-600/50">
+      {/* FAIXA TOPO */}
+      <div className="bg-brand-pink text-white text-center py-2 px-2 text-[10px] md:text-xs font-black uppercase tracking-widest animate-pulse sticky top-0 z-40 border-b border-pink-700 shadow-md">
          🔥 Black November: O preço vai subir a qualquer momento! 🔥
       </div>
 
-      {/* 1. HEADLINE + HERO (BLACK THEME) */}
-      <header className="bg-gradient-to-b from-gray-900 via-purple-900 to-brand-pink text-white text-center pt-8 pb-12 px-4 relative overflow-hidden">
+      {/* 1. HEADLINE + HERO (PINK THEME) */}
+      <header className="bg-gradient-to-b from-brand-pink via-purple-600 to-[#fff0f5] text-white text-center pt-8 pb-12 px-4 relative overflow-hidden">
         <div className="max-w-2xl mx-auto relative z-10">
-          <div className="inline-block bg-black border border-yellow-400 text-yellow-400 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-6 shadow-[0_0_15px_rgba(250,204,21,0.5)] transform -rotate-1">
+          <div className="inline-block bg-white/20 backdrop-blur-md border border-white/40 text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider mb-6 shadow-[0_0_15px_rgba(255,255,255,0.3)] transform -rotate-1">
              ⚡ OFERTA ANTECIPADA DE BLACK FRIDAY
           </div>
-          <h1 className="font-heading font-extrabold text-3xl md:text-5xl leading-tight mb-4 drop-shadow-xl">
-            "Descubra a Lista Secreta de Fornecedores que as Donas de Loja de R$10 <span className="bg-yellow-400 text-black px-1 italic">Escondem de Você</span>"
+          <h1 className="font-heading font-extrabold text-3xl md:text-5xl leading-tight mb-4 drop-shadow-md text-white">
+            "Descubra a Lista Secreta de Fornecedores que as Donas de Loja de R$10 <span className="bg-white text-brand-pink px-1 italic transform -skew-x-12 inline-block">Escondem de Você</span>"
           </h1>
           
           {/* WHATSAPP BADGE + GIF DEMO */}
           <div className="flex flex-col items-center justify-center mb-8">
-             <div className="bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm md:text-base flex items-center shadow-lg animate-bounce mb-6 z-10 relative border-2 border-green-400">
+             <div className="bg-[#25D366] text-white px-4 py-2 rounded-full font-bold text-sm md:text-base flex items-center shadow-lg animate-bounce mb-6 z-10 relative border-2 border-white/50">
                <MessageCircle className="w-5 h-5 mr-2" fill="white" />
                Acesso enviado na hora no seu WhatsApp!
              </div>
 
              {/* GIF Container - Phone Mockup Style */}
-             <div className="relative w-[260px] rounded-[2.5rem] border-8 border-gray-900 bg-gray-900 shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 ring-4 ring-purple-500/30">
+             <div className="relative w-[260px] rounded-[2.5rem] border-8 border-brand-dark bg-brand-dark shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-500 ring-4 ring-pink-400/50">
                 {/* Notch */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-5 bg-gray-900 rounded-b-xl z-20"></div>
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-28 h-5 bg-black rounded-b-xl z-20"></div>
                 
                 {/* Status Badge - Acesso Liberado */}
-                <div className="absolute top-7 left-1/2 transform -translate-x-1/2 z-30 bg-black/80 text-white px-3 py-1 rounded-full text-[9px] font-bold flex items-center gap-1.5 shadow-md border border-white/10 whitespace-nowrap">
+                <div className="absolute top-7 left-1/2 transform -translate-x-1/2 z-30 bg-white/90 text-brand-dark px-3 py-1 rounded-full text-[9px] font-bold flex items-center gap-1.5 shadow-md border border-gray-200 whitespace-nowrap">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>
                   acesso liberado em segundos
                 </div>
 
                 {/* Suporte 24h Sticker */}
-                <div className="absolute top-16 -right-3 z-30 bg-yellow-400 text-pink-900 text-[8px] font-black px-3 py-1 shadow-lg transform rotate-6 border-2 border-white rounded-lg flex items-center gap-1">
+                <div className="absolute top-16 -right-3 z-30 bg-yellow-400 text-black text-[8px] font-black px-3 py-1 shadow-lg transform rotate-6 border-2 border-white rounded-lg flex items-center gap-1">
                    <Headset size={12} />
                    SUPORTE 24H
                 </div>
@@ -78,19 +78,19 @@ function App() {
                   className="w-full h-auto rounded-[2rem] scale-[1.02]"
                 />
              </div>
-             <p className="text-xs text-white/80 mt-3 font-medium animate-pulse">👆 Veja como é fácil receber</p>
+             <p className="text-xs text-brand-dark mt-3 font-bold animate-pulse">👆 Veja como é fácil receber</p>
           </div>
 
-          <p className="text-lg md:text-xl text-pink-100 mb-6 font-medium">
+          <p className="text-lg md:text-xl text-white/90 mb-6 font-medium drop-shadow-sm">
             Monte sua revenda em casa investindo menos que uma pizza.
           </p>
           
           {/* Author Profile */}
-          <div className="flex items-center justify-center space-x-4 bg-black/30 backdrop-blur-sm p-4 rounded-xl border border-white/10 max-w-md mx-auto hover:bg-black/40 transition-colors">
-             <img src="https://i.postimg.cc/jq75SSvD/image.png" alt="Sônia Prado" className="w-16 h-16 rounded-full border-2 border-purple-400 shadow-md object-cover" />
+          <div className="flex items-center justify-center space-x-4 bg-white/20 backdrop-blur-md p-4 rounded-xl border border-white/30 max-w-md mx-auto hover:bg-white/30 transition-colors">
+             <img src="https://i.postimg.cc/jq75SSvD/image.png" alt="Sônia Prado" className="w-16 h-16 rounded-full border-2 border-white shadow-md object-cover" />
              <div className="text-left">
                <p className="font-bold text-white text-sm">Com Sônia, da fase difícil à independência</p>
-               <p className="text-xs text-purple-200">Uma história marcada por fé, recomeço e provisão.</p>
+               <p className="text-xs text-pink-100">Uma história marcada por fé, recomeço e provisão.</p>
              </div>
           </div>
         </div>
@@ -102,11 +102,11 @@ function App() {
       <section className="py-10 px-4 max-w-3xl mx-auto">
         <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-l-4 border-brand-pink relative -mt-16 z-20 overflow-hidden">
            {/* Background subtle touch */}
-           <div className="absolute top-0 right-0 opacity-5 -mr-10 -mt-10">
-              <Heart size={150} />
+           <div className="absolute top-0 right-0 opacity-5 -mr-10 -mt-10 text-brand-pink">
+              <Heart size={150} fill="currentColor" />
            </div>
 
-          <span className="bg-brand-light text-brand-dark px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-5 inline-block border border-pink-100">
+          <span className="bg-brand-pink text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider mb-5 inline-block shadow-md">
             História Real
           </span>
           
@@ -121,14 +121,14 @@ function App() {
             <p>
               Ela vendeu a casa para investir na Bolsa e perdeu tudo. O impacto foi devastador: nas finanças, no emocional e na saúde. Em suas palavras, <span className="bg-red-50 text-red-800 px-1 rounded font-medium">foi desesperador.</span>
             </p>
-            <p className="pl-4 border-l-2 border-brand-pink/30">
-              Mas ao invés de desistir, Sônia agiu. Inspirada na irmã, juntou o que restava e abriu uma pequena loja vendendo <strong className="bg-yellow-100 text-gray-900 px-1">maquiagens.</strong>
+            <p className="pl-4 border-l-2 border-pink-300">
+              Mas ao invés de desistir, Sônia agiu. Inspirada na irmã, juntou o que restava e abriu uma pequena loja vendendo <strong className="bg-pink-100 text-pink-900 px-1">maquiagens.</strong>
             </p>
             <p>
               O que era um último suspiro virou um novo começo. A loja encheu, o dinheiro girou e Sônia recuperou algo valioso: <span className="text-brand-pink font-bold">sua dignidade e fé.</span>
             </p>
 
-            <div className="bg-brand-bg/50 p-5 rounded-xl border border-brand-light mt-2 relative">
+            <div className="bg-[#fff0f5] p-5 rounded-xl border border-pink-100 mt-2 relative">
               <p className="italic text-gray-700 font-medium mb-3 text-center">
                 "Deus é especialista em transformar cinzas em alegria. Ele continua agindo através de decisões corajosas."
               </p>
@@ -141,7 +141,7 @@ function App() {
       </section>
 
       {/* 3. PROVA SOCIAL MASSIVA (Carousel) */}
-      <section className="py-8 bg-brand-bg">
+      <section className="py-8 bg-[#fff0f5]">
         <div className="text-center mb-6 px-4">
           <h3 className="font-heading font-bold text-xl md:text-2xl text-gray-800 flex items-center justify-center gap-2">
             Monitoramento de Entregas no Zap <span className="animate-pulse text-green-500">●</span>
@@ -158,7 +158,7 @@ function App() {
       </section>
 
       {/* BOTÃO FURA-FILA PARA ANSIOSOS */}
-      <div className="w-full bg-brand-bg pb-10 px-4 flex flex-col items-center">
+      <div className="w-full bg-[#fff0f5] pb-10 px-4 flex flex-col items-center">
          <a
            href="#oferta"
            className="group bg-[#25D366] hover:bg-green-600 text-white font-extrabold text-lg md:text-xl py-4 px-8 rounded-full shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] transform transition duration-200 hover:scale-105 flex items-center gap-2 animate-pulse"
@@ -172,23 +172,23 @@ function App() {
       {/* 4. O QUE VOCÊ RECEBE (Product Showcase) */}
       <section className="py-12 px-4 max-w-4xl mx-auto">
         <div className="flex justify-center mb-4">
-            <span className="bg-black text-white px-3 py-1 rounded text-xs font-black uppercase tracking-widest border border-gray-700">Black November</span>
+            <span className="bg-brand-dark text-white px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-md">Black November</span>
         </div>
         <h3 className="font-heading font-extrabold text-center text-2xl md:text-3xl text-brand-dark mb-2">
-          Preços de <span className="text-black bg-yellow-300 px-1">Black Friday</span> o ano todo:
+          Preços de <span className="text-white bg-brand-pink px-1 rotate-1 inline-block transform">Black Friday</span> o ano todo:
         </h3>
         <p className="text-center text-gray-600 mb-8">Você paga centavos e revende por R$ 10,00, R$ 15,00 ou mais.</p>
 
         {/* --- ESTRATÉGIA VISUAL: GIF DE ESTOQUE REAL (SNEAK PEEK) --- */}
         <div className="flex justify-center mb-12 relative z-10">
-           <div className="relative w-[280px] rounded-2xl overflow-hidden border-[6px] border-gray-800 shadow-2xl bg-gray-100 rotate-1 hover:rotate-0 transition-transform duration-500 group">
+           <div className="relative w-[280px] rounded-2xl overflow-hidden border-[6px] border-brand-pink shadow-2xl bg-brand-dark rotate-1 hover:rotate-0 transition-transform duration-500 group ring-4 ring-pink-100">
                {/* Phone Header */}
-               <div className="bg-gray-800 h-6 w-full flex justify-center items-center">
-                   <div className="w-16 h-1 bg-gray-600 rounded-full"></div>
+               <div className="bg-white h-6 w-full flex justify-center items-center border-b border-gray-100">
+                   <div className="w-16 h-1 bg-gray-300 rounded-full"></div>
                </div>
                
                {/* Flutuante "Flagra" */}
-               <div className="absolute top-10 right-2 z-10 bg-white/95 text-brand-pink font-extrabold text-[10px] px-3 py-1.5 rounded-lg shadow-md border border-pink-100 transform rotate-3 flex items-center gap-1">
+               <div className="absolute top-10 right-2 z-10 bg-brand-pink text-white font-extrabold text-[10px] px-3 py-1.5 rounded-lg shadow-md border border-white/20 transform rotate-3 flex items-center gap-1">
                   <span>🎥</span>
                   IMAGEM DOS FORNECEDORES
                </div>
@@ -197,31 +197,31 @@ function App() {
                <img 
                  src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmh0Y3Uxbm53dG93NDI3MnJjZzgwbHFldXI3cjJhMzBydGJpd2c2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Wfkq7BCVzOUwu1mqD/giphy.gif" 
                  alt="Unboxing fornecedor maquiagem" 
-                 className="w-full h-auto object-cover blur-[2px] brightness-[0.6] contrast-125 group-hover:blur-0 group-hover:brightness-100 transition-all duration-700"
+                 className="w-full h-auto object-cover blur-[2px] brightness-[0.9] contrast-110 group-hover:blur-0 group-hover:brightness-100 transition-all duration-700"
                />
 
                {/* Caption overlay */}
-               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 pt-12 text-white text-center">
+               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/60 to-transparent p-4 pt-12 text-white text-center">
                    <div className="flex items-center justify-center gap-2 mb-1">
-                      <PackageOpen size={16} className="text-yellow-400" />
-                      <p className="text-xs font-bold text-yellow-300 uppercase tracking-wide animate-pulse">Chegou Reposição Black!</p>
+                      <PackageOpen size={16} className="text-yellow-300" />
+                      <p className="text-xs font-bold text-yellow-200 uppercase tracking-wide animate-pulse">Chegou Reposição Black!</p>
                    </div>
-                   <p className="text-[10px] text-gray-200">É mercadoria de verdade chegando todo dia.</p>
+                   <p className="text-[10px] text-white">É mercadoria de verdade chegando todo dia.</p>
                </div>
            </div>
            
            {/* Background Glow Effect */}
-           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-purple-600/20 blur-[50px] -z-10 rounded-full animate-pulse"></div>
+           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-pink-500/20 blur-[50px] -z-10 rounded-full animate-pulse"></div>
         </div>
         {/* --- FIM DO GIF ESTRATÉGICO --- */}
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {PRODUCTS.map((product, index) => (
-            <div key={index} className="bg-white p-3 pb-8 rounded-lg shadow-sm border border-gray-200 hover:border-black transition-all hover:shadow-xl group relative overflow-visible">
+            <div key={index} className="bg-white p-3 pb-8 rounded-lg shadow-sm border border-gray-100 hover:border-brand-pink transition-all hover:shadow-xl group relative overflow-visible">
               
               {/* Dynamic Badge - Black Friday Style */}
               {product.badge ? (
-                <div className="absolute -top-3 -right-3 bg-black text-yellow-400 text-[9px] font-black w-14 h-14 flex items-center justify-center text-center rounded-full shadow-lg z-30 animate-pulse leading-tight border-2 border-white transform rotate-12">
+                <div className="absolute -top-3 -right-3 bg-brand-pink text-white text-[9px] font-black w-14 h-14 flex items-center justify-center text-center rounded-full shadow-lg z-30 animate-pulse leading-tight border-2 border-white transform rotate-12">
                   {product.badge.replace(' ', '\n')}
                 </div>
               ) : (
@@ -230,7 +230,7 @@ function App() {
                 </div>
               )}
               
-              <div className="aspect-square overflow-hidden rounded-md mb-3 bg-gray-100 relative">
+              <div className="aspect-square overflow-hidden rounded-md mb-3 bg-gray-50 relative">
                 <img src={product.img} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               </div>
 
@@ -242,8 +242,8 @@ function App() {
                    <span className="text-xs text-gray-400 line-through">R$ 15,00</span>
                 </div>
                 <div className="flex flex-col items-end">
-                   <span className="text-[10px] text-brand-pink font-bold">Custo Black</span>
-                   <span className="text-lg font-extrabold text-brand-pink leading-none">R$ {product.cost}</span>
+                   <span className="text-[10px] text-green-600 font-bold">Custo Black</span>
+                   <span className="text-lg font-extrabold text-green-600 leading-none">R$ {product.cost}</span>
                 </div>
               </div>
             </div>
@@ -251,14 +251,14 @@ function App() {
         </div>
 
         <div className="mt-8 flex flex-col md:flex-row gap-4">
-            <div className="flex-1 bg-brand-light p-4 rounded-lg flex items-start space-x-3 border border-pink-100">
+            <div className="flex-1 bg-white p-4 rounded-lg flex items-start space-x-3 border border-pink-100 shadow-sm">
                 <Lock className="w-6 h-6 text-brand-pink flex-shrink-0 mt-1" />
                 <div>
                     <h4 className="font-bold text-brand-dark">Lista Verificada</h4>
                     <p className="text-sm text-gray-700">Todos os contatos foram verificados.</p>
                 </div>
             </div>
-            <div className="flex-1 bg-green-100 p-4 rounded-lg flex items-start space-x-3 border border-green-200">
+            <div className="flex-1 bg-white p-4 rounded-lg flex items-start space-x-3 border border-green-200 shadow-sm">
                 <MessageCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
                     <h4 className="font-bold text-green-800">Envio no WhatsApp</h4>
@@ -302,25 +302,25 @@ function App() {
            
            <div className="flex flex-col md:flex-row justify-center items-center gap-6 relative">
               {/* Linha Conectora (Desktop) */}
-              <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gray-100 -z-0"></div>
+              <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-pink-50 -z-0"></div>
 
               {/* Passo 1 */}
               <div className="relative z-10 flex flex-col items-center text-center max-w-[200px]">
-                 <div className="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-3 border-4 border-white">1</div>
+                 <div className="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-3 border-4 border-white ring-4 ring-pink-50">1</div>
                  <h4 className="font-bold text-gray-800 mb-1">Receba no Zap</h4>
                  <p className="text-xs text-gray-500">O acesso chega automaticamente no seu WhatsApp e E-mail.</p>
               </div>
 
               {/* Passo 2 */}
               <div className="relative z-10 flex flex-col items-center text-center max-w-[200px]">
-                 <div className="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-3 border-4 border-white">2</div>
+                 <div className="w-16 h-16 bg-brand-pink rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-3 border-4 border-white ring-4 ring-pink-50">2</div>
                  <h4 className="font-bold text-gray-800 mb-1">Chame os Lojistas</h4>
                  <p className="text-xs text-gray-500">Escolha os produtos de R$ 2,00 e faça seu pedido pelo celular.</p>
               </div>
 
               {/* Passo 3 */}
               <div className="relative z-10 flex flex-col items-center text-center max-w-[200px]">
-                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-3 border-4 border-white">3</div>
+                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-3 border-4 border-white ring-4 ring-green-50">3</div>
                  <h4 className="font-bold text-gray-800 mb-1">Lucre 400%</h4>
                  <p className="text-xs text-gray-500">Venda para amigas e vizinhas com lucro absurdo.</p>
               </div>
@@ -328,91 +328,92 @@ function App() {
         </div>
       </section>
 
-      {/* --- NOVO BLOCO: BÔNUS (The Stack) --- */}
-      <section className="py-12 px-4 bg-gray-900 border-t border-b border-gray-800 text-white relative overflow-hidden">
+      {/* --- NOVO BLOCO: BÔNUS (The Stack) - BRAND DARK THEME --- */}
+      <section className="py-12 px-4 bg-brand-dark border-t border-b border-pink-900 text-white relative overflow-hidden">
          {/* Decoration */}
-         <div className="absolute top-0 right-0 w-64 h-64 bg-brand-pink/20 blur-[100px] pointer-events-none"></div>
+         <div className="absolute top-0 right-0 w-64 h-64 bg-purple-900/40 blur-[100px] pointer-events-none"></div>
+         <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-500/20 blur-[100px] pointer-events-none"></div>
 
          <div className="max-w-3xl mx-auto relative z-10">
             <div className="text-center mb-8">
-               <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-2 inline-block animate-pulse">
+               <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider mb-2 inline-block animate-pulse shadow-md">
                   Exclusivo Black Friday
                </span>
                <h3 className="font-heading font-extrabold text-2xl md:text-3xl text-white">
-                  Leve <span className="text-brand-pink">3 Presentes</span> de Graça
+                  Leve <span className="text-yellow-300">3 Presentes</span> de Graça
                </h3>
-               <p className="text-gray-400 mt-2">Só nessa oferta de Black Friday eu liberei tudo isso:</p>
+               <p className="text-pink-100 mt-2">Só nessa oferta de Black Friday eu liberei tudo isso:</p>
             </div>
 
             <div className="space-y-4">
                {/* Bonus 1 */}
-               <div className="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
-                  <div className="absolute top-0 right-0 bg-brand-pink text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
-                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
-                     <Smartphone className="text-brand-pink w-6 h-6" />
+               <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/20 flex items-center gap-4 relative overflow-hidden group hover:bg-white/20 transition-colors">
+                  <div className="absolute top-0 right-0 bg-yellow-400 text-brand-dark text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 border border-white/20">
+                     <Smartphone className="text-pink-200 w-6 h-6" />
                   </div>
                   <div>
                      <h4 className="font-bold text-white text-sm">Scripts de Venda Prontos</h4>
-                     <p className="text-xs text-gray-400">Copie e cole minhas mensagens no Zap para vender sem ser chata.</p>
-                     <p className="text-[10px] text-gray-500 mt-1 line-through">Valor: R$ 29,90</p>
+                     <p className="text-xs text-pink-100">Copie e cole minhas mensagens no Zap para vender sem ser chata.</p>
+                     <p className="text-[10px] text-pink-300 mt-1 line-through">Valor: R$ 29,90</p>
                   </div>
                </div>
 
                {/* Bonus 2 */}
-               <div className="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
-                   <div className="absolute top-0 right-0 bg-brand-pink text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
-                   <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
-                     <Calculator className="text-blue-400 w-6 h-6" />
+               <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/20 flex items-center gap-4 relative overflow-hidden group hover:bg-white/20 transition-colors">
+                   <div className="absolute top-0 right-0 bg-yellow-400 text-brand-dark text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
+                   <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 border border-white/20">
+                     <Calculator className="text-pink-200 w-6 h-6" />
                   </div>
                   <div>
                      <h4 className="font-bold text-white text-sm">Calculadora de Lucro</h4>
-                     <p className="text-xs text-gray-400">Saiba exatamente por quanto vender cada peça para ter lucro.</p>
-                     <p className="text-[10px] text-gray-500 mt-1 line-through">Valor: R$ 19,90</p>
+                     <p className="text-xs text-pink-100">Saiba exatamente por quanto vender cada peça para ter lucro.</p>
+                     <p className="text-[10px] text-pink-300 mt-1 line-through">Valor: R$ 19,90</p>
                   </div>
                </div>
 
                {/* Bonus 3 */}
-               <div className="bg-gray-800 p-4 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4 relative overflow-hidden group hover:border-brand-pink transition-colors">
-                  <div className="absolute top-0 right-0 bg-brand-pink text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
-                  <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
-                     <BookOpen className="text-yellow-400 w-6 h-6" />
+               <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/20 flex items-center gap-4 relative overflow-hidden group hover:bg-white/20 transition-colors">
+                  <div className="absolute top-0 right-0 bg-yellow-400 text-brand-dark text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">DE GRAÇA</div>
+                  <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 border border-white/20">
+                     <BookOpen className="text-pink-200 w-6 h-6" />
                   </div>
                   <div>
                      <h4 className="font-bold text-white text-sm">Guia: Perdendo a Vergonha</h4>
-                     <p className="text-xs text-gray-400">Técnicas simples para oferecer seus produtos com confiança.</p>
-                     <p className="text-[10px] text-gray-500 mt-1 line-through">Valor: R$ 27,00</p>
+                     <p className="text-xs text-pink-100">Técnicas simples para oferecer seus produtos com confiança.</p>
+                     <p className="text-[10px] text-pink-300 mt-1 line-through">Valor: R$ 27,00</p>
                   </div>
                </div>
             </div>
          </div>
       </section>
 
-      {/* 5. OFFER + URGENCY */}
-      <section id="oferta" className="py-12 px-4 bg-gradient-to-b from-black to-gray-900 text-white text-center rounded-t-[3rem] relative shadow-[0_-10px_40px_rgba(0,0,0,0.3)] mt-[-2rem]">
+      {/* 5. OFFER + URGENCY (PINK GRADIENT) */}
+      <section id="oferta" className="py-12 px-4 bg-gradient-to-b from-brand-pink to-brand-dark text-white text-center rounded-t-[3rem] relative shadow-[0_-10px_40px_rgba(179,0,89,0.3)] mt-[-2rem]">
         <div className="max-w-2xl mx-auto">
            <div className="flex justify-center mb-4">
-              <span className="bg-yellow-400 text-black px-4 py-1 rounded-full font-black uppercase text-sm animate-bounce flex items-center gap-2">
+              <span className="bg-yellow-400 text-brand-dark px-4 py-1 rounded-full font-black uppercase text-sm animate-bounce flex items-center gap-2 shadow-lg">
                  <Flame className="w-4 h-4" /> Oferta Black
               </span>
            </div>
-          <h3 className="font-hand text-4xl text-brand-pink mb-2">
+          <h3 className="font-hand text-4xl text-white mb-2">
             É agora ou nunca, minha flor!
           </h3>
-          <p className="text-gray-300 mb-6">
+          <p className="text-pink-100 mb-6">
             Essa oferta de <strong className="text-white">Black November</strong> pode sair do ar a qualquer momento.
           </p>
 
           <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 inline-block w-full max-w-md mb-8 relative overflow-hidden">
              {/* Ribbon */}
-             <div className="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg z-20">90% OFF</div>
+             <div className="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-4 py-1 rounded-bl-lg z-20 shadow-sm">90% OFF</div>
 
-            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Cupom Black: <span className="text-yellow-400 font-bold">DESCONTOLOJADE10</span></p>
+            <p className="text-sm uppercase tracking-widest text-pink-100 mb-2">Cupom Black: <span className="text-yellow-300 font-bold">DESCONTOLOJADE10</span></p>
             
             {/* STACK RECAP (NEW VISUAL) */}
-            <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl border border-white/10 p-4 mb-6 text-left shadow-inner">
-               <div className="flex items-center gap-2 mb-3 border-b border-white/10 pb-2">
+            <div className="bg-white rounded-xl border border-gray-200 p-4 mb-6 text-left shadow-lg">
+               <div className="flex items-center gap-2 mb-3 border-b border-gray-200 pb-2">
                   <span className="bg-green-500 w-2 h-2 rounded-full animate-pulse"></span>
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Resumo do Pacote</p>
+                  <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">Resumo do Pedido</p>
                </div>
 
                <div className="space-y-3">
@@ -421,47 +422,47 @@ function App() {
                      <div className="flex items-start gap-2">
                         <CheckCircle className="w-4 h-4 text-brand-pink mt-0.5 flex-shrink-0" />
                         <div>
-                           <p className="text-sm font-bold text-white leading-tight">Lista de Fornecedores 2.0</p>
-                           <p className="text-[10px] text-gray-400">Acesso Vitalício + Atualizações</p>
+                           <p className="text-sm font-bold text-gray-800 leading-tight">Lista de Fornecedores 2.0</p>
+                           <p className="text-[10px] text-gray-500">Acesso Vitalício + Atualizações</p>
                         </div>
                      </div>
                      <div className="text-right flex-shrink-0">
                         <p className="text-[10px] text-red-400 line-through">R$ 17,99</p>
-                        <p className="text-sm font-bold text-green-400">R$ 3,99</p>
+                        <p className="text-sm font-bold text-green-600">R$ 3,99</p>
                      </div>
                   </div>
 
                   {/* Bônus 1 */}
-                  <div className="flex justify-between items-center opacity-80">
+                  <div className="flex justify-between items-center opacity-90">
                      <div className="flex items-center gap-2">
-                        <Gift className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                        <p className="text-xs text-gray-300">Bônus: Scripts de Venda</p>
+                        <Gift className="w-3 h-3 text-brand-pink flex-shrink-0" />
+                        <p className="text-xs text-gray-600">Bônus: Scripts de Venda</p>
                      </div>
-                     <span className="bg-green-500/20 text-green-400 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-500/30">GRÁTIS</span>
+                     <span className="bg-green-100 text-green-700 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-200">GRÁTIS</span>
                   </div>
 
                   {/* Bônus 2 */}
-                  <div className="flex justify-between items-center opacity-80">
+                  <div className="flex justify-between items-center opacity-90">
                      <div className="flex items-center gap-2">
-                        <Gift className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                        <p className="text-xs text-gray-300">Bônus: Calculadora de Lucro</p>
+                        <Gift className="w-3 h-3 text-brand-pink flex-shrink-0" />
+                        <p className="text-xs text-gray-600">Bônus: Calculadora de Lucro</p>
                      </div>
-                     <span className="bg-green-500/20 text-green-400 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-500/30">GRÁTIS</span>
+                     <span className="bg-green-100 text-green-700 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-200">GRÁTIS</span>
                   </div>
 
                    {/* Bônus 3 */}
-                  <div className="flex justify-between items-center opacity-80">
+                  <div className="flex justify-between items-center opacity-90">
                      <div className="flex items-center gap-2">
-                        <Gift className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                        <p className="text-xs text-gray-300">Bônus: Guia Vergonha Zero</p>
+                        <Gift className="w-3 h-3 text-brand-pink flex-shrink-0" />
+                        <p className="text-xs text-gray-600">Bônus: Guia Vergonha Zero</p>
                      </div>
-                     <span className="bg-green-500/20 text-green-400 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-500/30">GRÁTIS</span>
+                     <span className="bg-green-100 text-green-700 text-[9px] font-bold px-1.5 py-0.5 rounded border border-green-200">GRÁTIS</span>
                   </div>
                </div>
 
                {/* Total Line */}
-               <div className="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
-                  <p className="text-xs text-gray-400">Valor Total:</p>
+               <div className="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
+                  <p className="text-xs text-gray-500">Valor Total:</p>
                   <div className="text-right">
                      <p className="text-xl font-black text-brand-pink leading-none">R$ 3,99</p>
                      <p className="text-[9px] text-gray-500">ou 1x no cartão</p>
@@ -470,21 +471,21 @@ function App() {
             </div>
 
             <div className="flex items-center justify-center space-x-4 mb-4">
-              <span className="text-2xl text-gray-500 line-through font-medium">R$ 17,99</span>
-              <span className="text-6xl font-extrabold text-brand-pink drop-shadow-lg">R$ 3,99</span>
+              <span className="text-2xl text-pink-200 line-through font-medium">R$ 17,99</span>
+              <span className="text-6xl font-extrabold text-white drop-shadow-md">R$ 3,99</span>
             </div>
             <CountdownTimer />
           </div>
 
           <a 
             href={CHECKOUT_LINK}
-            className="block w-full max-w-md mx-auto bg-[#25D366] hover:bg-green-600 text-white font-bold text-xl py-5 px-8 rounded-full shadow-[0_4px_15px_rgba(37,211,102,0.6)] transition-transform transform hover:scale-105 hover:-translate-y-1 animate-pulse-fast mb-4 flex items-center justify-center gap-3"
+            className="block w-full max-w-md mx-auto bg-[#25D366] hover:bg-green-600 text-white font-bold text-xl py-5 px-8 rounded-full shadow-[0_4px_15px_rgba(37,211,102,0.6)] transition-transform transform hover:scale-105 hover:-translate-y-1 animate-pulse-fast mb-4 flex items-center justify-center gap-3 border-2 border-white/20"
           >
              <MessageCircle className="w-8 h-8" fill="white" />
              GARANTIR OFERTA NO WHATSAPP
           </a>
           
-          <div className="flex items-center justify-center space-x-4 text-xs text-gray-400">
+          <div className="flex items-center justify-center space-x-4 text-xs text-pink-100">
              <span className="flex items-center"><ShieldCheck className="w-3 h-3 mr-1" /> Compra Segura</span>
              <span className="flex items-center"><CheckCircle className="w-3 h-3 mr-1" /> Chega no Zap</span>
           </div>
@@ -495,7 +496,7 @@ function App() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-2xl mx-auto space-y-8">
           {/* Guarantee Box */}
-          <div className="border-2 border-brand-pink border-dashed p-6 rounded-2xl bg-brand-bg relative">
+          <div className="border-2 border-brand-pink border-dashed p-6 rounded-2xl bg-[#fff0f5] relative">
             <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-pink text-white px-4 py-1 rounded-full font-bold shadow-lg">
               DESAFIO 7 DIAS
             </div>
@@ -519,7 +520,7 @@ function App() {
 
       {/* 7. FAQ */}
       <section className="py-10 px-4 max-w-3xl mx-auto">
-        <h3 className="font-heading font-bold text-2xl text-center mb-8 text-gray-800">
+        <h3 className="font-heading font-bold text-2xl text-center mb-8 text-brand-dark">
           Tirando suas dúvidas (de mãe pra mãe)
         </h3>
         <div className="space-y-3">
@@ -533,7 +534,7 @@ function App() {
                 {openFaqIndex === index ? <ChevronUp className="w-5 h-5 text-brand-pink" /> : <ChevronDown className="w-5 h-5 text-gray-400" />}
               </button>
               {openFaqIndex === index && (
-                <div className="p-4 bg-brand-bg border-t border-gray-100 text-gray-700 text-sm">
+                <div className="p-4 bg-[#fff0f5] border-t border-gray-100 text-gray-700 text-sm">
                   {item.answer}
                 </div>
               )}
@@ -559,9 +560,9 @@ function App() {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-8 text-center text-xs">
+      <footer className="bg-brand-dark text-white py-8 text-center text-xs">
         <p className="mb-2">© 2024 Sônia Prado - Todos os direitos reservados.</p>
-        <p className="text-gray-500">Este site não faz parte do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.</p>
+        <p className="text-pink-200">Este site não faz parte do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.</p>
       </footer>
       
       <StickyCTA />
