@@ -39,33 +39,9 @@ export const CouponPopup: React.FC<CouponPopupProps> = ({ isOpen, onClose }) => 
           ESPERA, LINDA! 😱
         </h3>
 
-        <p className="text-gray-600 text-sm mb-4 px-1 leading-relaxed">
+        <p className="text-gray-600 text-sm mb-6 px-1 leading-relaxed">
           Eu vi que você quer mudar de vida, então consegui liberar um <strong>desconto extra</strong> só pra você fechar agora.
         </p>
-
-        {/* GIF "Espiadinha" - Aumentado (Tela Maior) */}
-        <div className="relative w-full h-48 mx-auto mb-5 rounded-xl overflow-hidden border-[6px] border-gray-800 shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-300 group bg-black">
-           {/* Camada de Mistério */}
-           <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none group-hover:bg-black/10 transition-colors"></div>
-           
-           {/* Selo Acesso Restrito */}
-           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full text-center">
-               <span className="text-[10px] font-black text-white uppercase tracking-[0.2em] bg-red-600/90 px-3 py-1 rounded shadow-lg backdrop-blur-[2px] border border-white/20 whitespace-nowrap animate-pulse">
-                  🔒 Espiada Secreta
-               </span>
-           </div>
-
-           <img 
-             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmh0Y3Uxbm53dG93NDI3MnJjZzgwbHFldXI3cjJhMzBydGJpd2c2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Wfkq7BCVzOUwu1mqD/giphy.gif" 
-             alt="Preview Fornecedores" 
-             className="w-full h-full object-cover blur-[1px] brightness-[0.8] contrast-125 group-hover:blur-0 group-hover:brightness-100 transition-all duration-700"
-           />
-           
-           {/* Fake Player Interface */}
-           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700/50">
-             <div className="h-full bg-red-600 w-1/3"></div>
-           </div>
-        </div>
 
         {/* Coupon Box */}
         <div 
@@ -88,7 +64,7 @@ export const CouponPopup: React.FC<CouponPopupProps> = ({ isOpen, onClose }) => 
           href={CHECKOUT_LINK}
           className="block w-full bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 rounded-full shadow-lg shadow-green-100 transform hover:scale-105 transition-all text-lg flex items-center justify-center gap-2 group"
         >
-          QUERO USAR MEU DESCONTO ⚡
+          Não quero Benefícios
         </a>
         
         <p 
