@@ -1,5 +1,6 @@
 import React from 'react';
 import { CHECKOUT_LINK } from '../constants';
+import { MessageCircle } from 'lucide-react';
 
 export const StickyCTA = () => {
   return (
@@ -10,11 +11,7 @@ export const StickyCTA = () => {
          <span className="text-[10px] text-green-600 font-extrabold flex items-center animate-pulse"><span className="mr-1">📲</span> Chega no Zap</span>
       </div>
       <a href={CHECKOUT_LINK} className="bg-[#25D366] hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg animate-pulse flex items-center gap-2">
-        <img 
-          src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGt2N282OGVrNHM4NnhqM2xpMzR5a3pjY3k1d3BiM3AxZTBobnpzbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0pWSPx0wxbUxlEzfFZ/giphy.gif" 
-          alt="Ícone animado" 
-          className="w-8 h-8 filter brightness-0 invert" 
-        />
+        <MessageCircle size={24} fill="white" className="text-white" />
         QUERO AGORA
       </a>
     </div>
