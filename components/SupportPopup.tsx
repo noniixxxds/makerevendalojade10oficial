@@ -16,13 +16,13 @@ export const SupportPopup: React.FC<SupportPopupProps> = ({ isOpen, onClose }) =
         {/* Close Button */}
         <button 
           onClick={onClose} 
-          className="absolute top-3 right-3 text-gray-300 hover:text-gray-500 p-1 hover:bg-gray-100 rounded-full transition-colors"
+          className="absolute top-3 right-3 text-gray-300 hover:text-gray-500 p-1 hover:bg-gray-100 rounded-full transition-colors z-30"
         >
           <X size={20} />
         </button>
 
         {/* Icon Header */}
-        <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 relative">
+        <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3 relative">
             <PackageCheck size={32} className="text-green-600" />
             <div className="absolute -bottom-1 -right-1 bg-brand-pink text-white text-[10px] font-bold px-2 py-0.5 rounded-full border-2 border-white">
                 ?
@@ -33,9 +33,28 @@ export const SupportPopup: React.FC<SupportPopupProps> = ({ isOpen, onClose }) =
           Está com dúvida de como vai receber a lista?
         </h3>
 
-        <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-          Não compre com dúvida, amiga! Fale comigo agora no WhatsApp que eu te explico certinho como o acesso chega no seu e-mail e celular.
+        <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+          Não compre com dúvida, amiga! Veja o que chega no seu celular:
         </p>
+
+        {/* GIF Preview Block - Tamanho Reduzido */}
+        <div className="relative w-4/5 h-24 mx-auto mb-4 rounded-xl overflow-hidden border-[3px] border-gray-800 shadow-lg rotate-1 hover:rotate-0 transition-transform duration-300 group bg-black">
+           {/* Camada de Proteção Visual */}
+           <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none group-hover:bg-transparent transition-colors"></div>
+
+           {/* Selo Informativo */}
+           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 w-full text-center">
+               <span className="text-[8px] font-black text-white uppercase tracking-[0.05em] bg-green-600/90 px-2 py-1 rounded shadow-lg backdrop-blur-[2px] border border-white/20 whitespace-nowrap animate-pulse">
+                  📦 É isso que você recebe
+               </span>
+           </div>
+
+           <img 
+             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmh0Y3Uxbm53dG93NDI3MnJjZzgwbHFldXI3cjJhMzBydGJpd2c2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Wfkq7BCVzOUwu1mqD/giphy.gif" 
+             alt="Preview Fornecedores" 
+             className="w-full h-full object-cover blur-[0.5px] hover:blur-0 transition-all duration-700"
+           />
+        </div>
 
         {/* Main CTA */}
         <a 
