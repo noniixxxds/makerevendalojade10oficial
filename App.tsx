@@ -5,7 +5,7 @@ import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
 import { SalesNotification } from './components/SalesNotification';
 import { CouponPopup } from './components/CouponPopup';
-import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen, Gift, Smartphone, Calculator, BookOpen, Flame, Star, Crown } from 'lucide-react';
+import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen, Gift, Smartphone, Calculator, BookOpen, Flame, Star, Crown, FileCheck } from 'lucide-react';
 
 function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -535,9 +535,22 @@ function App() {
              GARANTIR OFERTA NO WHATSAPP
           </a>
           
-          <div className="flex items-center justify-center space-x-4 text-xs text-pink-100">
-             <span className="flex items-center"><ShieldCheck className="w-3 h-3 mr-1" /> Compra Segura</span>
-             <span className="flex items-center"><CheckCircle className="w-3 h-3 mr-1" /> Chega no Zap</span>
+          {/* TRUST BADGES ROW */}
+          <div className="mt-6 bg-white/5 rounded-xl p-3 border border-white/10 flex flex-col md:flex-row flex-wrap justify-center items-center gap-3 md:gap-6 backdrop-blur-sm">
+             <div className="flex items-center gap-2 opacity-90 bg-white/10 px-3 py-1.5 rounded-full border border-white/5">
+                <Lock size={14} className="text-green-400" />
+                <span className="text-xs text-white font-bold tracking-wide">COMPRA 100% SEGURA</span>
+             </div>
+             <div className="flex gap-4 items-center opacity-80">
+                 <div className="flex items-center gap-1">
+                    <ShieldCheck size={14} className="text-white" />
+                    <span className="text-[10px] text-white">Dados Protegidos</span>
+                 </div>
+                 <div className="flex items-center gap-1">
+                    <FileCheck size={14} className="text-white" />
+                    <span className="text-[10px] text-white">Entrega Garantida</span>
+                 </div>
+             </div>
           </div>
         </div>
       </section>
