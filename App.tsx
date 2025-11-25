@@ -85,12 +85,12 @@ function App() {
             Monte sua revenda em casa investindo menos que uma pizza.
           </p>
           
-          {/* Author Profile */}
-          <div className="flex items-center justify-center space-x-4 bg-white/20 backdrop-blur-md p-4 rounded-xl border border-white/30 max-w-md mx-auto hover:bg-white/30 transition-colors">
-             <img src="https://i.postimg.cc/jq75SSvD/image.png" alt="Sônia Prado" className="w-16 h-16 rounded-full border-2 border-white shadow-md object-cover" />
+          {/* Author Profile - VISIBILIDADE MELHORADA */}
+          <div className="flex items-center justify-center space-x-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl border border-white/50 max-w-md mx-auto shadow-2xl transform hover:scale-105 transition-all duration-300">
+             <img src="https://i.postimg.cc/jq75SSvD/image.png" alt="Sônia Prado" className="w-16 h-16 rounded-full border-2 border-brand-pink p-0.5 object-cover" />
              <div className="text-left">
-               <p className="font-bold text-white text-sm">Com Sônia, da fase difícil à independência</p>
-               <p className="text-xs text-pink-100">Uma história marcada por fé, recomeço e provisão.</p>
+               <p className="font-bold text-brand-dark text-sm leading-tight">Com Sônia, da fase difícil à independência</p>
+               <p className="text-xs text-gray-700 mt-1 font-medium">Uma história marcada por fé, recomeço e provisão.</p>
              </div>
           </div>
         </div>
