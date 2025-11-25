@@ -142,33 +142,59 @@ function App() {
         </div>
       </section>
 
-      {/* 3. PROVA SOCIAL MASSIVA (Carousel) */}
-      <section className="py-8 bg-[#fff0f5]">
-        <div className="text-center mb-6 px-4">
-          <h3 className="font-heading font-bold text-xl md:text-2xl text-gray-800 flex items-center justify-center gap-2">
-            Monitoramento de Entregas no Zap <span className="animate-pulse text-green-500">●</span>
-          </h3>
-          <p className="text-sm text-gray-500 mt-1">Atualizado em tempo real</p>
-        </div>
+      {/* 3. PROVA SOCIAL MASSIVA (GRID LAYOUT) */}
+      <section className="py-12 bg-[#E5DDD5] relative border-t border-gray-200">
+        {/* Pattern Background WhatsApp Style */}
+        <div className="absolute inset-0 opacity-5 bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] pointer-events-none"></div>
 
-        <div className="flex overflow-x-auto pb-8 px-4 space-x-4 hide-scrollbar snap-x">
-           {/* Duplicate array for seamless feel mock */}
-           {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-             <TestimonialCard key={i} {...t} />
-           ))}
+        <div className="relative z-10 max-w-5xl mx-auto px-4">
+            <div className="text-center mb-8">
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest border border-green-200 mb-3 inline-block">
+                Tempo Real
+              </span>
+              <h3 className="font-heading font-extrabold text-2xl md:text-3xl text-gray-800 flex flex-col md:flex-row items-center justify-center gap-2 leading-tight">
+                <span>Elas acabaram de receber o acesso</span> 
+                <span className="hidden md:inline text-gray-300">|</span>
+                <span className="text-green-600 flex items-center gap-1.5 text-lg">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  </span>
+                  Entregas Hoje
+                </span>
+              </h3>
+              <p className="text-sm text-gray-500 mt-2 max-w-lg mx-auto">
+                Não é só você que está aproveitando a Black Friday. Veja quem já está com a lista na mão agora mesmo:
+              </p>
+            </div>
+
+            {/* GRID LAYOUT - Um embaixo do outro (Mobile) e Lados (Desktop) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {TESTIMONIALS.map((t, i) => (
+                <div key={i} className="transform hover:-translate-y-1 transition-transform duration-300">
+                  <TestimonialCard {...t} />
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center">
+               <p className="text-xs text-gray-500 animate-pulse">
+                 ⬇ Carregando mais entregas recentes...
+               </p>
+            </div>
         </div>
       </section>
 
       {/* BOTÃO FURA-FILA PARA ANSIOSOS */}
-      <div className="w-full bg-[#fff0f5] pb-10 px-4 flex flex-col items-center">
+      <div className="w-full bg-[#E5DDD5] pb-12 px-4 flex flex-col items-center border-b border-gray-200 relative z-20">
          <a
            href="#oferta"
-           className="group bg-[#25D366] hover:bg-green-600 text-white font-extrabold text-lg md:text-xl py-4 px-8 rounded-full shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] transform transition duration-200 hover:scale-105 flex items-center gap-2 animate-pulse"
+           className="group bg-[#25D366] hover:bg-green-600 text-white font-extrabold text-lg md:text-xl py-4 px-8 rounded-full shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] transform transition duration-200 hover:scale-105 flex items-center gap-2 animate-pulse border-4 border-white"
          >
            QUERO A OFERTA BLACK AGORA ⚡
            <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
          </a>
-         <p className="text-xs text-gray-500 mt-3">Clique para pular a explicação e ir para o cupom</p>
+         <p className="text-xs text-gray-500 mt-3 font-medium">Clique para garantir antes que acabe</p>
       </div>
 
       {/* 4. O QUE VOCÊ RECEBE (Product Showcase) */}
