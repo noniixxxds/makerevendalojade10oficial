@@ -14,10 +14,10 @@ function App() {
   const [isCouponOpen, setIsCouponOpen] = useState(false);
 
   useEffect(() => {
-    // Timer para aparecer o popup de Cupom (7 segundos)
+    // Timer para aparecer o popup de Cupom (10 segundos)
     const timer = setTimeout(() => {
       setIsCouponOpen(true);
-    }, 7000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -478,7 +478,7 @@ function App() {
                           <p className="text-xs text-gray-400 line-through">De R$ 17,99</p>
                           <div className="text-right">
                               <p className="text-xs text-brand-pink font-bold">Por apenas:</p>
-                              <p className="text-2xl font-black text-green-600 leading-none tracking-tight">R$ 7,90</p>
+                              <p className="text-2xl font-black text-green-600 leading-none tracking-tight">R$ 9,90</p>
                           </div>
                       </div>
                   </div>
@@ -512,7 +512,7 @@ function App() {
                <div className="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
                   <p className="text-xs text-gray-500">Valor Total:</p>
                   <div className="text-right">
-                     <p className="text-xl font-black text-brand-pink leading-none">R$ 7,90</p>
+                     <p className="text-xl font-black text-brand-pink leading-none">R$ 9,90</p>
                      <p className="text-[9px] text-gray-500">ou 1x no cartão</p>
                   </div>
                </div>
@@ -520,7 +520,7 @@ function App() {
 
             <div className="flex items-center justify-center space-x-4 mb-4">
               <span className="text-2xl text-pink-200 line-through font-medium">R$ 17,99</span>
-              <span className="text-6xl font-extrabold text-white drop-shadow-md">R$ 7,90</span>
+              <span className="text-6xl font-extrabold text-white drop-shadow-md">R$ 9,90</span>
             </div>
             <CountdownTimer />
           </div>
@@ -565,7 +565,7 @@ function App() {
             </div>
             <h4 className="text-center font-bold text-xl mt-4 mb-2 text-brand-dark">Eu confio tanto que assumo o risco</h4>
             <p className="text-center text-gray-700 mb-4">
-              Se você comprar a lista, ligar para os fornecedores e achar que não valeu a pena, eu devolvo seus <strong>R$ 7,90</strong> NA HORA.
+              Se você comprar a lista, ligar para os fornecedores e achar que não valeu a pena, eu devolvo seus <strong>R$ 9,90</strong> NA HORA.
             </p>
             <p className="text-center text-xs text-gray-500 mt-2">É sério. Eu não brinco com o sonho de ninguém.</p>
           </div>
