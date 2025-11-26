@@ -96,7 +96,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "O preço vai baixar mais na Black Friday?",
-    answer: "Não, amor! Esse é o MENOR preço da história (R$ 9,90). É literalmente preço de custo para você começar agora."
+    answer: "Não, amor! Esse é o MENOR preço da história (R$ 7,90). É literalmente preço de custo para você começar agora."
   },
   {
     question: "Tenho medo de comprar e não receber, é seguro?",
@@ -120,7 +120,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "E se eu não gostar?",
-    answer: "Se você não gostar, eu devolvo seus R$ 9,90. Eu assumo o risco porque sei que funciona."
+    answer: "Se você não gostar, eu devolvo seus R$ 7,90. Eu assumo o risco porque sei que funciona."
   }
 ];
 
