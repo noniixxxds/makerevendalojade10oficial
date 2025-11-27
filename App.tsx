@@ -426,7 +426,7 @@ function App() {
               </span>
            </div>
           <h3 className="font-hand text-4xl text-white mb-2">
-            É agora ou nunca, minha flor!
+            É agora ou nunca, minha flor! Acesso imediato à Lista 2.0
           </h3>
           <p className="text-pink-100 mb-6">
             Essa oferta de <strong className="text-white">Black November</strong> pode sair do ar a qualquer momento.
@@ -531,7 +531,7 @@ function App() {
 
                        {/* Parcelado */}
                        <div className="flex items-center gap-1 mt-1">
-                          <span className="text-4xl font-black text-yellow-400 tracking-tight">2x R$ 3,95</span>
+                          <span className="text-4xl font-black text-[#FFD700] drop-shadow-md tracking-tight">2x R$ 3,95</span>
                        </div>
                        <p className="text-[10px] text-yellow-200/70 mt-1 uppercase tracking-wide">No cartão</p>
                   </div>
