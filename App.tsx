@@ -473,22 +473,6 @@ function App() {
                               </div>
                           </div>
                       </div>
-
-                      {/* Price Line dentro do Card */}
-                      <div className="flex items-center justify-between border-t border-pink-100 pt-3 mt-3">
-                          <div className="flex flex-col justify-end">
-                              <p className="text-xs text-gray-400 line-through mb-1">De R$ 17,99</p>
-                          </div>
-                          
-                          <div className="text-right flex flex-col items-end">
-                              <p className="text-xs text-brand-pink font-bold mb-0.5">Por apenas:</p>
-                              <p className="text-2xl font-black text-green-600 leading-none tracking-tight">R$ 7,90</p>
-                              
-                              <p className="text-sm font-black text-yellow-500 my-1">OU</p>
-
-                              <p className="text-xl font-black text-amber-500 leading-none tracking-tight">2x R$ 3,95</p>
-                          </div>
-                      </div>
                   </div>
 
                   {/* Bônus 1 */}
@@ -518,16 +502,38 @@ function App() {
             </div>
 
             <div className="flex flex-col items-center justify-center mb-6">
-              <span className="text-2xl text-pink-200 line-through font-medium mb-1">De R$ 17,99</span>
+              <div className="relative mb-2 group">
+                 <p className="text-xs text-white uppercase tracking-widest text-center font-bold drop-shadow-md">Vendido por:</p>
+                 <span className="text-3xl md:text-4xl text-gray-200 font-black relative inline-block mx-2 drop-shadow-sm">
+                    R$ 17,99
+                    {/* Linha vermelha de cancelamento */}
+                    <div className="absolute top-1/2 left-0 w-full h-1.5 bg-red-600 transform -rotate-6 rounded-full opacity-90 shadow-lg"></div>
+                 </span>
+              </div>
               
-              <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 w-full max-w-xs relative">
-                  <div className="flex flex-col items-center gap-2">
-                       <span className="text-4xl font-extrabold text-white leading-none">R$ 7,90</span>
-                       <div className="w-full h-px bg-white/20"></div>
-                       <div className="flex items-center gap-2">
-                          <span className="text-sm text-yellow-100 uppercase tracking-widest font-bold">OU</span>
-                          <span className="text-4xl font-extrabold text-yellow-300 leading-none">2x R$ 3,95</span>
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 w-full max-w-xs relative">
+                  <div className="flex flex-col items-center">
+                       {/* Preço à vista */}
+                       <p className="text-pink-200 text-xs uppercase font-bold mb-1">Por Apenas:</p>
+                       <div className="flex items-center justify-center gap-2 mb-2">
+                          <span className="text-3xl font-black text-green-400 tracking-tight">R$ 7,90</span>
+                          <div className="flex flex-col items-start leading-none">
+                             <span className="text-xs text-green-200 font-bold">à vista</span>
+                             <span className="text-[10px] text-yellow-300 font-bold whitespace-nowrap">(maior economia)</span>
+                          </div>
                        </div>
+
+                       {/* Separador Gigante OU */}
+                       <div className="relative w-full flex items-center justify-center my-3">
+                          <div className="h-px bg-white/20 w-full absolute"></div>
+                          <span className="bg-brand-dark px-3 text-3xl font-black text-yellow-400 z-10 relative transform -rotate-2">OU</span>
+                       </div>
+
+                       {/* Parcelado */}
+                       <div className="flex items-center gap-1 mt-1">
+                          <span className="text-4xl font-black text-yellow-400 tracking-tight">2x R$ 3,95</span>
+                       </div>
+                       <p className="text-[10px] text-yellow-200/70 mt-1 uppercase tracking-wide">No cartão</p>
                   </div>
               </div>
             </div>
