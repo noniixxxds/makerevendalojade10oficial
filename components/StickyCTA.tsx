@@ -12,10 +12,11 @@ export const StickyCTA = () => {
              <div className="flex items-center gap-1">
                 <span className="text-base font-black text-brand-pink">R$ 7,90</span>
                 <span className="text-[10px] text-gray-500 font-bold">à vista</span>
+                <span className="text-[8px] text-green-600 font-bold bg-green-100 px-1 rounded ml-1 whitespace-nowrap">(maior economia)</span>
              </div>
              <div className="flex items-center gap-1">
-                <span className="text-base font-black text-amber-500">2x R$ 3,95</span>
-                <CreditCard size={10} className="text-amber-500" />
+                <span className="text-base font-black text-[#FFD700]">2x R$ 3,95</span>
+                <CreditCard size={10} className="text-[#FFD700]" />
              </div>
          </div>
       </div>
