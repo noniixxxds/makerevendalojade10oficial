@@ -5,7 +5,7 @@ import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
 import { SalesNotification } from './components/SalesNotification';
 import { CouponPopup } from './components/CouponPopup';
-import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen, Gift, Smartphone, Calculator, BookOpen, Flame, Star, Crown, FileCheck } from 'lucide-react';
+import { ShieldCheck, Heart, Lock, CheckCircle, ChevronDown, ChevronUp, MessageCircle, ArrowDown, Headset, PackageOpen, Gift, Smartphone, Calculator, BookOpen, Flame, Star, Crown, FileCheck, CreditCard } from 'lucide-react';
 
 function App() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
@@ -50,6 +50,7 @@ function App() {
           {/* WHATSAPP BADGE + GIF DEMO */}
           <div className="flex flex-col items-center justify-center mb-8">
              <div className="bg-[#25D366] text-white px-4 py-2 rounded-full font-bold text-sm md:text-base flex items-center shadow-lg animate-bounce mb-6 z-10 relative border-2 border-white/50">
+               {/* Ícone SVG WhatsApp Oficial */}
                <svg viewBox="0 0 33 33" className="w-5 h-5 mr-2 fill-white" xmlns="http://www.w3.org/2000/svg">
                    <path d="M16.6 0C7.4 0 0 7.5 0 16.7c0 3 .8 5.9 2.3 8.4L.6 33l8.1-2.1c2.4 1.3 5.1 2 7.9 2 9.2 0 16.6-7.5 16.6-16.7S25.8 0 16.6 0zm0 29.8c-2.5 0-4.9-.7-7-1.9l-.5-.3-5.2 1.4 1.4-5.1-.3-.5C3.7 21.2 2.8 19 2.8 16.7c0-7.6 6.2-13.9 13.8-13.9s13.8 6.2 13.8 13.9-6.2 13.1-13.8 13.1zm7.6-10.4c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.6-.2.3-.5.3-.9.1-1.7-.9-3.2-2.1-4.3-4.2-.3-.5 0-.8.2-1 .2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.2.1-.4 0-.6s-1-2.4-1.3-3.3c-.3-.9-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.8s1.6 4.4 1.9 4.8c.3.4 3.2 5 7.9 7 3.8 1.6 4.6 1.3 5.4 1.2.8-.1 2.4-1 2.8-1.9.3-.9.3-1.7.2-1.9-.2-.2-.6-.3-1-.5z"/>
                </svg>
@@ -88,7 +89,7 @@ function App() {
           </p>
           
           {/* Author Profile - VISIBILIDADE MELHORADA */}
-          <div className="flex items-center justify-center space-x-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl border border-white/50 max-w-md mx-auto shadow-2xl transform hover:scale-105 transition-all duration-300">
+          <div className="flex items-center justify-center space-x-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl border border-white/50 max-w-md mx-auto shadow-xl transform hover:scale-105 transition-all duration-300">
              <img src="https://i.postimg.cc/jq75SSvD/image.png" alt="Sônia Prado" className="w-16 h-16 rounded-full border-2 border-brand-pink p-0.5 object-cover" />
              <div className="text-left">
                <p className="font-bold text-brand-dark text-sm leading-tight">Com Sônia, da fase difícil à independência</p>
@@ -474,11 +475,18 @@ function App() {
                       </div>
 
                       {/* Price Line dentro do Card */}
-                      <div className="flex items-end justify-between border-t border-pink-100 pt-2 mt-2">
-                          <p className="text-xs text-gray-400 line-through">De R$ 17,99</p>
-                          <div className="text-right">
-                              <p className="text-xs text-brand-pink font-bold">Por apenas:</p>
+                      <div className="flex items-center justify-between border-t border-pink-100 pt-3 mt-3">
+                          <div className="flex flex-col justify-end">
+                              <p className="text-xs text-gray-400 line-through mb-1">De R$ 17,99</p>
+                          </div>
+                          
+                          <div className="text-right flex flex-col items-end">
+                              <p className="text-xs text-brand-pink font-bold mb-0.5">Por apenas:</p>
                               <p className="text-2xl font-black text-green-600 leading-none tracking-tight">R$ 7,90</p>
+                              
+                              <p className="text-sm font-black text-yellow-500 my-1">OU</p>
+
+                              <p className="text-xl font-black text-amber-500 leading-none tracking-tight">2x R$ 3,95</p>
                           </div>
                       </div>
                   </div>
@@ -507,20 +515,21 @@ function App() {
                      </div>
                   </div>
                </div>
-
-               {/* Total Line */}
-               <div className="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
-                  <p className="text-xs text-gray-500">Valor Total:</p>
-                  <div className="text-right">
-                     <p className="text-xl font-black text-brand-pink leading-none">R$ 7,90</p>
-                     <p className="text-[9px] text-gray-500">ou 1x no cartão</p>
-                  </div>
-               </div>
             </div>
 
-            <div className="flex items-center justify-center space-x-4 mb-4">
-              <span className="text-2xl text-pink-200 line-through font-medium">R$ 17,99</span>
-              <span className="text-6xl font-extrabold text-white drop-shadow-md">R$ 7,90</span>
+            <div className="flex flex-col items-center justify-center mb-6">
+              <span className="text-2xl text-pink-200 line-through font-medium mb-1">De R$ 17,99</span>
+              
+              <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 w-full max-w-xs relative">
+                  <div className="flex flex-col items-center gap-2">
+                       <span className="text-4xl font-extrabold text-white leading-none">R$ 7,90</span>
+                       <div className="w-full h-px bg-white/20"></div>
+                       <div className="flex items-center gap-2">
+                          <span className="text-sm text-yellow-100 uppercase tracking-widest font-bold">OU</span>
+                          <span className="text-4xl font-extrabold text-yellow-300 leading-none">2x R$ 3,95</span>
+                       </div>
+                  </div>
+              </div>
             </div>
             <CountdownTimer />
           </div>
@@ -529,6 +538,7 @@ function App() {
             href={CHECKOUT_LINK}
             className="block w-full max-w-md mx-auto bg-[#25D366] hover:bg-green-600 text-white font-bold text-xl py-5 px-8 rounded-full shadow-[0_4px_15px_rgba(37,211,102,0.6)] transition-transform transform hover:scale-105 hover:-translate-y-1 animate-pulse-fast mb-4 flex items-center justify-center gap-3 border-2 border-white/20"
           >
+             {/* Ícone SVG WhatsApp Oficial */}
              <svg viewBox="0 0 33 33" className="w-8 h-8 fill-white" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.6 0C7.4 0 0 7.5 0 16.7c0 3 .8 5.9 2.3 8.4L.6 33l8.1-2.1c2.4 1.3 5.1 2 7.9 2 9.2 0 16.6-7.5 16.6-16.7S25.8 0 16.6 0zm0 29.8c-2.5 0-4.9-.7-7-1.9l-.5-.3-5.2 1.4 1.4-5.1-.3-.5C3.7 21.2 2.8 19 2.8 16.7c0-7.6 6.2-13.9 13.8-13.9s13.8 6.2 13.8 13.9-6.2 13.1-13.8 13.1zm7.6-10.4c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.6-.2.3-.5.3-.9.1-1.7-.9-3.2-2.1-4.3-4.2-.3-.5 0-.8.2-1 .2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.2.1-.4 0-.6s-1-2.4-1.3-3.3c-.3-.9-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.8s1.6 4.4 1.9 4.8c.3.4 3.2 5 7.9 7 3.8 1.6 4.6 1.3 5.4 1.2.8-.1 2.4-1 2.8-1.9.3-.9.3-1.7.2-1.9-.2-.2-.6-.3-1-.5z"/>
              </svg>
