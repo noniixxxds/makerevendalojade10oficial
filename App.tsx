@@ -518,7 +518,7 @@ function App() {
                           Ou R$ 7,74 (economize mais!)
                        </p>
                        
-                       <p className="text-[10px] text-yellow-200/50 mt-1 uppercase tracking-wide">No cartão</p>
+                       <p className="text-[10px] text-yellow-200/50 mt-1 uppercase tracking-wide"></p>
                   </div>
               </div>
             </div>
