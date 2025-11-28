@@ -502,40 +502,23 @@ function App() {
             </div>
 
             <div className="flex flex-col items-center justify-center mb-6">
-              <div className="relative mb-2 group">
-                 <p className="text-xs text-white uppercase tracking-widest text-center font-bold drop-shadow-md">Vendido por:</p>
-                 <span className="text-3xl md:text-4xl text-gray-200 font-black relative inline-block mx-2 drop-shadow-sm">
-                    R$ 17,99
-                    {/* Linha vermelha de cancelamento */}
-                    <div className="absolute top-1/2 left-0 w-full h-1.5 bg-red-600 transform -rotate-6 rounded-full opacity-90 shadow-lg"></div>
-                 </span>
-              </div>
-              
               <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 w-full max-w-xs relative">
                   <div className="flex flex-col items-center">
-                       {/* Preço à vista */}
-                       <p className="text-pink-200 text-xs uppercase font-bold mb-1">Por Apenas:</p>
-                       <div className="flex items-center justify-center gap-2 mb-2">
-                          <span className="text-3xl font-black text-green-400 tracking-tight">R$ 7,90</span>
-                          <div className="flex flex-col items-start leading-none">
-                             <span className="text-xs text-green-200 font-bold">à vista</span>
-                             <span className="text-[10px] text-yellow-300 font-bold whitespace-nowrap">(maior economia)</span>
-                          </div>
-                       </div>
-
-                       {/* Separador Gigante OU */}
-                       <div className="relative w-full flex items-center justify-center my-3">
-                          <div className="h-px bg-white/20 w-full absolute"></div>
-                          <span className="bg-brand-dark px-3 text-3xl font-black text-yellow-400 z-10 relative transform -rotate-2">OU</span>
-                       </div>
-
+                       {/* Preço à vista - REMOVIDO PARA DAR DESTAQUE AO PARCELADO */}
+                       
                        {/* Parcelado GIGANTE E COM BORDA GROSSA */}
                        <div className="flex items-center gap-1 mt-1">
                           <span className="text-5xl md:text-6xl font-black text-[#FF0000] bg-[#FFFF00] px-3 py-1 rounded-lg border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] tracking-tighter transform -rotate-2">
-                             2x R$ 3,95 🔥🔥
+                             2x R$ 3,91 🔥🔥
                           </span>
                        </div>
-                       <p className="text-[10px] text-yellow-200/70 mt-3 uppercase tracking-wide">No cartão</p>
+                       
+                       {/* Texto Discreto de Economia */}
+                       <p className="text-sm text-green-400 font-bold mt-3">
+                          Ou R$ 7,74 (economize mais!)
+                       </p>
+                       
+                       <p className="text-[10px] text-yellow-200/50 mt-1 uppercase tracking-wide">No cartão</p>
                   </div>
               </div>
             </div>

@@ -5,20 +5,18 @@ export const StickyCTA = () => {
   return (
     <div className="fixed bottom-0 left-0 w-full bg-white border-t border-brand-light shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] p-3 z-50 md:hidden flex items-center justify-between px-4">
       <div className="flex flex-col justify-center">
-         <span className="text-[10px] text-gray-400 line-through leading-none mb-1">De R$ 17,99</span>
          
-         <div className="flex flex-col leading-tight">
-             <div className="flex items-center gap-1 mb-1">
-                <span className="text-base font-black text-brand-pink">R$ 7,90</span>
-                <span className="text-[10px] text-gray-500 font-bold">à vista</span>
-                <span className="text-[8px] text-green-600 font-bold bg-green-100 px-1 rounded ml-1 whitespace-nowrap">(maior economia)</span>
-             </div>
+         <div className="flex flex-col leading-tight items-start">
              <div className="flex items-center gap-1">
                 {/* PREÇO PARCELADO GIGANTE E COM BORDA GROSSA - SEM ÍCONE */}
                 <span className="text-xl font-black text-[#FF0000] bg-[#FFFF00] px-2 py-0.5 rounded border-[3px] border-black shadow-sm transform -rotate-1 inline-block leading-none">
-                  2x R$ 3,95 🔥🔥
+                  2x R$ 3,91 🔥🔥
                 </span>
              </div>
+             {/* Texto Discreto de Economia */}
+             <span className="text-xs text-green-600 font-bold mt-1 ml-1 tracking-tight">
+                Ou R$ 7,74 (economize mais!)
+             </span>
          </div>
       </div>
       
