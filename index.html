@@ -30,11 +30,16 @@
               heartbeat: {
                 '0%, 100%': { transform: 'scale(1)', filter: 'brightness(100%)' },
                 '50%': { transform: 'scale(1.05)', boxShadow: '0 0 15px rgba(37, 211, 102, 0.7)', filter: 'brightness(115%)' },
+              },
+              'heartbeat-skew': {
+                '0%, 100%': { transform: 'skewX(-12deg) scale(1)' },
+                '50%': { transform: 'skewX(-12deg) scale(1.05)', filter: 'brightness(105%)', boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)' },
               }
             },
             animation: {
               'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
               'heartbeat': 'heartbeat 0.8s ease-in-out infinite',
+              'heartbeat-skew': 'heartbeat-skew 0.8s ease-in-out infinite',
             }
           }
         }
