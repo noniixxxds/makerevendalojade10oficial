@@ -1,6 +1,5 @@
 import React from 'react';
 import { CHECKOUT_LINK } from '../constants';
-import { CreditCard } from 'lucide-react';
 
 export const StickyCTA = () => {
   return (
@@ -15,11 +14,10 @@ export const StickyCTA = () => {
                 <span className="text-[8px] text-green-600 font-bold bg-green-100 px-1 rounded ml-1 whitespace-nowrap">(maior economia)</span>
              </div>
              <div className="flex items-center gap-1">
-                {/* PREÇO PARCELADO GIGANTE E COM BORDA GROSSA */}
+                {/* PREÇO PARCELADO GIGANTE E COM BORDA GROSSA - SEM ÍCONE */}
                 <span className="text-xl font-black text-[#FF0000] bg-[#FFFF00] px-2 py-0.5 rounded border-[3px] border-black shadow-sm transform -rotate-1 inline-block leading-none">
                   2x R$ 3,95 🔥🔥
                 </span>
-                <CreditCard size={12} className="text-black ml-0.5" />
              </div>
          </div>
       </div>
