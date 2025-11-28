@@ -529,11 +529,13 @@ function App() {
                           <span className="bg-brand-dark px-3 text-3xl font-black text-yellow-400 z-10 relative transform -rotate-2">OU</span>
                        </div>
 
-                       {/* Parcelado */}
+                       {/* Parcelado GIGANTE E COM BORDA GROSSA */}
                        <div className="flex items-center gap-1 mt-1">
-                          <span className="text-4xl font-black text-[#FFD700] drop-shadow-md tracking-tight">2x R$ 3,95</span>
+                          <span className="text-5xl md:text-6xl font-black text-[#FF0000] bg-[#FFFF00] px-3 py-1 rounded-lg border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] tracking-tighter transform -rotate-2">
+                             2x R$ 3,95 🔥🔥
+                          </span>
                        </div>
-                       <p className="text-[10px] text-yellow-200/70 mt-1 uppercase tracking-wide">No cartão</p>
+                       <p className="text-[10px] text-yellow-200/70 mt-3 uppercase tracking-wide">No cartão</p>
                   </div>
               </div>
             </div>
