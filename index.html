@@ -28,13 +28,13 @@
             },
             keyframes: {
               heartbeat: {
-                '0%, 100%': { transform: 'scale(1)' },
-                '50%': { transform: 'scale(1.05)', boxShadow: '0 0 15px rgba(37, 211, 102, 0.7)' },
+                '0%, 100%': { transform: 'scale(1)', filter: 'brightness(100%)' },
+                '50%': { transform: 'scale(1.05)', boxShadow: '0 0 15px rgba(37, 211, 102, 0.7)', filter: 'brightness(115%)' },
               }
             },
             animation: {
               'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'heartbeat': 'heartbeat 1s ease-in-out infinite',
+              'heartbeat': 'heartbeat 0.8s ease-in-out infinite',
             }
           }
         }
