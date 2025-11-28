@@ -6,8 +6,8 @@ const NOTIFICATIONS = [
   { 
     id: 1,
     name: "Alerta de Vendas", 
-    text: "Mais 15 pessoas receberam no Zap", 
-    time: "nos últimos 2 min",
+    text: "Mais 40 pessoas receberam no Zap", 
+    time: "nos últimos 3 dias",
     type: "alert",
     icon: "🔥" 
   },
