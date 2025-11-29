@@ -44,7 +44,7 @@ function App() {
              ⚡ OFERTA ANTECIPADA DE BLACK FRIDAY
           </div>
           <h1 className="font-heading font-extrabold text-3xl md:text-5xl leading-tight mb-4 drop-shadow-md text-white">
-            "Descubra a Lista Secreta de Fornecedores que as Donas de Loja de R$10 <span className="bg-white text-brand-pink px-1 italic transform -skew-x-12 inline-block animate-heartbeat-skew">Escondem de Você</span>"
+            "Descubra a Lista Secreta de Fornecedores que as Donas de Loja de R$10 <span className="bg-white text-brand-pink px-1 italic transform -skew-x-12 inline-block">Escondem de Você</span>"
           </h1>
           
           {/* WHATSAPP BADGE + GIF DEMO */}
