@@ -501,7 +501,7 @@ export default function App() {
       {/* --- FOOTER --- */}
       <footer className="bg-brand-dark text-white py-8 text-center text-sm opacity-90">
          <div className="container mx-auto px-4">
-            <p className="mb-2">&copy; 2024 Sônia Prado - Todos os direitos reservados.</p>
+            <p className="mb-2">&copy; 2024 - Todos os direitos reservados.</p>
             <p className="text-xs opacity-60 max-w-xl mx-auto">
                Este site não faz parte do Facebook ou do Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.
             </p>
