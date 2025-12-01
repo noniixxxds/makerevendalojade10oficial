@@ -82,8 +82,8 @@ export default function App() {
                       className="w-full rounded-lg shadow-md transform group-hover:scale-105 transition-transform duration-300 border-2 border-gray-100"
                    />
                    {/* Faixa Inauguração */}
-                   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-xl z-10">
-                      Inauguração Lojas de 10
+                   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
+                      Sua Loja de R$10 Lotando de Clientes
                    </div>
                 </div>
              </div>
