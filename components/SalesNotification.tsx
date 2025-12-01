@@ -39,10 +39,10 @@ export const SalesNotification = () => {
 
   useEffect(() => {
     // Initial delay before starting the loop
-    // Ajustado para 15 segundos (15000ms) - Tempo psicológico de leitura da headline
+    // Ajustado para 10 segundos (10000ms) conforme solicitado
     const initialTimeout = setTimeout(() => {
       setVisible(true);
-    }, 15000);
+    }, 10000);
 
     return () => clearTimeout(initialTimeout);
   }, []);

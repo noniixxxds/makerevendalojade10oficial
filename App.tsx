@@ -87,7 +87,7 @@ export default function App() {
                    />
                    {/* Faixa Inauguração */}
                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
-                      Inauguração lojas de 10
+                      Inauguração de lojas 10
                    </div>
                 </div>
              </div>
@@ -103,7 +103,7 @@ export default function App() {
              Como funciona? É simples assim:
            </h2>
            
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="flex flex-col items-center text-center">
                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">1</div>
                  <h3 className="font-bold text-lg mb-2">Receba no Zap</h3>
@@ -112,11 +112,6 @@ export default function App() {
               </div>
               <div className="flex flex-col items-center text-center">
                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">2</div>
-                 <h3 className="font-bold text-lg mb-2">Chame os Lojistas</h3>
-                 <p className="text-sm text-gray-600">Escolha os produtos de R$ 2,00 e faça seu pedido pelo celular.</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">3</div>
                  <h3 className="font-bold text-lg mb-2">Lucre 400%</h3>
                  <p className="text-sm text-gray-600">Venda para amigas e vizinhas com lucro absurdo.</p>
               </div>
