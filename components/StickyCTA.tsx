@@ -9,7 +9,7 @@ export const StickyCTA = () => {
          <div className="flex flex-col leading-tight items-start">
              <div className="flex items-center gap-1">
                 {/* PREÇO PARCELADO GIGANTE E COM BORDA GROSSA - SEM ÍCONE */}
-                <span className="text-xl font-black text-[#FF0000] bg-[#FFFF00] px-2 py-0.5 rounded border-[3px] border-black shadow-sm transform -rotate-1 inline-block leading-none">
+                <span className="text-lg font-black text-[#FF0000] bg-[#FFFF00] px-2 py-0.5 rounded border-[3px] border-black shadow-sm transform -rotate-1 inline-block leading-none">
                   2x R$ 3,91 🔥🔥
                 </span>
              </div>
