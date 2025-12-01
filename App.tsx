@@ -87,7 +87,7 @@ export default function App() {
                    />
                    {/* Faixa Inauguração */}
                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
-                      Inauguração de lojas 10
+                      A FONTE SECRETA DAS LOJAS DE 10 🤫
                    </div>
                 </div>
              </div>
@@ -96,24 +96,120 @@ export default function App() {
         </div>
       </header>
 
-      {/* --- HOW IT WORKS (REPLACED STORY SECTION) --- */}
+      {/* --- HOW IT WORKS (WITH PRODUCTS INSIDE STEP 2) --- */}
       <section className="py-12 bg-gray-50 border-y border-gray-200">
-         <div className="container mx-auto px-4 max-w-4xl">
+         <div className="container mx-auto px-4 max-w-6xl">
            <h2 className="text-center font-heading text-2xl md:text-3xl font-bold text-gray-800 mb-8">
              Como funciona? É simples assim:
            </h2>
            
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="flex flex-col items-center text-center">
+           <div className="flex flex-col gap-16">
+              
+              {/* STEP 1 */}
+              <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">1</div>
                  <h3 className="font-bold text-lg mb-2">Receba no Zap</h3>
                  <p className="text-sm text-gray-600 mb-3">O acesso chega automaticamente no seu WhatsApp e E-mail.</p>
                  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejk3Z2I1aDY3czRxYzBxanRkN3V0OGU1OHZqN3Jwdm04bjJ6djhlayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sQDYXzIfNEzsXbxgX4/giphy.gif" className="w-full max-w-[200px] rounded-xl shadow-md border-2 border-green-100" alt="Recebendo no WhatsApp" />
               </div>
-              <div className="flex flex-col items-center text-center">
+
+              {/* STEP 2 - NOW INCLUDES PRODUCT SHOWCASE */}
+              <div className="flex flex-col items-center text-center w-full">
                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">2</div>
                  <h3 className="font-bold text-lg mb-2">Lucre 400%</h3>
-                 <p className="text-sm text-gray-600">Venda para amigas e vizinhas com lucro absurdo.</p>
+                 <p className="text-sm text-gray-600 mb-8">Venda para amigas e vizinhas com lucro absurdo.</p>
+                 
+                 {/* --- MOVED PRODUCTS SECTION CONTENT START --- */}
+                 <div className="w-full bg-white rounded-3xl p-6 md:p-10 shadow-xl border border-gray-100">
+                    <div className="text-center mb-12">
+                      <h2 className="font-heading text-2xl md:text-4xl font-extrabold text-brand-dark mb-4">
+                        Preços de <span className="bg-black text-white px-2">Black Friday</span> o ano todo:
+                      </h2>
+                      <p className="text-lg text-gray-600">
+                        Você paga centavos e revende por R$ 10,00, R$ 15,00 ou mais.
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-4">
+                       {/* Phone Mockup */}
+                       <div className="relative w-64 h-[500px] border-8 border-gray-900 rounded-[3rem] shadow-2xl overflow-hidden bg-black shrink-0">
+                          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-7 w-24 bg-black rounded-b-2xl z-20"></div>
+                          
+                          <div className="w-full h-full bg-gray-100 overflow-y-auto no-scrollbar relative">
+                             <div className="bg-[#008069] p-4 pt-10 text-white flex items-center gap-3 sticky top-0 z-10 shadow-md">
+                                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-[#008069] font-bold text-xs">F</div>
+                                <div>
+                                  <p className="font-bold text-sm">Fornecedor #01</p>
+                                  <p className="text-[10px] opacity-90">visto por último hoje às 09:42</p>
+                                </div>
+                             </div>
+
+                             <div className="flex justify-center my-4">
+                                <span className="bg-[#e2e6ea] text-gray-600 text-[10px] px-2 py-1 rounded shadow-sm">HOJE</span>
+                             </div>
+
+                             <div className="px-3 mb-4 group relative">
+                                <div className="bg-white p-1 rounded-lg rounded-tl-none shadow-sm max-w-[85%] relative overflow-hidden">
+                                   <div className="relative">
+                                      <img 
+                                        src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmh0Y3Uxbm53dG93NDI3MnJjZzgwbHFldXI3cjJhMzBydGJpd2c2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Wfkq7BCVzOUwu1mqD/giphy.gif" 
+                                        alt="Segredo" 
+                                        className="w-full h-40 object-cover rounded blur-[5px] transition-all duration-500"
+                                      />
+                                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                         <div className="bg-black/40 p-2 rounded-full">
+                                            <span className="text-2xl">🎥</span>
+                                         </div>
+                                      </div>
+                                   </div>
+                                   <p className="text-xs text-gray-600 mt-2 font-medium px-1">IMAGEM DOS FORNECEDORES<br/>Unboxing fornecedor maquiagem</p>
+                                   <div className="text-[9px] text-gray-400 text-right mt-1">10:45</div>
+                                </div>
+                                
+                                <div className="absolute -right-2 top-0 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full animate-bounce shadow-md z-10">
+                                  Chegou Reposição Black!
+                                </div>
+                             </div>
+
+                             <div className="px-3 mb-2">
+                                 <div className="bg-white p-2 rounded-lg rounded-tl-none shadow-sm max-w-[85%] text-xs text-left">
+                                    É mercadoria de verdade chegando todo dia.
+                                    <div className="text-[9px] text-gray-400 text-right mt-1">10:46</div>
+                                 </div>
+                             </div>
+
+                          </div>
+                       </div>
+
+                       {/* Products Grid */}
+                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
+                         {PRODUCTS.map((product, index) => (
+                           <div key={index} className="bg-white p-3 rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300 relative group">
+                              <div className="absolute top-2 left-2 bg-black text-white text-[9px] font-bold px-1.5 py-0.5 rounded z-10">
+                                 {product.badge}
+                              </div>
+                              <div className="h-32 flex items-center justify-center mb-2 bg-gray-50 rounded-lg overflow-hidden relative">
+                                 <img src={product.img} alt={product.name} className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500" />
+                              </div>
+                              <h3 className="font-bold text-gray-800 text-xs md:text-sm leading-tight h-8 mb-1 line-clamp-2 text-left">{product.name}</h3>
+                              <p className="text-[10px] text-gray-400 mb-1 text-left">{product.brand}</p>
+                              <div className="flex justify-between items-end border-t border-dashed border-gray-200 pt-2">
+                                 <div className="text-left">
+                                   <p className="text-[10px] text-gray-400">Revenda</p>
+                                   <p className="text-xs font-bold text-gray-500 line-through decoration-red-500 decoration-2">R$ 15,00</p>
+                                 </div>
+                                 <div className="text-right">
+                                   <p className="text-[10px] text-brand-pink font-bold">Custo Black</p>
+                                   <p className="text-lg font-black text-brand-dark leading-none">R$ {product.cost}</p>
+                                 </div>
+                              </div>
+                           </div>
+                         ))}
+                       </div>
+                    </div>
+                 </div>
+                 {/* --- MOVED PRODUCTS SECTION CONTENT END --- */}
+
               </div>
            </div>
          </div>
@@ -150,103 +246,6 @@ export default function App() {
               </a>
             </div>
          </div>
-      </section>
-
-      {/* --- PRODUCTS SECTION --- */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark mb-4">
-              Preços de <span className="bg-black text-white px-2">Black Friday</span> o ano todo:
-            </h2>
-            <p className="text-lg text-gray-600">
-              Você paga centavos e revende por R$ 10,00, R$ 15,00 ou mais.
-            </p>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
-             <div className="relative w-64 h-[500px] border-8 border-gray-900 rounded-[3rem] shadow-2xl overflow-hidden bg-black">
-                {/* Dynamic Island */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-7 w-24 bg-black rounded-b-2xl z-20"></div>
-                
-                {/* Screen Content */}
-                <div className="w-full h-full bg-gray-100 overflow-y-auto no-scrollbar relative">
-                   {/* Header Zap */}
-                   <div className="bg-[#008069] p-4 pt-10 text-white flex items-center gap-3 sticky top-0 z-10 shadow-md">
-                      <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-[#008069] font-bold text-xs">F</div>
-                      <div>
-                        <p className="font-bold text-sm">Fornecedor #01</p>
-                        <p className="text-[10px] opacity-90">visto por último hoje às 09:42</p>
-                      </div>
-                   </div>
-
-                   {/* Date Bubble */}
-                   <div className="flex justify-center my-4">
-                      <span className="bg-[#e2e6ea] text-gray-600 text-[10px] px-2 py-1 rounded shadow-sm">HOJE</span>
-                   </div>
-
-                   {/* Secret Product - Blurred */}
-                   <div className="px-3 mb-4 group relative">
-                      <div className="bg-white p-1 rounded-lg rounded-tl-none shadow-sm max-w-[85%] relative overflow-hidden">
-                         <div className="relative">
-                            <img 
-                              src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmh0Y3Uxbm53dG93NDI3MnJjZzgwbHFldXI3cjJhMzBydGJpd2c2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Wfkq7BCVzOUwu1mqD/giphy.gif" 
-                              alt="Segredo" 
-                              className="w-full h-40 object-cover rounded blur-[5px] transition-all duration-500"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                               <div className="bg-black/40 p-2 rounded-full">
-                                  <span className="text-2xl">🎥</span>
-                               </div>
-                            </div>
-                         </div>
-                         <p className="text-xs text-gray-600 mt-2 font-medium px-1">IMAGEM DOS FORNECEDORES<br/>Unboxing fornecedor maquiagem</p>
-                         <div className="text-[9px] text-gray-400 text-right mt-1">10:45</div>
-                      </div>
-                      
-                      {/* Badge Chegou */}
-                      <div className="absolute -right-2 top-0 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded-full animate-bounce shadow-md z-10">
-                        Chegou Reposição Black!
-                      </div>
-                   </div>
-
-                   <div className="px-3 mb-2">
-                       <div className="bg-white p-2 rounded-lg rounded-tl-none shadow-sm max-w-[85%] text-xs">
-                          É mercadoria de verdade chegando todo dia.
-                          <div className="text-[9px] text-gray-400 text-right mt-1">10:46</div>
-                       </div>
-                   </div>
-
-                </div>
-             </div>
-
-             {/* Products Grid */}
-             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
-               {PRODUCTS.map((product, index) => (
-                 <div key={index} className="bg-white p-3 rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:scale-105 transition-all duration-300 relative group">
-                    <div className="absolute top-2 left-2 bg-black text-white text-[9px] font-bold px-1.5 py-0.5 rounded z-10">
-                       {product.badge}
-                    </div>
-                    <div className="h-32 flex items-center justify-center mb-2 bg-gray-50 rounded-lg overflow-hidden relative">
-                       <img src={product.img} alt={product.name} className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500" />
-                    </div>
-                    <h3 className="font-bold text-gray-800 text-xs md:text-sm leading-tight h-8 mb-1 line-clamp-2">{product.name}</h3>
-                    <p className="text-[10px] text-gray-400 mb-1">{product.brand}</p>
-                    <div className="flex justify-between items-end border-t border-dashed border-gray-200 pt-2">
-                       <div>
-                         <p className="text-[10px] text-gray-400">Revenda</p>
-                         <p className="text-xs font-bold text-gray-500 line-through decoration-red-500 decoration-2">R$ 15,00</p>
-                       </div>
-                       <div className="text-right">
-                         <p className="text-[10px] text-brand-pink font-bold">Custo Black</p>
-                         <p className="text-lg font-black text-brand-dark leading-none">R$ {product.cost}</p>
-                       </div>
-                    </div>
-                 </div>
-               ))}
-             </div>
-          </div>
-        </div>
       </section>
 
       {/* --- SUPPORT SECTION (Steps moved to top) --- */}
