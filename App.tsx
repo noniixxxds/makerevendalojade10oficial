@@ -71,10 +71,12 @@ export default function App() {
                    <p className="font-hand text-2xl md:text-3xl font-bold text-red-600 leading-tight mb-2">
                      CANSADA DE DEPENDER ATÉ PRA FAZER A <span className="bg-yellow-300 px-1 transform -rotate-2 inline-block border-2 border-black">UNHA</span> ?
                    </p>
-                   <p className="font-bold text-lg text-gray-800 uppercase">
+                   <p className="font-bold text-lg text-gray-800 uppercase mb-2">
                      TÁ NA HORA DE TER SUA PRÓPRIA RENDA!!
-                     Acesso imediato à Lista 2.0
                    </p>
+                   <span className="inline-block bg-[#25D366] text-white px-3 py-1 rounded-md font-bold shadow-sm transform rotate-1 border-2 border-white text-base md:text-lg animate-pulse">
+                      🔓 Acesso imediato à Lista 2.0
+                   </span>
                 </div>
                 <div className="w-full max-w-md mx-auto relative group">
                    <img 
