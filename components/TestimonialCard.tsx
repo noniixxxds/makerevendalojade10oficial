@@ -1,5 +1,14 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, FileText } from 'lucide-react';
+
+interface ConversationItem {
+  side: string;
+  text?: string;
+  type?: string;
+  fileName?: string;
+  fileInfo?: string;
+  time: string;
+}
 
 interface TestimonialProps {
   name: string;
@@ -7,10 +16,85 @@ interface TestimonialProps {
   type: string;
   audioTime?: string;
   img?: string;
+  conversation?: ConversationItem[];
 }
 
-export const TestimonialCard: React.FC<TestimonialProps> = ({ name, text, type, audioTime, img }) => {
-  // 1. WHATSAPP CONVERSATION SIMULATION
+export const TestimonialCard: React.FC<TestimonialProps> = ({ name, text, type, audioTime, img, conversation }) => {
+  
+  // 0. WHATSAPP DARK MODE (CUSTOM IMAGE REQUEST)
+  if (type === 'whatsapp-dark') {
+    return (
+      <div className="bg-[#0b141a] rounded-xl shadow-2xl border border-gray-800 flex flex-col relative overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-green-900/20">
+        
+        {/* Floating Badge 'Acesso em Tempo Real' */}
+        <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-30 pointer-events-none">
+           <div className="bg-black/40 backdrop-blur-md border border-green-500/30 text-green-400 px-4 py-1.5 rounded-full text-xs font-bold shadow-[0_0_15px_rgba(37,211,102,0.3)] flex items-center gap-2 animate-pulse">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
+              acesso em tempo real
+           </div>
+        </div>
+
+        {/* Header Dark */}
+        <div className="bg-[#202c33] p-3 flex items-center gap-3 z-20 border-b border-gray-800/50">
+           <div className="w-10 h-10 rounded-full bg-gray-500 overflow-hidden border border-gray-600">
+              <img src={`https://api.dicebear.com/7.x/initials/svg?seed=${name}&backgroundColor=005c4b`} alt={name} />
+           </div>
+           <div className="flex flex-col">
+              <span className="text-[#e9edef] font-bold text-sm">{name}</span>
+              <span className="text-gray-400 text-xs">online</span>
+           </div>
+        </div>
+
+        {/* Body Dark */}
+        <div className="p-4 flex flex-col gap-3 relative bg-[#0b141a] min-h-[300px]">
+           {/* Background Pattern */}
+           <div className="absolute inset-0 bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] opacity-[0.06] bg-repeat"></div>
+
+           <div className="relative z-10 flex flex-col gap-3 pb-2">
+              {conversation?.map((msg, idx) => (
+                  <div key={idx} className={`max-w-[85%] rounded-lg p-2 text-sm relative shadow-sm ${
+                      msg.side === 'right' 
+                      ? 'self-end bg-[#005c4b] text-[#e9edef] rounded-tr-none' 
+                      : 'self-start bg-[#202c33] text-[#e9edef] rounded-tl-none'
+                  }`}>
+                      {msg.type === 'file' ? (
+                          <div className="flex items-center gap-3 p-1">
+                              <div className="bg-[#ff5a5f] h-10 w-8 rounded flex items-center justify-center text-white font-bold text-[8px] shadow-sm shrink-0">
+                                PDF
+                              </div>
+                              <div className="flex flex-col min-w-0">
+                                  <span className="font-bold line-clamp-1 text-sm text-white">{msg.fileName}</span>
+                                  <span className="text-[10px] opacity-70 text-gray-300">{msg.fileInfo}</span>
+                              </div>
+                          </div>
+                      ) : (
+                          <p className="whitespace-pre-line leading-relaxed text-[13px]">{msg.text}</p>
+                      )}
+                      
+                      <div className="text-[9px] text-gray-400 text-right mt-1 flex justify-end items-center gap-1">
+                          {msg.time}
+                          {msg.side === 'right' && <span className="text-[#53bdeb] font-bold">✓✓</span>}
+                      </div>
+                  </div>
+              ))}
+           </div>
+        </div>
+        
+        {/* Footer Input simulation */}
+         <div className="bg-[#202c33] p-2 flex items-center gap-3 z-20 border-t border-gray-800">
+            <div className="bg-[#2a3942] rounded-full h-9 w-9 flex items-center justify-center text-gray-400 text-xl pb-1">+</div>
+            <div className="bg-[#2a3942] rounded-lg h-9 flex-1 flex items-center px-4 text-sm text-gray-400">
+                Digite uma mensagem
+            </div>
+            <div className="bg-[#00a884] rounded-full h-9 w-9 flex items-center justify-center text-white shadow-md">
+               <span className="ml-0.5 mt-0.5">➤</span>
+            </div>
+         </div>
+      </div>
+    );
+  }
+
+  // 1. WHATSAPP CONVERSATION SIMULATION (LIGHT)
   if (type === 'whatsapp') {
     return (
       <div className="bg-[#E5DDD5] p-3 rounded-xl shadow-lg border border-gray-300 flex flex-col relative overflow-hidden">
@@ -80,7 +164,7 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({ name, text, type, 
 
             {/* The Evidence Image */}
             <div className="relative group cursor-pointer bg-gray-100">
-                <img src={img} alt="Prova social" className="w-full h-auto object-cover" />
+                {img && <img src={img} alt="Prova social" className="w-full h-auto object-cover" />}
                 {text && (
                    <div className="bg-white/95 backdrop-blur-sm p-2 text-xs text-gray-700 italic border-t border-gray-100 leading-tight">
                       "{text}"

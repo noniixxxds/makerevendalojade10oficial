@@ -4,18 +4,19 @@ import {
   MessageCircle, 
   Lock, 
   ChevronDown, 
-  Star, 
   Sparkles, 
   Gem, 
   Smile,
-  ArrowRight
+  ShoppingBag,
+  Heart,
+  Users
 } from 'lucide-react';
-import { StickyCTA } from './components/StickyCTA';
-import { SalesNotification } from './components/SalesNotification';
 import { CouponPopup } from './components/CouponPopup';
 import { SupportPopup } from './components/SupportPopup';
 import { TestimonialCard } from './components/TestimonialCard';
 import { CountdownTimer } from './components/CountdownTimer';
+import { StickyCTA } from './components/StickyCTA';
+import { SalesNotification } from './components/SalesNotification';
 import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, CHECKOUT_LINK } from './constants';
 
 export default function App() {
@@ -50,145 +51,83 @@ export default function App() {
   return (
     <div className="min-h-screen bg-brand-bg font-sans text-gray-800 pb-24 md:pb-0 selection:bg-brand-pink selection:text-white overflow-x-hidden">
       
-      {/* Popups & Notifications */}
+      {/* Notifications & Sticky Elements */}
       <SalesNotification />
-      <SupportPopup isOpen={showSupportPopup} onClose={handleCloseSupport} />
-      <CouponPopup isOpen={showCouponPopup} onClose={() => setShowCouponPopup(false)} />
       <StickyCTA />
 
+      {/* Popups */}
+      <SupportPopup isOpen={showSupportPopup} onClose={handleCloseSupport} />
+      <CouponPopup isOpen={showCouponPopup} onClose={() => setShowCouponPopup(false)} />
+
       {/* --- HERO SECTION --- */}
-      <header className="relative bg-gradient-to-br from-purple-600 via-brand-pink to-brand-dark text-white pt-8 pb-16 overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        
-        <div className="container mx-auto px-4 relative z-10 text-center">
+      <header className="bg-gradient-to-b from-brand-pink to-brand-dark text-white pt-8 pb-16 px-4 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div className="container mx-auto max-w-4xl relative z-10">
           
-      
-
-          <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight drop-shadow-md">
-            Descubra a Lista Secreta de Fornecedores que as <br className="hidden md:block"/>
-            <span className="text-yellow-300">Donas de Loja de R$10</span> <br/>
-            <span className="bg-white text-brand-pink px-2 transform -skew-x-6 inline-block mt-2">
-               Escondem de Você
-            </span>"
-          </h1>
-          
-          {/* Pain Point Quote - MOVED ABOVE CARD - SUPER DESTAQUE */}
-          <div className="flex flex-col items-center justify-center mb-8 relative z-20 mt-8 px-2">
-              <p className="bg-white text-[#FF0000] font-black text-xl md:text-3xl leading-none uppercase text-center px-6 py-4 rounded-lg border-4 border-[#FF0000] shadow-[8px_8px_0px_0px_rgba(0,0,0,0.5)] transform -rotate-2 max-w-2xl mx-auto italic tracking-tighter relative z-10">
-                Cansada de depender até pra fazer a <span className="bg-yellow-300 text-black px-1 mx-1 transform -rotate-2 inline-block border-2 border-black shadow-sm">UNHA</span>? <br className="md:hidden" />
-                Tá na hora de ter sua própria renda.
-              </p>
-              
-              {/* GIF REFORÇO VISUAL + BADGE LIVE */}
-              <div className="mt-6 relative rounded-xl overflow-hidden shadow-2xl border-4 border-white w-full max-w-[200px] md:max-w-[250px] transform rotate-2 hover:rotate-0 transition-transform group">
-                  {/* Live Badge */}
-                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="bg-black/70 backdrop-blur-sm border border-green-500/50 text-green-400 text-[10px] font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg animate-pulse">
-                        <div className="relative flex h-2 w-2">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                        </div>
-                        acesso em tempo real
-                    </div>
-                  </div>
-                  
-                  <img 
-                    src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb25nZDYyNndjYXFucWhoZG5ibG4weXhvNHQ4eXYzMWV6dXF0bGdvOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/y0arF4lGb1PN6xwDva/giphy.gif" 
-                    alt="Reação" 
-                    className="w-full h-auto"
-                  />
-              </div>
-          </div>
-
-          {/* Author Profile */}
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl border border-white/50 max-w-lg mx-auto shadow-2xl relative z-10">
-            <div className="w-16 h-16 rounded-full border-2 border-brand-pink p-0.5 shrink-0">
-               <img src="https://i.postimg.cc/jq75SSvD/image.png" alt="Sônia" className="w-full h-full rounded-full object-cover" />
-            </div>
-            <div className="text-left">
-              <p className="text-brand-dark font-bold text-lg">Com Sônia, da fase difícil à independência</p>
-              <p className="text-gray-600 text-sm italic">Uma história marcada por fé, recomeço e provisão.</p>
-            </div>
+          {/* PAIN BOX */}
+          <div className="bg-white text-brand-dark p-6 rounded-xl shadow-2xl transform rotate-1 border-b-8 border-brand-dark max-w-3xl mx-auto mb-8 animate-bounce-in">
+             <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-1 text-left">
+                   <p className="font-hand text-2xl md:text-3xl font-bold text-red-600 leading-tight mb-2">
+                     CANSADA DE DEPENDER ATÉ PRA FAZER A <span className="bg-yellow-300 px-1 transform -rotate-2 inline-block border-2 border-black">UNHA</span> ?
+                   </p>
+                   <p className="font-bold text-lg text-gray-800 uppercase">
+                     TÁ NA HORA DE TER SUA PRÓPRIA RENDA!
+                   </p>
+                </div>
+                <div className="flex-1 w-full max-w-xs md:max-w-full mx-auto">
+                   <img 
+                      src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnFocGZheHdjdnZ4eGM1dHA4bW5tbGVhMW8ybm03ZGxnNjRlcDY0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qf1og8TmCIbVD5giqa/giphy.gif" 
+                      alt="Independência Financeira" 
+                      className="w-full rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 border-2 border-gray-100"
+                   />
+                </div>
+             </div>
           </div>
 
         </div>
       </header>
 
-      {/* --- NEW SECTION: VISUALIZATION (DREAM) --- */}
-      <section className="py-12 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4 text-center">
-           <div className="inline-block p-3 rounded-full bg-purple-50 mb-4">
-              <Sparkles className="w-8 h-8 text-purple-500 animate-pulse" />
-           </div>
-           <h2 className="font-heading text-2xl md:text-3xl font-bold text-gray-800 mb-8">
-             Imagine sua vida quando voce realmente fazer isso acontecer...
-           </h2>
-           
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-gradient-to-b from-pink-50 to-white p-6 rounded-2xl border border-pink-100 shadow-sm hover:shadow-md transition-shadow">
-                 <div className="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">💅</div>
-                 <h3 className="font-bold text-brand-dark mb-2">Vaidade em Dia</h3>
-                 <p className="text-sm text-gray-600">Você fazendo cabelo e unha toda semana sem pedir 1 real pra ninguém.</p>
-              </div>
-              <div className="bg-gradient-to-b from-purple-50 to-white p-6 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition-shadow">
-                 <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🛒</div>
-                 <h3 className="font-bold text-purple-700 mb-2">Geladeira Cheia</h3>
-                 <p className="text-sm text-gray-600">Ir ao mercado e comprar o que seus filhos pedem sem olhar o preço.</p>
-              </div>
-              <div className="bg-gradient-to-b from-green-50 to-white p-6 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition-shadow">
-                 <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🥰</div>
-                 <h3 className="font-bold text-green-700 mb-2">Orgulho da Família</h3>
-                 <p className="text-sm text-gray-600">Ver o marido e a família te admirando por ter dado a volta por cima.</p>
-              </div>
-           </div>
-        </div>
-      </section>
-
-      {/* --- HISTORY SECTION --- */}
-      <section className="py-12 bg-brand-bg">
-        <div className="container mx-auto px-4 max-w-4xl">
-           <div className="bg-white rounded-2xl p-6 md:p-10 shadow-xl border-l-4 border-brand-pink relative overflow-hidden">
-             <div className="absolute -right-10 -top-10 text-9xl text-gray-100 font-serif opacity-50 z-0">"</div>
-             
-             <div className="relative z-10">
-                <span className="bg-brand-light text-brand-dark px-3 py-1 rounded text-xs font-bold tracking-widest uppercase mb-4 inline-block">História Real</span>
-                <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6 text-gray-800">
-                  Baseada em uma história real de recomeço com maquiagem acessível
-                </h2>
-                
-                <div className="space-y-4 text-gray-700 leading-relaxed text-base md:text-lg">
-                  <p>
-                    Existem momentos em que a vida parece desabar. Foi o que aconteceu com <strong className="text-brand-pink">Sônia Prado</strong>.
-                  </p>
-                  <p>
-                    Ela vendeu a casa para investir na Bolsa e perdeu tudo. O impacto foi devastador: nas finanças, no emocional e na saúde. Em suas palavras, foi <span className="italic">desesperador</span>.
-                  </p>
-                  <p>
-                    Mas ao invés de desistir, Sônia agiu. Inspirada na irmã, juntou o que restava e abriu uma pequena loja vendendo maquiagens.
-                  </p>
-                  <p>
-                     O que era um último suspiro virou um novo começo. A loja encheu, o dinheiro girou e Sônia recuperou algo valioso: <strong>sua dignidade e fé.</strong>
-                  </p>
-                </div>
-
-                <div className="mt-8 bg-brand-bg p-4 rounded-lg border border-brand-light flex items-start gap-3">
-                   <span className="text-2xl">🙌</span>
-                   <div>
-                     <p className="text-brand-dark font-medium italic">
-                       "Deus é especialista em transformar cinzas em alegria. Ele continua agindo através de decisões corajosas."
+      {/* --- STORY SECTION --- */}
+      <section className="py-12 bg-gray-50 border-y border-gray-200">
+         <div className="container mx-auto px-4 max-w-4xl">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+               <div className="md:w-1/2">
+                  <span className="bg-brand-pink text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">História Real</span>
+                  <h2 className="font-heading text-2xl md:text-3xl font-extrabold text-gray-800 mb-4">
+                    Baseada em uma história real de recomeço com maquiagem acessível
+                  </h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed text-sm md:text-base text-justify">
+                     <p>
+                       Existem momentos em que a vida parece desabar. Foi o que aconteceu com <strong className="text-brand-pink">Sônia Prado</strong>.
                      </p>
-                     <p className="text-xs text-brand-pink mt-1 font-bold">📖 Jeremias 29:11</p>
-                   </div>
-                </div>
-             </div>
-           </div>
-        </div>
+                     <p>
+                       Ela vendeu a casa para investir e perdeu tudo. O impacto foi devastador: nas finanças, no emocional e na saúde. Em suas palavras, foi desesperador.
+                     </p>
+                     <p>
+                       Mas ao invés de desistir, Sônia agiu. Inspirada na irmã, juntou o que restava e abriu uma pequena loja vendendo maquiagens.
+                     </p>
+                     <p className="bg-white p-3 rounded-lg border-l-4 border-brand-pink italic">
+                       O que era um último suspiro virou um novo começo. A loja encheu, o dinheiro girou e Sônia recuperou algo valioso: sua dignidade e fé.
+                     </p>
+                  </div>
+               </div>
+               <div className="md:w-1/2 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 relative">
+                  <div className="absolute -top-3 -right-3 text-4xl">🙌</div>
+                  <h3 className="font-hand text-2xl font-bold text-gray-800 mb-2 text-center">A Palavra de Sônia</h3>
+                  <p className="text-center italic text-gray-600 mb-4">
+                    "Deus é especialista em transformar cinzas em alegria. Ele continua agindo através de decisões corajosas."
+                  </p>
+                  <div className="text-center">
+                     <span className="font-bold text-brand-dark bg-brand-light px-4 py-1 rounded-full text-sm">📖 Jeremias 29:11</span>
+                  </div>
+               </div>
+            </div>
+         </div>
       </section>
 
       {/* --- SOCIAL PROOF (DELIVERIES) --- */}
-      <section className="py-12 bg-[#E5DDD5] relative border-t border-b border-gray-200">
+      <section className="py-12 bg-[#E5DDD5] relative border-b border-gray-200 pt-16">
          <div className="absolute inset-0 opacity-5 bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')]"></div>
          <div className="container mx-auto px-4 relative z-10">
             <div className="text-center mb-10">
@@ -198,7 +137,6 @@ export default function App() {
               <h2 className="font-heading text-2xl md:text-4xl font-extrabold text-gray-800 mb-2">
                 Elas acabaram de receber o acesso
               </h2>
-              <p className="text-gray-600">Não é só você que está aproveitando a Black Friday. Veja quem já está com a lista na mão agora mesmo:</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">

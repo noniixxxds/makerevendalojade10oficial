@@ -34,12 +34,24 @@
               'heartbeat-skew': {
                 '0%, 100%': { transform: 'skewX(-12deg) scale(1)' },
                 '50%': { transform: 'skewX(-12deg) scale(1.05)', filter: 'brightness(105%)', boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              bounceIn: {
+                '0%': { opacity: '0', transform: 'scale(0.3)' },
+                '50%': { opacity: '1', transform: 'scale(1.05)' },
+                '70%': { transform: 'scale(0.9)' },
+                '100%': { transform: 'scale(1)' },
               }
             },
             animation: {
               'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
               'heartbeat': 'heartbeat 0.8s ease-in-out infinite',
               'heartbeat-skew': 'heartbeat-skew 0.8s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.3s ease-out',
+              'bounce-in': 'bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
             }
           }
         }
