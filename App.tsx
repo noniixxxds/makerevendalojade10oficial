@@ -25,11 +25,11 @@ export default function App() {
   const [showCouponPopup, setShowCouponPopup] = useState(false);
   const [hasClosedSupport, setHasClosedSupport] = useState(false);
 
-  // 1. Show Support Popup after 5 seconds
+  // 1. Show Support Popup after 15 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSupportPopup(true);
-    }, 5000);
+    }, 15000);
     return () => clearTimeout(timer);
   }, []);
 

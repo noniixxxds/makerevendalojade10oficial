@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { CheckCircle } from 'lucide-react';
 
@@ -40,10 +39,10 @@ export const SalesNotification = () => {
 
   useEffect(() => {
     // Initial delay before starting the loop
-    // Ajustado para 7 segundos (7000ms) - Tempo psicológico de leitura da headline
+    // Ajustado para 15 segundos (15000ms) - Tempo psicológico de leitura da headline
     const initialTimeout = setTimeout(() => {
       setVisible(true);
-    }, 7000);
+    }, 15000);
 
     return () => clearTimeout(initialTimeout);
   }, []);
