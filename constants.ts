@@ -125,18 +125,6 @@ export const FAQ_ITEMS = [
 ];
 
 export const TESTIMONIALS = [
-  { 
-    name: "Flavia", 
-    type: "whatsapp-dark",
-    img: "", 
-    conversation: [
-        { side: 'right', type: 'file', fileName: 'LISTA DE FORNECEDORES 2.0', fileInfo: '10 páginas • PDF • 2 MB', time: '17:28' },
-        { side: 'right', type: 'file', fileName: 'SCRIPT DE VENDAS SECRETA...', fileInfo: '5 páginas • PDF • 1 MB', time: '17:28' },
-        { side: 'right', text: 'Se pintar alguma dúvida no caminho, me chama.\n\nVocê vai sentir o quanto isso facilita — e como tudo começa a encaixar de um jeito que faz sentido. ❤️✨', time: '17:28' },
-        { side: 'left', text: 'menina... eu juro q eu tô chocada aqui 😳', time: '17:36' },
-        { side: 'left', text: 'melhor do que eu imaginava', time: '17:38' }
-    ]
-  },
   { name: "Carla Dias", img: "https://i.postimg.cc/pV5zHkzQ/image.png", text: "Mal recebi a lista e já tô acessando agora mesmo! Chocada com a rapidez.", type: "photo" },
   { name: "Bruna S.", img: "https://i.postimg.cc/DycFDkjw/image.png", text: "Comecei com medo, mas investi pouquinho e olha a qualidade das mercadorias! Apaixonada.", type: "photo" },
   { name: "Jessica Alves", img: "https://i.postimg.cc/3RQjg2Xq/image.png", text: "Simplesmente apaixonada! Chegou tudo certinho e as vendas estão bombando.", type: "photo" },
