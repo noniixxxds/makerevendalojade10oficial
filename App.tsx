@@ -73,6 +73,7 @@ export default function App() {
                    </p>
                    <p className="font-bold text-lg text-gray-800 uppercase">
                      TÁ NA HORA DE TER SUA PRÓPRIA RENDA!!
+                     Acesso imediato à Lista 2.0
                    </p>
                 </div>
                 <div className="w-full max-w-md mx-auto relative group">
