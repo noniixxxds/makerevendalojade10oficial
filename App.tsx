@@ -68,7 +68,7 @@ export default function App() {
                    />
                    {/* Faixa Inauguração */}
                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
-                      inauguração🥳! de novas🎉! lojas! 😱😱❤️de 10 !
+                      INAUGURAÇÃO DAS NOVAS LOJAS 😭🔥
                    </div>
                 </div>
              </div>
@@ -91,7 +91,7 @@ export default function App() {
                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">1</div>
                  <h3 className="font-bold text-lg mb-2">Receba no Zap</h3>
                  <p className="text-sm text-gray-600 mb-3">O acesso chega automaticamente no seu WhatsApp e E-mail.</p>
-                 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejk3Z2I1aDY3czRxYzBxanRkN3V0OGU1OHZqN3Jwdm04bjJ6djhlayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sQDYXzIfNEzsXbxgX4/giphy.gif" className="w-full max-w-[200px] rounded-xl shadow-md border-2 border-green-100" alt="Recebendo no WhatsApp" />
+                 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejk3Z2I1aDY3czRxYzBxanRkN3V0OGU1OHZqN3Jwdm04bjJ6djhlayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sQDYXzIfNEzsXbxgX4/giphy.gif" className="w-full max-w-[280px] rounded-xl shadow-md border-2 border-green-100" alt="Recebendo no WhatsApp" />
               </div>
 
               {/* STEP 2 - NOW INCLUDES PRODUCT SHOWCASE */}
