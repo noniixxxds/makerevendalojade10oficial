@@ -6,7 +6,7 @@ const NOTIFICATIONS = [
   { 
     id: 1,
     name: "Alerta de Vendas", 
-    text: "Mais 40 pessoas receberam no Zap", 
+    text: "Mais 40 pessoas receberam no WhatsApp", 
     time: "nos últimos 3 dias",
     type: "alert",
     icon: "🔥" 
@@ -14,21 +14,21 @@ const NOTIFICATIONS = [
   { 
     id: 2,
     name: "Tatiane Souza", 
-    text: "acabou de receber o acesso", 
+    text: "acabou de receber o acesso no WhatsApp", 
     time: "Agora mesmo", 
     type: "person" 
   },
   { 
     id: 3,
     name: "Marta Alves", 
-    text: "recebeu o link no WhatsApp", 
+    text: "acabou de receber o acesso no WhatsApp", 
     time: "Há 1 minuto", 
     type: "person" 
   },
   { 
     id: 4,
     name: "Gracielly Oliveira", 
-    text: "garantiu a oferta", 
+    text: "acabou de receber o acesso no WhatsApp", 
     time: "Há 3 minutos", 
     type: "person" 
   }

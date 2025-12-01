@@ -30,7 +30,7 @@ export const SupportPopup: React.FC<SupportPopupProps> = ({ isOpen, onClose }) =
            </h3>
            
            <p className="text-gray-600 text-sm mb-5 leading-relaxed">
-             Oi, sou a Sônia! Vi que você está olhando a lista. Se tiver qualquer dúvida sobre como funciona ou sobre os fornecedores, me chama no WhatsApp!
+             Oi! Vi que você está olhando a lista. Se tiver qualquer dúvida sobre como funciona ou sobre os fornecedores, me chama no WhatsApp!
            </p>
 
            <a 
@@ -41,7 +41,7 @@ export const SupportPopup: React.FC<SupportPopupProps> = ({ isOpen, onClose }) =
              onClick={onClose}
            >
              <MessageCircle size={18} />
-             Falar com Sônia
+             Falar com Atendente
            </a>
            
            <button 

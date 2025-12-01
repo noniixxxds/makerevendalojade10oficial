@@ -66,16 +66,16 @@ export default function App() {
           
           {/* PAIN BOX */}
           <div className="bg-white text-brand-dark p-6 rounded-xl shadow-2xl transform rotate-1 border-b-8 border-brand-dark max-w-3xl mx-auto mb-8 animate-bounce-in">
-             <div className="flex flex-col md:flex-row items-center gap-6">
-                <div className="flex-1 text-left">
+             <div className="flex flex-col items-center gap-6">
+                <div className="text-center w-full">
                    <p className="font-hand text-2xl md:text-3xl font-bold text-red-600 leading-tight mb-2">
                      CANSADA DE DEPENDER ATÉ PRA FAZER A <span className="bg-yellow-300 px-1 transform -rotate-2 inline-block border-2 border-black">UNHA</span> ?
                    </p>
                    <p className="font-bold text-lg text-gray-800 uppercase">
-                     TÁ NA HORA DE TER SUA PRÓPRIA RENDA!
+                     TÁ NA HORA DE TER SUA PRÓPRIA RENDA!!
                    </p>
                 </div>
-                <div className="flex-1 w-full max-w-xs md:max-w-full mx-auto">
+                <div className="w-full max-w-md mx-auto">
                    <img 
                       src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnFocGZheHdjdnZ4eGM1dHA4bW5tbGVhMW8ybm03ZGxnNjRlcDY0aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qf1og8TmCIbVD5giqa/giphy.gif" 
                       alt="Independência Financeira" 
