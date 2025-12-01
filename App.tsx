@@ -68,7 +68,7 @@ export default function App() {
                    />
                    {/* Faixa Inauguração */}
                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
-                      A FONTE SECRETA DAS LOJAS DE 10 🤫
+                      inauguração de novas lojas de 10
                    </div>
                 </div>
              </div>
