@@ -33,12 +33,12 @@ export default function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // 2. Show Coupon Popup 9 seconds AFTER Support Popup is closed
+  // 2. Show Coupon Popup 15 seconds AFTER Support Popup is closed
   useEffect(() => {
     if (hasClosedSupport) {
       const timer = setTimeout(() => {
         setShowCouponPopup(true);
-      }, 9000);
+      }, 15000);
       return () => clearTimeout(timer);
     }
   }, [hasClosedSupport]);
@@ -83,7 +83,7 @@ export default function App() {
                    />
                    {/* Faixa Inauguração */}
                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
-                      Sua Loja de R$10 Lotando de Clientes
+                      A FONTE SECRETA DAS LOJAS DE 10 🤫
                    </div>
                 </div>
              </div>
