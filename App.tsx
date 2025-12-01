@@ -116,8 +116,6 @@ export default function App() {
               {/* STEP 2 - NOW INCLUDES PRODUCT SHOWCASE */}
               <div className="flex flex-col items-center text-center w-full">
                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">2</div>
-                 <h3 className="font-bold text-lg mb-2">Lucre 400%</h3>
-                 <p className="text-sm text-gray-600 mb-8">Venda para amigas e vizinhas com lucro absurdo.</p>
                  
                  {/* --- MOVED PRODUCTS SECTION CONTENT START --- */}
                  <div className="w-full bg-white rounded-3xl p-6 md:p-10 shadow-xl border border-gray-100">
