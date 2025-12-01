@@ -88,41 +88,30 @@ export default function App() {
         </div>
       </header>
 
-      {/* --- STORY SECTION --- */}
+      {/* --- HOW IT WORKS (REPLACED STORY SECTION) --- */}
       <section className="py-12 bg-gray-50 border-y border-gray-200">
          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-               <div className="md:w-1/2">
-                  <span className="bg-brand-pink text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">História Real</span>
-                  <h2 className="font-heading text-2xl md:text-3xl font-extrabold text-gray-800 mb-4">
-                    Baseada em uma história real de recomeço com maquiagem acessível
-                  </h2>
-                  <div className="space-y-4 text-gray-600 leading-relaxed text-sm md:text-base text-justify">
-                     <p>
-                       Existem momentos em que a vida parece desabar. Foi o que aconteceu com <strong className="text-brand-pink">Sônia Prado</strong>.
-                     </p>
-                     <p>
-                       Ela vendeu a casa para investir e perdeu tudo. O impacto foi devastador: nas finanças, no emocional e na saúde. Em suas palavras, foi desesperador.
-                     </p>
-                     <p>
-                       Mas ao invés de desistir, Sônia agiu. Inspirada na irmã, juntou o que restava e abriu uma pequena loja vendendo maquiagens.
-                     </p>
-                     <p className="bg-white p-3 rounded-lg border-l-4 border-brand-pink italic">
-                       O que era um último suspiro virou um novo começo. A loja encheu, o dinheiro girou e Sônia recuperou algo valioso: sua dignidade e fé.
-                     </p>
-                  </div>
-               </div>
-               <div className="md:w-1/2 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 relative">
-                  <div className="absolute -top-3 -right-3 text-4xl">🙌</div>
-                  <h3 className="font-hand text-2xl font-bold text-gray-800 mb-2 text-center">A Palavra de Sônia</h3>
-                  <p className="text-center italic text-gray-600 mb-4">
-                    "Deus é especialista em transformar cinzas em alegria. Ele continua agindo através de decisões corajosas."
-                  </p>
-                  <div className="text-center">
-                     <span className="font-bold text-brand-dark bg-brand-light px-4 py-1 rounded-full text-sm">📖 Jeremias 29:11</span>
-                  </div>
-               </div>
-            </div>
+           <h2 className="text-center font-heading text-2xl md:text-3xl font-bold text-gray-800 mb-8">
+             Como funciona? É simples assim:
+           </h2>
+           
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center text-center">
+                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">1</div>
+                 <h3 className="font-bold text-lg mb-2">Receba no Zap</h3>
+                 <p className="text-sm text-gray-600">O acesso chega automaticamente no seu WhatsApp e E-mail.</p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">2</div>
+                 <h3 className="font-bold text-lg mb-2">Chame os Lojistas</h3>
+                 <p className="text-sm text-gray-600">Escolha os produtos de R$ 2,00 e faça seu pedido pelo celular.</p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">3</div>
+                 <h3 className="font-bold text-lg mb-2">Lucre 400%</h3>
+                 <p className="text-sm text-gray-600">Venda para amigas e vizinhas com lucro absurdo.</p>
+              </div>
+           </div>
          </div>
       </section>
 
@@ -256,12 +245,12 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- HOW IT WORKS & SUPPORT --- */}
+      {/* --- SUPPORT SECTION (Steps moved to top) --- */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
            
            {/* Support Box */}
-           <div className="bg-green-50 border border-green-200 rounded-2xl p-6 mb-12 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
+           <div className="bg-green-50 border border-green-200 rounded-2xl p-6 mb-4 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
               <div className="flex items-center gap-4">
                  <div className="bg-[#25D366] p-3 rounded-full shrink-0">
                     <MessageCircle className="text-white w-6 h-6" />
@@ -281,27 +270,6 @@ export default function App() {
               </a>
            </div>
 
-           <h2 className="text-center font-heading text-2xl md:text-3xl font-bold text-gray-800 mb-8">
-             Como funciona? É simples assim:
-           </h2>
-           
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center">
-                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">1</div>
-                 <h3 className="font-bold text-lg mb-2">Receba no Zap</h3>
-                 <p className="text-sm text-gray-600">O acesso chega automaticamente no seu WhatsApp e E-mail.</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">2</div>
-                 <h3 className="font-bold text-lg mb-2">Chame os Lojistas</h3>
-                 <p className="text-sm text-gray-600">Escolha os produtos de R$ 2,00 e faça seu pedido pelo celular.</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">3</div>
-                 <h3 className="font-bold text-lg mb-2">Lucre 400%</h3>
-                 <p className="text-sm text-gray-600">Venda para amigas e vizinhas com lucro absurdo.</p>
-              </div>
-           </div>
         </div>
       </section>
 
@@ -415,22 +383,7 @@ export default function App() {
 
                 {/* PRICING BLOCK */}
                 <div className="mt-6 pt-4 border-t-2 border-dashed border-gray-200 text-center">
-                   <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">Por Apenas:</p>
                    
-                   {/* PREÇO À VISTA (VERDE) */}
-                   <div className="flex items-center justify-center gap-2 mb-2">
-                      <span className="text-3xl font-black text-green-400">R$ 7,90</span>
-                      <span className="text-sm text-gray-400 font-bold">à vista</span>
-                      <span className="text-[10px] bg-green-100 text-green-600 px-1 rounded font-bold">(maior economia)</span>
-                   </div>
-
-                   {/* SEPARADOR OU */}
-                   <div className="flex items-center justify-center gap-2 my-2 opacity-50">
-                      <div className="h-px w-8 bg-gray-300"></div>
-                      <span className="text-xs font-bold text-gray-400">OU</span>
-                      <div className="h-px w-8 bg-gray-300"></div>
-                   </div>
-
                    {/* PREÇO PARCELADO AGRESSIVO (AMARELO NEON + VERMELHO + BORDA PRETA) */}
                    <div className="inline-block transform hover:scale-105 transition-transform duration-300">
                       <span className="bg-[#FFFF00] text-[#FF0000] font-black text-5xl md:text-6xl px-4 py-2 rounded-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] tracking-tighter leading-none block -rotate-1">
@@ -440,8 +393,25 @@ export default function App() {
                    
                    {/* TEXTO ECONOMIA VERDE VIBRANTE */}
                    <p className="text-[#00FF00] font-bold text-sm md:text-base mt-3 tracking-wide">
-                      Ou R$ 7,74 (economize mais!)
+                     
                    </p>
+
+                   {/* SEPARADOR OU */}
+                   <div className="flex items-center justify-center gap-2 my-4 opacity-50">
+                      <div className="h-px w-8 bg-gray-300"></div>
+                      <span className="text-xs font-bold text-gray-400">OU</span>
+                      <div className="h-px w-8 bg-gray-300"></div>
+                   </div>
+
+                   <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">Por Apenas:</p>
+                   
+                   {/* PREÇO À VISTA (VERDE) */}
+                   <div className="flex items-center justify-center gap-2 mb-2">
+                      <span className="text-3xl font-black text-green-400">R$ 7,90</span>
+                      <span className="text-sm text-gray-400 font-bold">à vista</span>
+                      <span className="text-[10px] bg-green-100 text-green-600 px-1 rounded font-bold">(maior economia)</span>
+                   </div>
+
                 </div>
              </div>
 
