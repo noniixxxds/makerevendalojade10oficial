@@ -50,7 +50,7 @@ export default function App() {
              <div className="flex flex-col items-center gap-6">
                 <div className="text-center w-full">
                    <p className="font-hand text-2xl md:text-3xl font-bold text-red-600 leading-tight mb-2">
-                     CANSADA DE DEPENDER ATÉ PRA FAZER A <span className="bg-yellow-300 px-1 transform -rotate-2 inline-block border-2 border-black">UNHA</span> ?
+                     TODA MÃE MERECE UMA RENDA QUE ACOMPANHE OS SONHOS DA <span className="bg-yellow-300 px-1 transform -rotate-2 inline-block border-2 border-black">FAMÍLIA</span>
                    </p>
                    <p className="font-bold text-lg text-gray-800 uppercase mb-2">
                      TÁ NA HORA DE TER SUA PRÓPRIA RENDA!!
