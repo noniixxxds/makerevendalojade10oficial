@@ -50,7 +50,7 @@ export default function App() {
              <div className="flex flex-col items-center gap-6">
                 <div className="text-center w-full">
                    <p className="font-hand text-2xl md:text-3xl font-bold text-red-600 leading-tight mb-2">
-                     TODA MÃE MERECE UMA RENDA QUE ACOMPANHE OS SONHOS DA <span className="bg-yellow-300 px-1 transform -rotate-2 inline-block border-2 border-black">FAMÍLIA</span>
+                    VOCÊ MERECE UMA RENDA QUE ACOMPANHE OS SONHOS DA <span className="bg-yellow-300 px-1 transform -rotate-2 inline-block border-2 border-black">FAMÍLIA</span>
                    </p>
                    <p className="font-bold text-lg text-gray-800 uppercase mb-2">
                      TÁ NA HORA DE TER SUA PRÓPRIA RENDA!!
@@ -68,7 +68,7 @@ export default function App() {
                    />
                    {/* Faixa Inauguração */}
                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
-                      INAUGURAÇÃO DAS NOVAS LOJAS 😭🔥
+                      INAUGURAÇÃO DAS NOVAS!!! LOJAS🔥
                    </div>
                 </div>
              </div>
