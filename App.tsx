@@ -52,7 +52,7 @@ export default function App() {
                     VOCÊ MERECE UMA RENDA QUE ACOMPANHE OS SONHOS DA <span className="bg-yellow-300 px-1 transform -rotate-2 inline-block border-2 border-black">FAMÍLIA</span>
                    </p>
                    <p className="font-bold text-lg text-gray-800 uppercase mb-2">
-                     TÁ NA HORA DE TER SUA PRÓPRIA RENDA💸💸💸!
+                     TÁ NA HORA DE TER SUA PRÓPRIA RENDA💸💸💼✨
                    </p>
                    <span className="inline-flex items-center gap-2 bg-[#25D366] text-white px-3 py-1 rounded-md font-bold shadow-sm transform rotate-1 border-2 border-white text-base md:text-lg animate-pulse">
                       <svg viewBox="0 0 33 33" className="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 0C7.4 0 0 7.5 0 16.7c0 3 .8 5.9 2.3 8.4L.6 33l8.1-2.1c2.4 1.3 5.1 2 7.9 2 9.2 0 16.6-7.5 16.6-16.7S25.8 0 16.6 0zm0 29.8c-2.5 0-4.9-.7-7-1.9l-.5-.3-5.2 1.4 1.4-5.1-.3-.5C3.7 21.2 2.8 19 2.8 16.7c0-7.6 6.2-13.9 13.8-13.9s13.8 6.2 13.8 13.9-6.2 13.1-13.8 13.1zm7.6-10.4c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.6-.2.3-.5.3-.9.1-1.7-.9-3.2-2.1-4.3-4.2-.3-.5 0-.8.2-1 .2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.2.1-.4 0-.6s-1-2.4-1.3-3.3c-.3-.9-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.8s1.6 4.4 1.9 4.8c.3.4 3.2 5 7.9 7 3.8 1.6 4.6 1.3 5.4 1.2.8-.1 2.4-1 2.8-1.9.3-.9.3-1.7.2-1.9-.2-.2-.6-.3-1-.5z"/></svg>
@@ -67,7 +67,7 @@ export default function App() {
                    />
                    {/* Faixa Inauguração */}
                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
-                      A FONTE SECRETA DAS LOJAS DE 10 🤫
+                      INAUGURAÇÃO LOJAS DE 10 🤫 VOCÊ VAI AMAR ISSO…
                    </div>
                 </div>
              </div>
@@ -400,7 +400,7 @@ export default function App() {
                    
                    {/* PREÇO À VISTA (VERDE) */}
                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <span className="text-3xl font-black text-green-400">R$ 7,90</span>
+                      <span className="text-2xl font-black text-green-400">R$ 7,90</span>
                       <span className="text-sm text-gray-400 font-bold">à vista</span>
                       <span className="text-[10px] bg-green-100 text-green-600 px-1 rounded font-bold">(maior economia)</span>
                    </div>
