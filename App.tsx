@@ -7,9 +7,8 @@ import {
   Sparkles, 
   Gem, 
   Smile,
-  ShoppingBag,
-  Heart,
-  Users
+  X,
+  CheckCircle
 } from 'lucide-react';
 import { CouponPopup } from './components/CouponPopup';
 import { TestimonialCard } from './components/TestimonialCard';
@@ -53,7 +52,7 @@ export default function App() {
                     VOCÊ MERECE UMA RENDA QUE ACOMPANHE OS SONHOS DA <span className="bg-yellow-300 px-1 transform -rotate-2 inline-block border-2 border-black">FAMÍLIA</span>
                    </p>
                    <p className="font-bold text-lg text-gray-800 uppercase mb-2">
-                     TÁ NA HORA DE TER SUA PRÓPRIA RENDA💸!
+                     TÁ NA HORA DE TER SUA PRÓPRIA RENDA💸💸💸!
                    </p>
                    <span className="inline-flex items-center gap-2 bg-[#25D366] text-white px-3 py-1 rounded-md font-bold shadow-sm transform rotate-1 border-2 border-white text-base md:text-lg animate-pulse">
                       <svg viewBox="0 0 33 33" className="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 0C7.4 0 0 7.5 0 16.7c0 3 .8 5.9 2.3 8.4L.6 33l8.1-2.1c2.4 1.3 5.1 2 7.9 2 9.2 0 16.6-7.5 16.6-16.7S25.8 0 16.6 0zm0 29.8c-2.5 0-4.9-.7-7-1.9l-.5-.3-5.2 1.4 1.4-5.1-.3-.5C3.7 21.2 2.8 19 2.8 16.7c0-7.6 6.2-13.9 13.8-13.9s13.8 6.2 13.8 13.9-6.2 13.1-13.8 13.1zm7.6-10.4c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.6-.2.3-.5.3-.9.1-1.7-.9-3.2-2.1-4.3-4.2-.3-.5 0-.8.2-1 .2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.2.1-.4 0-.6s-1-2.4-1.3-3.3c-.3-.9-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.8s1.6 4.4 1.9 4.8c.3.4 3.2 5 7.9 7 3.8 1.6 4.6 1.3 5.4 1.2.8-.1 2.4-1 2.8-1.9.3-.9.3-1.7.2-1.9-.2-.2-.6-.3-1-.5z"/></svg>
@@ -68,7 +67,7 @@ export default function App() {
                    />
                    {/* Faixa Inauguração */}
                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
-                      INAUGURAÇÃO DAS NOVAS LOJAS🔥DE 10
+                      A FONTE SECRETA DAS LOJAS DE 10 🤫
                    </div>
                 </div>
              </div>
@@ -423,6 +422,64 @@ export default function App() {
                 <span className="flex items-center gap-1"><Sparkles size={12} /> Entrega Garantida</span>
              </div>
           </div>
+
+          {/* --- SECONDARY OFFER (LIST ONLY) --- */}
+          <div className="mt-12 max-w-lg mx-auto">
+              <div className="bg-white rounded-2xl p-6 shadow-xl border-2 border-gray-200 relative overflow-hidden opacity-90 hover:opacity-100 transition-opacity">
+                 <div className="absolute top-0 left-0 w-full h-1 bg-gray-300"></div>
+                 <div className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">Opção Básica</div>
+                 <h3 className="font-heading text-xl font-bold text-gray-700 mb-4">
+                    Quero levar <span className="text-red-500">APENAS A LISTA</span> (Sem Bônus)
+                 </h3>
+                 
+                 <div className="bg-gray-50 rounded-lg p-4 mb-6 text-left space-y-3 text-sm">
+                    <div className="flex items-center gap-3">
+                       <CheckCircle size={18} className="text-green-500 shrink-0" />
+                       <span className="font-bold text-gray-800">Lista de Fornecedores 2.0</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-400 decoration-gray-400 opacity-60">
+                       <X size={18} className="text-red-400 shrink-0" />
+                       <span className="line-through">Bônus: Scripts de Venda</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-400 decoration-gray-400 opacity-60">
+                       <X size={18} className="text-red-400 shrink-0" />
+                       <span className="line-through">Bônus: Calculadora de Lucro</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-400 decoration-gray-400 opacity-60">
+                       <X size={18} className="text-red-400 shrink-0" />
+                       <span className="line-through">Bônus: Guia Vergonha Zero</span>
+                    </div>
+                 </div>
+
+                 <p className="text-xs text-gray-500 mb-4 italic">
+                    *Você perderá o acesso aos presentes exclusivos da Black Friday.
+                 </p>
+
+                 {/* Pricing Section - Inspired by Main Offer */}
+                 <div className="text-center mb-6 pt-4 border-t border-gray-100">
+                    <div className="inline-block mb-2 transform -rotate-1">
+                       <span className="bg-[#FFFF00] text-[#FF0000] font-black text-2xl px-3 py-1 rounded border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] block tracking-tight">
+                          2x de R$ 2,95
+                       </span>
+                    </div>
+                    <div className="flex items-center justify-center gap-1.5 mt-1">
+                       <span className="font-bold text-gray-800 text-lg">R$ 5,90</span>
+                       <span className="text-sm text-gray-500 font-bold">à vista</span>
+                       <span className="text-[9px] bg-green-100 text-green-600 px-1.5 py-0.5 rounded font-bold">(maior economia)</span>
+                    </div>
+                 </div>
+
+                 <a 
+                    href="https://pay.kirvano.com/2a6822d9-5aea-4677-95e6-dc6f26d2c2bc" 
+                    className="w-full bg-[#25D366] hover:bg-green-600 text-white font-bold py-3 rounded-xl shadow-md animate-pulse flex items-center justify-center gap-2 transition-all text-sm uppercase tracking-wide group"
+                 >
+                    {/* SVG WhatsApp Branco Pequeno */}
+                    <svg viewBox="0 0 33 33" className="w-5 h-5 fill-white group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 0C7.4 0 0 7.5 0 16.7c0 3 .8 5.9 2.3 8.4L.6 33l8.1-2.1c2.4 1.3 5.1 2 7.9 2 9.2 0 16.6-7.5 16.6-16.7S25.8 0 16.6 0zm0 29.8c-2.5 0-4.9-.7-7-1.9l-.5-.3-5.2 1.4 1.4-5.1-.3-.5C3.7 21.2 2.8 19 2.8 16.7c0-7.6 6.2-13.9 13.8-13.9s13.8 6.2 13.8 13.9-6.2 13.1-13.8 13.1zm7.6-10.4c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.6-.2.3-.5.3-.9.1-1.7-.9-3.2-2.1-4.3-4.2-.3-.5 0-.8.2-1 .2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.2.1-.4 0-.6s-1-2.4-1.3-3.3c-.3-.9-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.8s1.6 4.4 1.9 4.8c.3.4 3.2 5 7.9 7 3.8 1.6 4.6 1.3 5.4 1.2.8-.1 2.4-1 2.8-1.9.3-.9.3-1.7.2-1.9-.2-.2-.6-.3-1-.5z"/></svg>
+                    Comprar somente a lista
+                 </a>
+              </div>
+          </div>
+
         </div>
       </section>
 
