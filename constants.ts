@@ -134,4 +134,5 @@ export const TESTIMONIALS = [
   { name: "Amanda Souza", img: "https://i.postimg.cc/Bb7mX9xL/582333586-813971864892131-8108173947280786291-n-(1).jpg", text: "Garanti a lista hoje cedo e já chamei os fornecedores. Bora vencer!", type: "photo" },
   { name: "Patrícia Gomes", img: "https://i.postimg.cc/9FKjnsv4/Captura-de-tela-2025-11-17-101009.png", text: "Gente, olha essa banca! Tudo montado com os fornecedores de R$ 2,00 da lista. Surreal!", type: "photo" },
   { name: "Dani Ferreira", img: "https://i.postimg.cc/FzCT75jk/582148552-868423898872479-3396241599108394350-n.jpg", text: "Tava ansiosa, mas o acesso chegou no Zap, abri a lista e já tô faturando!", type: "photo" },
+  { name: "Mariana Costa", img: "https://i.postimg.cc/R0BwbW0b/image.png", text: "Olha o tanto de coisa que comprei com o dinheiro que sobrou. Melhor investimento!", type: "photo" },
 ];

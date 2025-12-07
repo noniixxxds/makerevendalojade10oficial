@@ -78,9 +78,11 @@ export default function App() {
       <section className="py-12 bg-gray-50 border-y border-gray-200">
          <div className="container mx-auto px-4 max-w-6xl">
            
-           {/* STORE IMAGE - ADDED AS REQUESTED */}
-           <div className="mb-12 max-w-3xl mx-auto">
-             <div className="bg-white p-2 md:p-4 rounded-2xl shadow-xl border-4 border-white transform -rotate-1 hover:rotate-0 transition-transform duration-300 relative group">
+           {/* IMAGES SHOWCASE */}
+           <div className="mb-12 max-w-3xl mx-auto flex flex-col gap-8">
+             
+             {/* 1. PHYSICAL STORE */}
+             <div className="bg-white p-2 md:p-4 rounded-2xl shadow-xl border-4 border-white transform -rotate-1 hover:rotate-0 transition-transform duration-300 relative group z-10">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#25D366] text-white px-6 py-1.5 rounded-full font-bold shadow-lg border-2 border-white z-10 whitespace-nowrap text-sm md:text-base animate-pulse">
                    🤑 O resultado é esse aqui:
                 </div>
@@ -90,6 +92,24 @@ export default function App() {
                    className="w-full rounded-xl shadow-inner"
                 />
              </div>
+
+             {/* 2. SHOPEE SALES */}
+             <div className="relative">
+                <div className="text-center mb-4 relative z-20 -mt-2">
+                   <h3 className="font-hand text-3xl md:text-5xl font-black text-[#ee4d2d] bg-white px-6 py-2 rounded-full shadow-[0_4px_14px_rgba(238,77,45,0.3)] transform rotate-2 inline-block border-2 border-orange-100">
+                      Vendas na Shopee também! 🛍️✨
+                   </h3>
+                </div>
+                
+                <div className="bg-white p-2 md:p-4 rounded-2xl shadow-xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-300 relative group">
+                   <img 
+                      src="https://i.postimg.cc/PqS0MpbC/Gemini-Generated-Image-z7xi7xz7xi7xz7xi.png" 
+                      alt="Vendas na Shopee e Online" 
+                      className="w-full rounded-xl shadow-inner"
+                   />
+                </div>
+             </div>
+
            </div>
 
            <h2 className="text-center font-heading text-2xl md:text-3xl font-bold text-gray-800 mb-8">
@@ -445,7 +465,7 @@ export default function App() {
                    
                    {/* PREÇO À VISTA (VERDE) */}
                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <span className="text-2xl font-black text-green-400">R$ 7,90</span>
+                      <span className="text-3xl font-black text-green-400">R$ 7,90</span>
                       <span className="text-sm text-gray-400 font-bold">à vista</span>
                       <span className="text-[10px] bg-green-100 text-green-600 px-1 rounded font-bold">(maior economia)</span>
                    </div>
