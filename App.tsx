@@ -122,7 +122,7 @@ export default function App() {
               <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl font-black text-brand-pink shadow-md mb-4 border-4 border-pink-50">1</div>
                  <h3 className="font-bold text-lg mb-2">Receba no Zap</h3>
-                 <p className="text-sm text-gray-600 mb-3">O acesso chega automaticamente no seu WhatsApp e E-mail.</p>
+                 <p className="text-sm text-gray-600 mb-3">O acesso Lista Fornecedores usados pelas lojas de 10 chega automaticamente no seu WhatsApp e E-mail.</p>
                  
                  <div className="relative inline-block max-w-[280px]">
                     {/* Badge Overlay */}
