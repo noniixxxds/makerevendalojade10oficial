@@ -64,7 +64,7 @@ export const CouponPopup: React.FC<CouponPopupProps> = ({ isOpen, onClose }) => 
           href={CHECKOUT_LINK}
           className="block w-full bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 rounded-full shadow-lg shadow-green-100 transform hover:scale-105 transition-all text-lg flex items-center justify-center gap-2 group"
         >
-          QUERO MEU DESCONTO ⚡
+          Não Quero benefícios
         </a>
         
         <p 
