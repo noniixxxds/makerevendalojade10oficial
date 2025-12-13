@@ -445,7 +445,7 @@ export default function App() {
                    {/* PREÇO PARCELADO AGRESSIVO (AMARELO NEON + VERMELHO + BORDA PRETA) */}
                    <div className="inline-block transform hover:scale-105 transition-transform duration-300">
                       <span className="bg-[#FFFF00] text-[#FF0000] font-black text-5xl md:text-6xl px-4 py-2 rounded-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] tracking-tighter leading-none block -rotate-1">
-                         2x R$ 3,91 🔥🔥
+                         2x R$ 3,25 🔥🔥
                       </span>
                    </div>
                    
@@ -465,7 +465,7 @@ export default function App() {
                    
                    {/* PREÇO À VISTA (VERDE) */}
                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <span className="text-3xl font-black text-green-400">R$ 7,90</span>
+                      <span className="text-3xl font-black text-green-400">R$ 6,49</span>
                       <span className="text-sm text-gray-400 font-bold">à vista</span>
                       <span className="text-[10px] bg-green-100 text-green-600 px-1 rounded font-bold">(maior economia)</span>
                    </div>
@@ -478,7 +478,7 @@ export default function App() {
              <a href={CHECKOUT_LINK} className="w-full bg-[#25D366] hover:bg-green-600 text-white font-bold py-5 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.6)] animate-heartbeat text-xl md:text-2xl flex items-center justify-center gap-3 group border-b-4 border-green-700 transition-all">
                 {/* SVG WhatsApp Branco */}
                 <svg viewBox="0 0 33 33" className="w-8 h-8 fill-white group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg"><path d="M16.6 0C7.4 0 0 7.5 0 16.7c0 3 .8 5.9 2.3 8.4L.6 33l8.1-2.1c2.4 1.3 5.1 2 7.9 2 9.2 0 16.6-7.5 16.6-16.7S25.8 0 16.6 0zm0 29.8c-2.5 0-4.9-.7-7-1.9l-.5-.3-5.2 1.4 1.4-5.1-.3-.5C3.7 21.2 2.8 19 2.8 16.7c0-7.6 6.2-13.9 13.8-13.9s13.8 6.2 13.8 13.9-6.2 13.1-13.8 13.1zm7.6-10.4c-.4-.2-2.4-1.2-2.8-1.3-.4-.1-.7-.2-1 .2-.3.4-1.1 1.3-1.3 1.6-.2.3-.5.3-.9.1-1.7-.9-3.2-2.1-4.3-4.2-.3-.5 0-.8.2-1 .2-.2.4-.4.6-.7.2-.2.3-.4.4-.6.1-.2.1-.4 0-.6s-1-2.4-1.3-3.3c-.3-.9-.7-.8-1-.8h-.8c-.3 0-.8.1-1.2.6-.4.4-1.6 1.6-1.6 3.8s1.6 4.4 1.9 4.8c.3.4 3.2 5 7.9 7 3.8 1.6 4.6 1.3 5.4 1.2.8-.1 2.4-1 2.8-1.9.3-.9.3-1.7.2-1.9-.2-.2-.6-.3-1-.5z"/></svg>
-                Vou abrir minha loja
+                QUERO ACESSO IMEDIATO WHATSAPP
              </a>
 
              <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs text-gray-400 font-medium">
@@ -498,7 +498,7 @@ export default function App() {
               <h2 className="font-heading text-2xl font-bold text-brand-dark mb-2">DESAFIO 7 DIAS</h2>
               <h3 className="font-bold text-gray-800 mb-4">Eu confio tanto que assumo o risco</h3>
               <p className="text-gray-600 mb-6">
-                Se você comprar a lista, ligar para os fornecedores e achar que não valeu a pena, eu devolvo seus <strong>R$ 7,90 NA HORA</strong>.
+                Se você comprar a lista, ligar para os fornecedores e achar que não valeu a pena, eu devolvo seus <strong>R$ 6,49 NA HORA</strong>.
               </p>
               <p className="text-sm text-gray-500 italic">"É sério. Eu não brinco com o sonho de ninguém."</p>
            </div>
