@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { 
   ShieldCheck, 
@@ -63,10 +64,6 @@ export default function App() {
                       alt="Independência Financeira" 
                       className="w-full rounded-lg shadow-md transform group-hover:scale-105 transition-transform duration-300 border-2 border-gray-100"
                    />
-                   {/* Faixa Inauguração */}
-                   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[95%] bg-red-600 text-white font-black text-center py-2 shadow-lg border-2 border-yellow-400 rotate-1 uppercase tracking-wider text-base md:text-lg z-10 flex items-center justify-center gap-2">
-                     Inauguração Loja De 10
-                   </div>
                 </div>
              </div>
           </div>
@@ -81,21 +78,9 @@ export default function App() {
            {/* IMAGES SHOWCASE */}
            <div className="mb-12 max-w-3xl mx-auto flex flex-col gap-8">
              
-             {/* 1. PHYSICAL STORE */}
-             <div className="bg-white p-2 md:p-4 rounded-2xl shadow-xl border-4 border-white transform -rotate-1 hover:rotate-0 transition-transform duration-300 relative group z-10">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#25D366] text-white px-6 py-1.5 rounded-full font-bold shadow-lg border-2 border-white z-10 whitespace-nowrap text-sm md:text-base animate-pulse">
-                   🤑 O resultado é esse aqui:
-                </div>
-                <img 
-                   src="https://i.postimg.cc/d3QNyWCf/Gemini-Generated-Image-vutdtyvutdtyvutd.png" 
-                   alt="Loja de Maquiagem Lotada" 
-                   className="w-full rounded-xl shadow-inner"
-                />
-             </div>
-
-             {/* 2. SHOPEE SALES */}
+             {/* SHOPEE SALES */}
              <div className="relative">
-                <div className="text-center mb-4 relative z-20 -mt-2">
+                <div className="text-center mb-4 relative z-20">
                    <h3 className="font-hand text-3xl md:text-5xl font-black text-[#ee4d2d] bg-white px-6 py-2 rounded-full shadow-[0_4px_14px_rgba(238,77,45,0.3)] transform rotate-2 inline-block border-2 border-orange-100">
                       Vendas na Shopee também! 🛍️✨
                    </h3>
@@ -235,38 +220,6 @@ export default function App() {
 
               </div>
            </div>
-         </div>
-      </section>
-
-      {/* --- NEWS SECTION --- */}
-      <section className="bg-white py-12 border-b border-gray-200">
-         <div className="container mx-auto px-4 max-w-4xl">
-            <div className="bg-white rounded-lg p-2 max-w-3xl mx-auto">
-               <div className="border-l-4 border-[#c4170c] pl-4 mb-4">
-                  <span className="text-[#c4170c] font-bold text-xs uppercase tracking-wide">Alagoas • Maceió</span>
-                  <h2 className="font-sans font-extrabold text-2xl md:text-3xl text-[#333] leading-tight mt-1">
-                     Inauguração de loja de maquiagem com produtos a R$ 10 em Maceió causa tumulto e polícia é acionada
-                  </h2>
-                  <p className="text-gray-500 text-xs mt-2 font-medium">Há 2 dias — Por Redação</p>
-               </div>
-               
-               <figure className="relative mt-4">
-                  <img 
-                     src="https://i.postimg.cc/sgKLVCZ5/image.png" 
-                     alt="Multidão na loja" 
-                     className="w-full rounded-md shadow-sm"
-                  />
-                  <figcaption className="text-[10px] text-gray-500 mt-1 italic border-b pb-2">
-                     Multidão se aglomerou para aproveitar ofertas de inauguração em loja de maquiagem. (Foto: Reprodução/Redes Sociais)
-                  </figcaption>
-               </figure>
-               
-               <div className="mt-4 p-4 bg-gray-50 rounded text-sm text-gray-700 leading-relaxed border-l-2 border-gray-200">
-                  <p>
-                     <strong>Resumo:</strong> Centenas de pessoas formaram filas quilométricas na madrugada desta sexta-feira para a inauguração de uma loja com preço fixo de R$ 10,00. O estoque que deveria durar um mês foi vendido em poucas horas, gerando confusão e correria.
-                  </p>
-               </div>
-            </div>
          </div>
       </section>
 
