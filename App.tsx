@@ -82,7 +82,7 @@ export default function App() {
              <div className="relative">
                 <div className="text-center mb-4 relative z-20">
                    <h3 className="font-hand text-3xl md:text-5xl font-black text-[#ee4d2d] bg-white px-6 py-2 rounded-full shadow-[0_4px_14px_rgba(238,77,45,0.3)] transform rotate-2 inline-block border-2 border-orange-100">
-                      Vendas na Shopee também! 🛍️✨
+                      Venda na Shopee também! 🛍️
                    </h3>
                 </div>
                 
