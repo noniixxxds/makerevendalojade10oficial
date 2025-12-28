@@ -38,26 +38,53 @@ export const PRODUCTS = [
   }
 ];
 
+export const SHOPEE_KITS = [
+  {
+    id: 's1',
+    name: "Kit de maquiagem Completo para revenda 28 Itens",
+    description: "Serão enviados 28 itens dentre esses produtos. Pode Conter mais de um Item do Mesmo Produto.",
+    price: "R$ 119,99",
+    shopeeUrl: "https://s.shopee.com.br/3VdZVu3vMV", 
+    img: "https://i.postimg.cc/nLb16Lg8/Gemini-Generated-Image-5temoa5temoa5tem.png",
+    tag: "MAIS VENDIDO"
+  },
+  {
+    id: 's2',
+    name: "Maquiagem para Revenda Mega Kit com 60 Itens",
+    description: "Em cada produto tem um valor unitário de preço sugerido para revenda, você poderá utilizar esse valor ou definir por quanto quer vender cada produto",
+    price: "R$ 269,00",
+    shopeeUrl: "https://s.shopee.com.br/7pmYgOVhM5",
+    img: "https://i.postimg.cc/y6bbYcbL/image.png",
+    tag: "ALTA MARGEM"
+  },
+  {
+    id: 's3',
+    name: "Kit 30 itens Produtos Maquiagem, Skincare e Acessórios Atacado para Revenda gloss",
+    description: "Produtos pra você investir e lucrar com produtos que possuem Ótima Saída e pigmentação.",
+    price: "R$ 139,99",
+    shopeeUrl: "https://s.shopee.com.br/8V2FUDebzM",
+    img: "https://i.postimg.cc/Zn5nf1Sj/image.png",
+    tag: "MIX COMPLETO"
+  },
+  {
+    id: 's4',
+    name: "KIT MAQUIAGEM 40 ITENS!! COMBO SUPER PREMIUM BOX",
+    description: "Eleve o nível da sua maquiagem ou garanta o presente perfeito com este Kit Super Premium",
+    price: "R$ 99,99",
+    shopeeUrl: "https://s.shopee.com.br/805yu59SCb",
+    img: "https://i.postimg.cc/tgzV2dx8/image.png",
+    tag: "QUALIDADE PREMIUM"
+  }
+];
+
 export const FAQ_ITEMS = [
   {
     question: "Como funcionam os kits de revenda?",
-    answer: "Nós selecionamos as maquiagens que mais vendem no momento (tendências de TikTok e Instagram) e montamos kits estratégicos de 5, 9 ou 15 itens. Você recebe o kit pronto na sua casa e só precisa começar a oferecer. O lucro médio é de 200% a 300%."
+    answer: "Nós selecionamos as maquiagens que mais vendem no momento (tendências de TikTok e Instagram) e montamos kits estratégicos. Você recebe o link direto dos melhores fornecedores da Shopee que já testamos e aprovamos."
   },
   {
-    question: "Quais marcas vêm nos kits?",
-    answer: "Trabalhamos com as queridinhas do público: Vivai, Febella, Max Love, Face Beautiful e outras marcas que entregam qualidade e preço baixo."
-  },
-  {
-    question: "Como eu escolho o melhor kit para mim?",
-    answer: "Basta clicar no botão e falar com uma de nossas consultoras. Ela vai entender seu objetivo (vender online, em banca, ou para amigas) e te indicar se o melhor para o seu momento é o kit de 5, 9 ou 15 itens."
-  },
-  {
-    question: "Vocês enviam para todo o Brasil?",
-    answer: "Sim! Enviamos via transportadora ou Correios com seguro total. Seu kit chega lacrado e pronto para ser vendido."
-  },
-  {
-    question: "Precisa de CNPJ para comprar?",
-    answer: "Não! Você pode começar sua jornada empreendedora como pessoa física. Facilitamos o caminho para você crescer."
+    question: "As marcas são boas?",
+    answer: "Sim! Trabalhamos com Vivai, Febella, Max Love, Face Beautiful e outras que as clientes já conhecem e amam."
   }
 ];
 
@@ -88,30 +115,5 @@ export const TESTIMONIALS = [
     type: "photo",
     img: "https://i.postimg.cc/PqS0MpbC/Gemini-Generated-Image-z7xi7xz7xi7xz7xi.png",
     text: "Meu pedido chegou hoje! Tudo lacrado e os fornecedores são super atenciosos. Já vendi 3 kits pra vizinhas."
-  },
-  { 
-    name: "Gisele Oliveira", 
-    type: "photo",
-    img: "https://i.postimg.cc/d3QNyWCf/Gemini-Generated-Image-vutdtyvutdtyvutd.png",
-    text: "Confesso que tive muito medo no começo. Comprei o Kit de 9 itens e em 3 dias já tinha vendido tudo e recuperado o investimento. É a minha melhor decisão do ano!"
-  },
-  { 
-    name: "Camila Fernandes", 
-    type: "whatsapp",
-    text: "Gente, eu tava morrendo de medo de investir e não vender. Comecei com o Kit de 5 itens e vendi tudo em 4 horas! Já quero o de 15 agora."
-  },
-  { 
-    name: "Renata G.", 
-    type: "whatsapp-dark",
-    conversation: [
-      { side: "left", text: "As marcas são boas mesmo?", time: "14:20" },
-      { side: "right", text: "Amiga, veio Vivai e Max Love! As clientes piram kkkk", time: "14:22" },
-      { side: "right", text: "Vendi 4 rímeis só no story do insta em 10 min", time: "14:25" }
-    ]
-  },
-  { 
-    name: "Fernanda S.", 
-    type: "whatsapp",
-    text: "O suporte de vocês é maravilhoso. Me ajudaram a escolher o kit que mais combinava com o que as minhas clientes pediam. Nota mil!"
   }
 ];
