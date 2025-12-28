@@ -1,6 +1,17 @@
 
 export const SUPPORT_LINK = "https://wa.me/5511980219977?text=Olá!+Quero+saber+mais+sobre+os+kits+de+revenda+de+maquiagem.";
 
+// Link para compra da lista (Checkout Kirvano conforme solicitado)
+export const SUPPLIER_LIST_CHECKOUT = "https://pay.kirvano.com/a39cd2c2-492c-42f6-b29e-f4046aaf666c"; 
+
+export const SUPPLIER_LIST_OFFER = {
+  title: "Acesso VIP: Lista das Importadoras",
+  description: "Acesso direto aos contatos que as grandes lojas escondem de você. Pague preço de custo real e lucre até 400%.",
+  price: "R$ 25,90",
+  originalPrice: "R$ 197,00",
+  benefit: "Preços 40% menores que os Kits"
+};
+
 export const PRODUCTS = [
   { 
     id: 1,

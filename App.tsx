@@ -9,13 +9,16 @@ import {
   TrendingUp,
   ShoppingBag,
   ArrowRight,
-  Sparkles
+  Sparkles,
+  Globe,
+  Star,
+  Zap
 } from 'lucide-react';
 import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
 import { SalesNotification } from './components/SalesNotification';
 import { CatalogView } from './components/CatalogView';
-import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, SUPPORT_LINK } from './constants';
+import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, SUPPORT_LINK, SUPPLIER_LIST_OFFER, SUPPLIER_LIST_CHECKOUT } from './constants';
 
 export default function App() {
   const [view, setView] = useState<'landing' | 'catalog'>('landing');
@@ -34,7 +37,6 @@ export default function App() {
     <div className="min-h-screen bg-brand-bg font-sans text-gray-800 pb-24 md:pb-0 selection:bg-brand-pink selection:text-white overflow-x-hidden">
       
       <SalesNotification />
-      {/* Passamos a função de ir para o catálogo para o StickyCTA também */}
       <StickyCTA onAction={goToCatalog} />
 
       {/* --- HERO SECTION --- */}
@@ -78,101 +80,137 @@ export default function App() {
         </div>
       </header>
 
-      {/* --- VALUE PROPOSITION --- */}
-      <section className="py-14 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-            <div className="flex flex-col items-center p-8 bg-pink-50 rounded-3xl border border-pink-100 shadow-sm">
-              <Package className="w-14 h-14 text-brand-pink mb-4" />
-              <h3 className="font-black text-xl mb-2 uppercase text-brand-dark">Curadoria Expert</h3>
-              <p className="text-gray-600 font-medium">As makes que são tendência absoluta no TikTok e Instagram.</p>
+      {/* --- DUAL OFFER SECTION --- */}
+      <section className="py-20 bg-white relative">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+             <h2 className="font-heading text-3xl md:text-5xl font-black text-gray-900 uppercase italic mb-4 leading-tight">
+               Como você quer <span className="text-brand-pink">começar seu império?</span>
+             </h2>
+             <p className="text-gray-500 font-medium text-lg max-w-2xl mx-auto">
+               Escolha o caminho que melhor se adapta ao seu momento hoje.
+             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            
+            {/* OFFER 1: KITS PRONTOS */}
+            <div className="relative group bg-gray-50 rounded-[3.5rem] p-8 md:p-12 border-2 border-dashed border-gray-200 hover:border-brand-pink transition-all duration-500 hover:bg-white hover:shadow-2xl">
+               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white px-6 py-2 rounded-full border-2 border-gray-200 text-xs font-black uppercase tracking-widest text-gray-500 group-hover:text-brand-pink group-hover:border-brand-pink">
+                 Praticidade Total
+               </div>
+               
+               <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 bg-brand-light rounded-full flex items-center justify-center mb-8 shadow-inner">
+                     <Package size={48} className="text-brand-pink" />
+                  </div>
+                  
+                  <h3 className="font-heading text-3xl font-black text-brand-dark uppercase mb-4 italic">Kits Prontos para Revenda</h3>
+                  <p className="text-gray-600 mb-8 font-medium leading-relaxed">
+                    A forma mais fácil de começar. Receba kits montados com as makes que mais vendem na Shopee. Sem complicação, pronto para postar e vender.
+                  </p>
+                  
+                  <ul className="space-y-4 mb-10 w-full text-left">
+                    <li className="flex items-center gap-3 text-gray-700 font-bold">
+                       <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
+                       Seleção Expert (Só o que vende)
+                    </li>
+                    <li className="flex items-center gap-3 text-gray-700 font-bold">
+                       <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
+                       Links Diretos da Shopee
+                    </li>
+                    <li className="flex items-center gap-3 text-gray-700 font-bold">
+                       <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
+                       Menor investimento inicial
+                    </li>
+                  </ul>
+
+                  <button 
+                    onClick={goToCatalog}
+                    className="w-full bg-brand-pink hover:bg-brand-dark text-white font-black py-6 rounded-full text-xl shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 border-b-8 border-brand-dark"
+                  >
+                    VER KITS DISPONÍVEIS
+                    <ArrowRight size={24} />
+                  </button>
+               </div>
             </div>
-            <div className="flex flex-col items-center p-8 bg-pink-50 rounded-3xl border border-pink-100 shadow-sm">
-              <TrendingUp className="w-14 h-14 text-brand-pink mb-4" />
-              <h3 className="font-black text-xl mb-2 uppercase text-brand-dark">Lucro Real</h3>
-              <p className="text-gray-600 font-medium">Preço de atacado para você faturar até 300% de lucro.</p>
+
+            {/* OFFER 2: SUPLLIER LIST */}
+            <div className="relative group bg-brand-dark rounded-[3.5rem] p-8 md:p-12 border-4 border-yellow-400 shadow-[0_30px_60px_rgba(0,0,0,0.3)] transform md:scale-105 z-10">
+               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-yellow-400 px-6 py-2 rounded-full text-black text-xs font-black uppercase tracking-widest animate-pulse">
+                 LUCRO MÁXIMO (VIPS)
+               </div>
+               
+               <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mb-8 shadow-inner border border-white/20">
+                     <Globe size={48} className="text-yellow-400" />
+                  </div>
+                  
+                  <h3 className="font-heading text-3xl font-black text-white uppercase mb-4 italic">Lista de Importadoras</h3>
+                  <p className="text-white/80 mb-8 font-medium leading-relaxed">
+                    O segredo das lojistas que pagam centavos. Compre direto das maiores importadoras do Brasil. Preços até 40% menores que os kits.
+                  </p>
+                  
+                  <ul className="space-y-4 mb-10 w-full text-left">
+                    <li className="flex items-center gap-3 text-white font-bold">
+                       <div className="bg-yellow-400/20 p-1 rounded-full"><Zap size={16} className="text-yellow-400 fill-yellow-400" /></div>
+                       Preço de Custo Real (Sem Intermédio)
+                    </li>
+                    <li className="flex items-center gap-3 text-white font-bold">
+                       <div className="bg-yellow-400/20 p-1 rounded-full"><Zap size={16} className="text-yellow-400 fill-yellow-400" /></div>
+                       Contatos de WhatsApp das Importadoras
+                    </li>
+                    <li className="flex items-center gap-3 text-white font-bold">
+                       <div className="bg-yellow-400/20 p-1 rounded-full"><Zap size={16} className="text-yellow-400 fill-yellow-400" /></div>
+                       Até 400% de Lucro em cada peça
+                    </li>
+                  </ul>
+
+                  <div className="mb-8 flex flex-col items-center">
+                     <span className="text-white/60 line-through text-sm font-bold">DE R$ 197,00</span>
+                     <div className="flex items-baseline gap-2">
+                        <span className="text-white text-5xl font-black">R$ 25,90</span>
+                        <span className="text-yellow-400 text-xs font-black uppercase">Taxa Única</span>
+                     </div>
+                  </div>
+
+                  <a 
+                    href={SUPPLIER_LIST_CHECKOUT}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-yellow-400 hover:bg-yellow-500 text-brand-dark font-black py-6 rounded-full text-xl shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 border-b-8 border-yellow-700"
+                  >
+                    COMPRAR LISTA VIP
+                    <Star size={24} className="fill-brand-dark" />
+                  </a>
+               </div>
             </div>
-            <div className="flex flex-col items-center p-8 bg-pink-50 rounded-3xl border border-pink-100 shadow-sm">
-              <CheckCircle2 className="w-14 h-14 text-brand-pink mb-4" />
-              <h3 className="font-black text-xl mb-2 uppercase text-brand-dark">Zero Burocracia</h3>
-              <p className="text-gray-600 font-medium">Não precisa de CNPJ. Comece agora mesmo com seu CPF.</p>
-            </div>
+
           </div>
         </div>
       </section>
 
-      {/* --- PRODUCT SHOWCASE --- */}
-      <section className="py-20 bg-gray-50 border-y border-gray-200">
-         <div className="container mx-auto px-4 max-w-6xl">
-           <div className="text-center mb-16">
-              <h2 className="font-heading text-4xl md:text-6xl font-black text-brand-dark mb-4 leading-none uppercase italic tracking-tighter">
-                Escolha seu Kit de Sucesso
-              </h2>
-              <div className="h-2 w-32 bg-brand-pink mx-auto rounded-full mb-8"></div>
-              <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">Acesso imediato aos melhores fornecedores</p>
-           </div>
-
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-             {PRODUCTS.map((product) => (
-               <div 
-                 key={product.id} 
-                 className={`group bg-white rounded-[3rem] overflow-hidden shadow-2xl flex flex-col transform transition-all duration-500 hover:-translate-y-6 border-4 ${product.featured ? 'border-brand-pink ring-8 ring-brand-pink/5 scale-105 z-10' : 'border-white'}`}
-               >
-                 <div className="relative pt-12 px-10 pb-6 bg-gradient-to-b from-pink-50 to-white">
-                    <div className="absolute top-6 left-6 z-20">
-                      <span className="bg-brand-dark text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-tighter shadow-lg">
-                        {product.badge}
-                      </span>
-                    </div>
-
-                    <div className="absolute top-6 right-6 z-20">
-                      <div className="bg-brand-pink text-white w-20 h-20 rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-white transform rotate-6">
-                         <span className="text-2xl font-black leading-none">{product.items.split(' ')[0]}</span>
-                         <span className="text-[10px] font-bold uppercase leading-none">ITENS</span>
-                      </div>
-                    </div>
-
-                    <div className="relative z-10 h-72 flex items-center justify-center">
-                       <img 
-                         src={product.img} 
-                         alt={product.name} 
-                         className="max-h-full max-w-full object-contain drop-shadow-2xl transform group-hover:scale-110 transition-transform duration-700" 
-                       />
-                    </div>
-                 </div>
-
-                 <div className="p-10 flex-grow flex flex-col text-center">
-                    <h3 className="font-heading font-black text-3xl text-brand-dark mb-2 uppercase italic leading-none">{product.name}</h3>
-                    <p className="text-gray-400 font-bold text-sm uppercase mb-8 tracking-widest">{product.brand}</p>
-                    
-                    <div className="bg-gray-50 rounded-3xl p-6 mb-8 border border-gray-100">
-                       <div className="flex items-center justify-center gap-3 mb-1">
-                          <span className="text-gray-400 line-through font-bold text-lg">{product.originalPrice}</span>
-                          <span className="bg-red-500 text-white text-xs font-black px-3 py-1 rounded-full">{product.discount}</span>
-                       </div>
-                       <div className="flex items-baseline justify-center">
-                          <span className="text-brand-pink font-black text-5xl">R$ {product.price}</span>
-                          <span className="text-gray-400 text-sm ml-1 font-bold">À VISTA</span>
-                       </div>
-                    </div>
-
-                    <button 
-                      onClick={goToCatalog}
-                      className={`w-full py-6 rounded-[2rem] font-black text-xl flex items-center justify-center gap-3 transition-all transform active:scale-95 shadow-2xl ${
-                        product.featured 
-                        ? 'bg-[#25D366] hover:bg-green-600 text-white border-b-8 border-green-800' 
-                        : 'bg-brand-pink hover:bg-brand-dark text-white border-b-8 border-brand-dark'
-                      }`}
-                    >
-                       <ShoppingBag size={24} />
-                       ACESSAR CATÁLOGO
-                       <ArrowRight size={20} />
-                    </button>
-                 </div>
-               </div>
-             ))}
-           </div>
-         </div>
+      {/* --- VALUE PROPOSITION --- */}
+      <section className="py-14 bg-gray-50 border-y border-gray-200">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div className="flex flex-col items-center p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
+              <Package className="w-14 h-14 text-brand-pink mb-4" />
+              <h3 className="font-black text-xl mb-2 uppercase text-brand-dark">Curadoria Expert</h3>
+              <p className="text-gray-600 font-medium">As makes que são tendência absoluta no TikTok e Instagram.</p>
+            </div>
+            <div className="flex flex-col items-center p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
+              <TrendingUp className="w-14 h-14 text-brand-pink mb-4" />
+              <h3 className="font-black text-xl mb-2 uppercase text-brand-dark">Lucro Real</h3>
+              <p className="text-gray-600 font-medium">Preço de atacado para você faturar até 300% de lucro.</p>
+            </div>
+            <div className="flex flex-col items-center p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
+              <CheckCircle2 className="w-14 h-14 text-brand-pink mb-4" />
+              <h3 className="font-black text-xl mb-2 uppercase text-brand-dark">Zero Burocracia</h3>
+              <p className="text-gray-600 font-medium">Não precisa de CNPJ. Comece agora mesmo.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* --- SOCIAL PROOF --- */}
@@ -203,16 +241,25 @@ export default function App() {
              Sua independência <span className="text-brand-pink">financeira</span> começa hoje!
            </h2>
            <p className="text-xl md:text-2xl text-pink-100 mb-12 leading-relaxed font-medium">
-             Pare de adiar seu sonho. Clique abaixo para escolher os kits que vão mudar sua história.
+             Pare de adiar seu sonho. Escolha agora como você vai dar o primeiro passo para ter sua loja de sucesso.
            </p>
 
-           <button 
-             onClick={goToCatalog}
-             className="inline-flex items-center gap-4 bg-[#25D366] hover:bg-green-600 text-white font-black py-8 px-16 rounded-full shadow-[0_20px_50px_rgba(37,211,102,0.5)] text-3xl md:text-4xl transition-all transform hover:scale-105 border-b-8 border-green-800"
-           >
-              <ShoppingBag size={40} />
-              VER KITS NA SHOPEE
-           </button>
+           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+              <button 
+                onClick={goToCatalog}
+                className="w-full md:w-auto inline-flex items-center justify-center gap-4 bg-white text-brand-dark font-black py-6 px-12 rounded-full shadow-2xl text-2xl transition-all transform hover:scale-105 border-b-8 border-gray-300"
+              >
+                 <Package size={32} />
+                 VER KITS PRONTOS
+              </button>
+              <a 
+                href={SUPPLIER_LIST_CHECKOUT}
+                className="w-full md:w-auto inline-flex items-center justify-center gap-4 bg-[#25D366] hover:bg-green-600 text-white font-black py-6 px-12 rounded-full shadow-2xl text-2xl transition-all transform hover:scale-105 border-b-8 border-green-800"
+              >
+                 <Globe size={32} />
+                 LISTA IMPORTADORAS
+              </a>
+           </div>
         </div>
       </section>
 
