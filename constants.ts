@@ -12,6 +12,37 @@ export const SUPPLIER_LIST_OFFER = {
   benefit: "Preços 40% menores que os Kits"
 };
 
+export const PROFIT_DATA = [
+  { 
+    name: "Lip Gloss Volume", 
+    cost: "2,50", 
+    resale: "15,00", 
+    profit: "500%",
+    img: "https://i.postimg.cc/jjLgyj98/image.png"
+  },
+  { 
+    name: "Base Matte Alta Cobertura", 
+    cost: "7,90", 
+    resale: "29,90", 
+    profit: "278%",
+    img: "https://i.postimg.cc/Jztc22qg/image.png"
+  },
+  { 
+    name: "Batom Stick Matte", 
+    cost: "3,50", 
+    resale: "15,00", 
+    profit: "328%",
+    img: "https://i.postimg.cc/QtqTtQmp/image.png"
+  },
+  { 
+    name: "Máscara de Cílios 4D", 
+    cost: "4,20", 
+    resale: "20,00", 
+    profit: "376%",
+    img: "https://i.postimg.cc/nrChJBPb/image.png"
+  }
+];
+
 export const PRODUCTS = [
   { 
     id: 1,
@@ -101,15 +132,6 @@ export const FAQ_ITEMS = [
 
 export const TESTIMONIALS = [
   { 
-    name: "Mariana Silva", 
-    type: "whatsapp-dark",
-    conversation: [
-      { side: "left", text: "Oi! O acesso aos fornecedores chegou?", time: "09:15" },
-      { side: "right", text: "Chegou sim! Já tô aqui olhando os preços, tô chocada que o gloss é R$ 2,50 real kkkk", time: "09:17" },
-      { side: "right", text: "Vou montar meu primeiro kit hoje mesmo!", time: "09:18" }
-    ]
-  },
-  { 
     name: "Letícia R.", 
     type: "photo",
     img: "https://i.postimg.cc/3RQjg2Xq/image.png",
@@ -120,6 +142,24 @@ export const TESTIMONIALS = [
     type: "photo",
     img: "https://i.postimg.cc/DycFDkjw/image.png",
     text: "Gente, acabei de abrir meu kit e estou sem palavras! A qualidade das bases e dos batons é de outro mundo. Veio tudo lacradinho. Já vou montar as cestinhas pra começar a vender amanhã cedo!"
+  },
+  { 
+    name: "Renata S.", 
+    type: "photo",
+    img: "https://i.postimg.cc/QMG2xfyG/image.png",
+    text: "Gente, olha a perfeição desses produtos! Chegou tudo impecável. Já comecei a divulgar e o feedback está sendo incrível. É lucro na certa!"
+  },
+  { 
+    name: "Juliana M.", 
+    type: "photo",
+    img: "https://i.postimg.cc/pV5zHkzQ/image.png",
+    text: "Chegou tudo certinho! Os mimos que vieram no kit são um diferencial enorme para as clientes. Já estou preparando as entregas da semana!"
+  },
+  { 
+    name: "Camila V.", 
+    type: "photo",
+    img: "https://i.postimg.cc/hPN8H6Xv/image.png",
+    text: "Gente, nem acredito! Fiz minha primeira venda hoje mesmo seguindo os fornecedores da lista. Tô muito feliz com o resultado!"
   },
   { 
     name: "Aline Souza", 

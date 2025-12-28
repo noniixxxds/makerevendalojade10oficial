@@ -12,13 +12,16 @@ import {
   Sparkles,
   Globe,
   Star,
-  Zap
+  Zap,
+  MousePointer2,
+  Lock,
+  DollarSign
 } from 'lucide-react';
 import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
 import { SalesNotification } from './components/SalesNotification';
 import { CatalogView } from './components/CatalogView';
-import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, SUPPORT_LINK, SUPPLIER_LIST_OFFER, SUPPLIER_LIST_CHECKOUT } from './constants';
+import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, SUPPORT_LINK, SUPPLIER_LIST_OFFER, SUPPLIER_LIST_CHECKOUT, PROFIT_DATA } from './constants';
 
 export default function App() {
   const [view, setView] = useState<'landing' | 'catalog'>('landing');
@@ -190,6 +193,81 @@ export default function App() {
         </div>
       </section>
 
+      {/* --- PROFIT COMPARISON SECTION --- */}
+      <section className="py-20 bg-brand-dark relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <div className="text-center mb-16">
+             <div className="inline-flex items-center gap-2 bg-yellow-400 text-brand-dark px-4 py-1 rounded-full font-black text-xs uppercase mb-4 shadow-lg">
+                <DollarSign size={14} />
+                A MATEMÁTICA DO SUCESSO
+             </div>
+             <h2 className="font-heading text-3xl md:text-5xl font-black text-white uppercase italic leading-tight mb-4">
+               Quanto você vai <span className="text-brand-pink">lucrar?</span>
+             </h2>
+             <p className="text-white/60 font-medium">Veja os preços que você pagará diretamente nas Importadoras da Lista VIP:</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PROFIT_DATA.map((item, idx) => (
+               <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 flex flex-col items-center group hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2">
+                  {/* Imagem do Produto */}
+                  <div className="w-full aspect-square bg-white rounded-3xl mb-6 p-4 relative overflow-hidden shadow-inner">
+                     <img 
+                       src={item.img} 
+                       alt={item.name} 
+                       className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                     />
+                     <div className="absolute top-2 right-2 bg-brand-pink text-white text-[9px] font-black px-2 py-1 rounded-full uppercase">
+                        {item.profit} lucro
+                     </div>
+                  </div>
+
+                  <span className="text-white font-black text-center mb-4 leading-tight min-h-[40px] flex items-center">{item.name}</span>
+                  <div className="w-full h-px bg-white/10 mb-4"></div>
+                  
+                  <div className="flex flex-col items-center gap-1 mb-4">
+                     <span className="text-[10px] text-white/40 font-bold uppercase tracking-widest">CUSTO REAL</span>
+                     <span className="text-yellow-400 font-black text-3xl">R$ {item.cost}</span>
+                  </div>
+
+                  <div className="flex flex-col items-center gap-1 mb-6">
+                     <span className="text-[10px] text-white/40 font-bold uppercase tracking-widest">PODE SER REVENDIDO POR</span>
+                     <span className="text-white font-black text-xl">R$ {item.resale}</span>
+                  </div>
+
+                  <div className="w-full bg-brand-pink/20 py-2.5 px-4 rounded-xl border border-brand-pink/30 text-center">
+                     <span className="text-brand-pink font-black text-xs uppercase tracking-widest">LUCRO DE R$ {(parseFloat(item.resale.replace(',', '.')) - parseFloat(item.cost.replace(',', '.'))).toFixed(2).replace('.', ',')}</span>
+                  </div>
+               </div>
+            ))}
+          </div>
+
+          <div className="mt-16 bg-white p-6 md:p-12 rounded-[3.5rem] shadow-2xl relative overflow-hidden">
+             <div className="absolute top-0 right-0 p-6 opacity-10">
+                <TrendingUp size={80} className="text-brand-pink" />
+             </div>
+             <div className="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                <div className="bg-brand-pink/10 p-5 rounded-3xl border border-brand-pink/20">
+                   <TrendingUp size={48} className="text-brand-pink" />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                   <p className="text-gray-900 font-black text-2xl md:text-3xl leading-tight">
+                     Vendendo apenas 3 gloss por dia, seu lucro mensal ultrapassa <span className="text-brand-pink">R$ 1.100,00!</span>
+                   </p>
+                   <p className="text-gray-500 font-bold text-lg mt-3">Imagine quando você estiver vendendo o kit completo...</p>
+                </div>
+                <a 
+                  href={SUPPLIER_LIST_CHECKOUT}
+                  className="bg-brand-dark text-white font-black px-10 py-5 rounded-full shadow-xl hover:bg-black transition-all transform hover:scale-105"
+                >
+                   QUERO ESSES PREÇOS
+                </a>
+             </div>
+          </div>
+        </div>
+      </section>
+
       {/* --- VALUE PROPOSITION --- */}
       <section className="py-14 bg-gray-50 border-y border-gray-200">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -214,7 +292,7 @@ export default function App() {
       </section>
 
       {/* --- SOCIAL PROOF --- */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white overflow-hidden">
          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="font-heading text-4xl font-black text-gray-800 mb-4 uppercase italic">
@@ -222,6 +300,79 @@ export default function App() {
               </h2>
               <div className="h-1.5 w-20 bg-brand-pink mx-auto rounded-full"></div>
             </div>
+
+            {/* --- PROVA DE ENTREGA EM TEMPO REAL --- */}
+            <div className="max-w-4xl mx-auto mb-20">
+               <div className="bg-brand-dark rounded-[2.5rem] md:rounded-[3.5rem] p-6 md:p-12 relative overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.4)] border-4 border-white/5">
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-brand-pink rounded-full blur-[120px] opacity-20 -mr-40 -mt-40"></div>
+                  
+                  <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
+                     <div className="flex-1 text-center lg:text-left">
+                        <div className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-1.5 rounded-full font-black text-[10px] md:text-xs uppercase mb-6 shadow-lg border border-white/20">
+                           <Zap size={14} className="fill-white" />
+                           Acesso Imediato Liberado
+                        </div>
+                        <h3 className="font-heading text-3xl md:text-5xl font-black text-white mb-6 uppercase italic leading-tight">
+                          Sua lista entregue <span className="text-brand-pink">em tempo real!</span>
+                        </h3>
+                        <p className="text-base md:text-xl text-white/80 font-medium mb-8 leading-relaxed">
+                          Nada de esperar dias ou horas. Nosso sistema é 100% automatizado: pagou, recebeu o link direto no seu e-mail e WhatsApp. 
+                        </p>
+                        
+                        <div className="grid grid-cols-2 gap-4 mb-8">
+                           <div className="bg-white/5 border border-white/10 p-4 rounded-2xl">
+                              <p className="text-yellow-400 font-black text-2xl md:text-3xl">100%</p>
+                              <p className="text-[10px] text-white/60 font-bold uppercase tracking-widest">Seguro & Vitalício</p>
+                           </div>
+                           <div className="bg-white/5 border border-white/10 p-4 rounded-2xl">
+                              <p className="text-brand-pink font-black text-2xl md:text-3xl">INSTANT</p>
+                              <p className="text-[10px] text-white/60 font-bold uppercase tracking-widest">Entrega Automática</p>
+                           </div>
+                        </div>
+
+                        <a 
+                          href={SUPPLIER_LIST_CHECKOUT}
+                          className="inline-flex items-center gap-3 bg-yellow-400 text-brand-dark font-black px-8 py-5 rounded-full text-lg shadow-xl hover:bg-yellow-500 transition-all transform hover:scale-105 border-b-4 border-yellow-700"
+                        >
+                           GARANTIR MEU ACESSO
+                           <ArrowRight size={20} />
+                        </a>
+                     </div>
+
+                     <div className="flex-1 w-full flex justify-center lg:justify-end">
+                        <div className="relative w-full max-w-[420px]">
+                           <div className="relative bg-white rounded-[2rem] p-2 shadow-2xl overflow-hidden aspect-[16/10] md:aspect-auto">
+                              <img 
+                                src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWNmNmI0MHdwczNoeXlvYjJucTZqbTZ4djk5YnI1dHM5d2JkeHhvOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sQDYXzIfNEzsXbxgX4/giphy.gif" 
+                                alt="Prova de entrega em tempo real" 
+                                className="w-full h-full object-cover rounded-[1.5rem]"
+                              />
+                              <div className="absolute top-4 left-4 right-4 flex justify-between items-start pointer-events-none">
+                                 <div className="bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 flex items-center gap-2">
+                                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                                    <span className="text-[10px] text-white font-black uppercase">LIVE PROOF</span>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-4 rounded-2xl shadow-2xl border border-gray-100 animate-bounce max-w-[200px] hidden md:block">
+                              <div className="flex items-center gap-3">
+                                 <div className="bg-green-100 p-2 rounded-full">
+                                    <CheckCircle2 size={24} className="text-green-600" />
+                                 </div>
+                                 <div className="flex flex-col">
+                                    <span className="text-xs font-black text-gray-800">Sucesso!</span>
+                                    <span className="text-[10px] text-gray-500 font-medium">Link enviado com sucesso.</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+            {/* --- GRID DE TESTEMUNHOS --- */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                {TESTIMONIALS.map((t, i) => (
                  <TestimonialCard key={i} {...t} />
