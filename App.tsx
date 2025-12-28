@@ -105,64 +105,69 @@ export default function App() {
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-             {PRODUCTS.map((product) => (
-               <div 
-                 key={product.id} 
-                 className={`group bg-white rounded-[3rem] overflow-hidden shadow-2xl flex flex-col transform transition-all duration-500 hover:-translate-y-6 border-4 ${product.featured ? 'border-brand-pink ring-8 ring-brand-pink/5 scale-105 z-10' : 'border-white'}`}
-               >
-                 <div className="relative pt-12 px-10 pb-6 bg-gradient-to-b from-pink-50 to-white">
-                    <div className="absolute top-6 left-6 z-20">
-                      <span className="bg-brand-dark text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-tighter shadow-lg">
-                        {product.badge}
-                      </span>
-                    </div>
-
-                    <div className="absolute top-6 right-6 z-20">
-                      <div className="bg-brand-pink text-white w-20 h-20 rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-white transform rotate-6">
-                         <span className="text-2xl font-black leading-none">{product.items.split(' ')[0]}</span>
-                         <span className="text-[10px] font-bold uppercase leading-none">ITENS</span>
+             {PRODUCTS.map((product) => {
+               // Construindo o link do WhatsApp dinamicamente para cada kit
+               const kitWhatsappUrl = `https://wa.me/5511980219977?text=${encodeURIComponent(`Olá! Quero o ${product.name}`)}`;
+               
+               return (
+                 <div 
+                   key={product.id} 
+                   className={`group bg-white rounded-[3rem] overflow-hidden shadow-2xl flex flex-col transform transition-all duration-500 hover:-translate-y-6 border-4 ${product.featured ? 'border-brand-pink ring-8 ring-brand-pink/5 scale-105 z-10' : 'border-white'}`}
+                 >
+                   <div className="relative pt-12 px-10 pb-6 bg-gradient-to-b from-pink-50 to-white">
+                      <div className="absolute top-6 left-6 z-20">
+                        <span className="bg-brand-dark text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-tighter shadow-lg">
+                          {product.badge}
+                        </span>
                       </div>
-                    </div>
 
-                    <div className="relative z-10 h-72 flex items-center justify-center">
-                       <img 
-                         src={product.img} 
-                         alt={product.name} 
-                         className="max-h-full max-w-full object-contain drop-shadow-2xl transform group-hover:scale-110 transition-transform duration-700" 
-                       />
-                    </div>
+                      <div className="absolute top-6 right-6 z-20">
+                        <div className="bg-brand-pink text-white w-20 h-20 rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-white transform rotate-6">
+                           <span className="text-2xl font-black leading-none">{product.items.split(' ')[0]}</span>
+                           <span className="text-[10px] font-bold uppercase leading-none">ITENS</span>
+                        </div>
+                      </div>
+
+                      <div className="relative z-10 h-72 flex items-center justify-center">
+                         <img 
+                           src={product.img} 
+                           alt={product.name} 
+                           className="max-h-full max-w-full object-contain drop-shadow-2xl transform group-hover:scale-110 transition-transform duration-700" 
+                         />
+                      </div>
+                   </div>
+
+                   <div className="p-10 flex-grow flex flex-col text-center">
+                      <h3 className="font-heading font-black text-3xl text-brand-dark mb-2 uppercase italic leading-none">{product.name}</h3>
+                      <p className="text-gray-400 font-bold text-sm uppercase mb-8 tracking-widest">{product.brand}</p>
+                      
+                      <div className="bg-gray-50 rounded-3xl p-6 mb-8 border border-gray-100">
+                         <div className="flex items-center justify-center gap-3 mb-1">
+                            <span className="text-gray-400 line-through font-bold text-lg">{product.originalPrice}</span>
+                            <span className="bg-red-500 text-white text-xs font-black px-3 py-1 rounded-full">{product.discount}</span>
+                         </div>
+                         <div className="flex items-baseline justify-center">
+                            <span className="text-brand-pink font-black text-5xl">R$ {product.price}</span>
+                            <span className="text-gray-400 text-sm ml-1 font-bold">À VISTA</span>
+                         </div>
+                      </div>
+
+                      <a 
+                        href={kitWhatsappUrl} 
+                        className={`w-full py-6 rounded-[2rem] font-black text-xl flex items-center justify-center gap-3 transition-all transform active:scale-95 shadow-2xl ${
+                          product.featured 
+                          ? 'bg-[#25D366] hover:bg-green-600 text-white border-b-8 border-green-800' 
+                          : 'bg-brand-pink hover:bg-brand-dark text-white border-b-8 border-brand-dark'
+                        }`}
+                      >
+                         <ShoppingBag size={24} />
+                         QUERO ESTE KIT
+                         <ArrowRight size={20} />
+                      </a>
+                   </div>
                  </div>
-
-                 <div className="p-10 flex-grow flex flex-col text-center">
-                    <h3 className="font-heading font-black text-3xl text-brand-dark mb-2 uppercase italic leading-none">{product.name}</h3>
-                    <p className="text-gray-400 font-bold text-sm uppercase mb-8 tracking-widest">{product.brand}</p>
-                    
-                    <div className="bg-gray-50 rounded-3xl p-6 mb-8 border border-gray-100">
-                       <div className="flex items-center justify-center gap-3 mb-1">
-                          <span className="text-gray-400 line-through font-bold text-lg">{product.originalPrice}</span>
-                          <span className="bg-red-500 text-white text-xs font-black px-3 py-1 rounded-full">{product.discount}</span>
-                       </div>
-                       <div className="flex items-baseline justify-center">
-                          <span className="text-brand-pink font-black text-5xl">R$ {product.price}</span>
-                          <span className="text-gray-400 text-sm ml-1 font-bold">À VISTA</span>
-                       </div>
-                    </div>
-
-                    <a 
-                      href={SUPPORT_LINK} 
-                      className={`w-full py-6 rounded-[2rem] font-black text-xl flex items-center justify-center gap-3 transition-all transform active:scale-95 shadow-2xl ${
-                        product.featured 
-                        ? 'bg-[#25D366] hover:bg-green-600 text-white border-b-8 border-green-800' 
-                        : 'bg-brand-pink hover:bg-brand-dark text-white border-b-8 border-brand-dark'
-                      }`}
-                    >
-                       <ShoppingBag size={24} />
-                       QUERO ESTE KIT
-                       <ArrowRight size={20} />
-                    </a>
-                 </div>
-               </div>
-             ))}
+               );
+             })}
            </div>
          </div>
       </section>
