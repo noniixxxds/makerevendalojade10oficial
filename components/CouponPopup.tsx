@@ -1,6 +1,8 @@
+
 import React, { useState } from 'react';
 import { Gift, Copy, X, Check } from 'lucide-react';
-import { CHECKOUT_LINK } from '../constants';
+// Changed import to use SUPPORT_LINK as CHECKOUT_LINK was not defined in constants.ts
+import { SUPPORT_LINK } from '../constants';
 
 interface CouponPopupProps {
   isOpen: boolean;
@@ -60,11 +62,12 @@ export const CouponPopup: React.FC<CouponPopupProps> = ({ isOpen, onClose }) => 
         </p>
 
         {/* Main CTA */}
+        {/* Fixed: Use SUPPORT_LINK instead of CHECKOUT_LINK and updated text to match the action */}
         <a 
-          href={CHECKOUT_LINK}
+          href={SUPPORT_LINK}
           className="block w-full bg-[#25D366] hover:bg-green-600 text-white font-bold py-4 rounded-full shadow-lg shadow-green-100 transform hover:scale-105 transition-all text-lg flex items-center justify-center gap-2 group"
         >
-          Não Quero benefícios
+          QUERO MEU DESCONTO
         </a>
         
         <p 

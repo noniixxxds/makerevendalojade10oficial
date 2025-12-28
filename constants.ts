@@ -1,138 +1,91 @@
 
-
-export const CHECKOUT_LINK = "https://pay.kirvano.com/a39cd2c2-492c-42f6-b29e-f4046aaf666c";
+export const SUPPORT_LINK = "https://wa.me/5511980219977?text=Olá!+Quero+saber+mais+sobre+os+kits+de+revenda+de+maquiagem.";
 
 export const PRODUCTS = [
   { 
-    name: "Lip Balm Frutas Potinho", 
-    brand: "Febella",
-    cost: "1,85", 
-    img: "https://i.postimg.cc/KYyP8Hh4/Captura-de-tela-2025-11-17-090715.png",
-    badge: "BLACK FRIDAY"
+    id: 1,
+    name: "Kit Revenda Iniciante", 
+    items: "5 ITENS",
+    originalPrice: "R$ 35,90",
+    price: "22,42",
+    discount: "38% OFF",
+    brand: "Mix Essencial",
+    img: "https://i.postimg.cc/0MRfHMvn/kit-maquiagem-revenda.png",
+    badge: "MAIS ECONÔMICO"
   },
   { 
-    name: "Lápis Kajal Retrátil Preto", 
-    brand: "Vivai",
-    cost: "2,50", 
-    img: "https://i.postimg.cc/ZRmzj4t4/Captura-de-tela-2025-11-17-091419.png",
-    badge: "OFERTA BLACK"
+    id: 2,
+    name: "Kit Revenda Empreendedora", 
+    items: "9 ITENS",
+    originalPrice: "R$ 58,00",
+    price: "41,48",
+    discount: "29% OFF",
+    brand: "Os mais vendidos",
+    img: "https://i.postimg.cc/0MRfHMvn/kit-maquiagem-revenda.png",
+    badge: "O QUERIDINHO",
+    featured: true
   },
   { 
-    name: "Brilho Moranguinho Retrô", 
-    brand: "Vivai",
-    cost: "1,99", 
-    img: "https://i.postimg.cc/RZwPdfM1/Captura-de-tela-2025-11-17-091740.png",
-    badge: "BLACK FRIDAY"
-  },
-  { 
-    name: "Teddy Gloss (Ursinho)", 
-    brand: "Vivai",
-    cost: "3,90", 
-    img: "https://i.postimg.cc/020nJvZv/Captura-de-tela-2025-11-17-092035.png",
-    badge: "PREÇO DE CUSTO"
-  },
-  { 
-    name: "Mousse de Limpeza Facial", 
-    brand: "Face Beautiful",
-    cost: "6,90", 
-    img: "https://i.postimg.cc/NFgy33Ts/Captura-de-tela-2025-11-17-092227.png",
-    badge: "BLACK FRIDAY"
-  },
-  { 
-    name: "Pó Banana Translúcido", 
-    brand: "Vivai",
-    cost: "4,50", 
-    img: "https://i.postimg.cc/hGcq1KRs/Captura-de-tela-2025-11-17-092434.png",
-    badge: "SUPER OFERTA"
-  },
-  { 
-    name: "Sabonete Facial Pump", 
-    brand: "Love Girl",
-    cost: "5,90", 
-    img: "https://i.postimg.cc/XNdSmZ74/Captura-de-tela-2025-11-17-092647.png",
-    badge: "BLACK FRIDAY"
-  },
-  { 
-    name: "Esponja Gota Chanfrada", 
-    brand: "Cres.",
-    cost: "1,75", 
-    img: "https://i.postimg.cc/ncFR2MXg/Captura-de-tela-2025-11-17-092843.png",
-    badge: "LIQUIDAÇÃO"
-  },
-  { 
-    name: "Batom My Little Princess", 
-    brand: "Vivai",
-    cost: "2,99", 
-    img: "https://i.postimg.cc/VN8b906J/Captura-de-tela-2025-11-17-093023.png",
-    badge: "BLACK FRIDAY"
-  },
-  { 
-    name: "Blush Compacto Uni", 
-    brand: "Vivai",
-    cost: "3,50", 
-    img: "https://i.postimg.cc/6QWp5rqv/Captura-de-tela-2025-11-17-093136.png",
-    badge: "OFERTA RELÂMPAGO"
-  },
-  { 
-    name: "Lápis Preto c/ Apontador", 
-    brand: "Bella Femme",
-    cost: "1,50", 
-    img: "https://i.postimg.cc/XvPqHZNX/Captura-de-tela-2025-11-17-093302.png",
-    badge: "BLACK FRIDAY"
-  },
-  { 
-    name: "Delineador Líquido Ultra", 
-    brand: "Vivai",
-    cost: "3,80", 
-    img: "https://i.postimg.cc/CxXp9b8c/Captura-de-tela-2025-11-17-093511.png",
-    badge: "PREÇO BAIXO"
-  },
+    id: 3,
+    name: "Kit Revenda Avançado", 
+    items: "15 ITENS",
+    originalPrice: "R$ 99,90",
+    price: "72,50",
+    discount: "27% OFF",
+    brand: "Estoque Completo",
+    img: "https://i.postimg.cc/0MRfHMvn/kit-maquiagem-revenda.png",
+    badge: "MAIOR LUCRO"
+  }
 ];
 
 export const FAQ_ITEMS = [
   {
-    question: "Como recebo o acesso?",
-    answer: "É automático, meu amor! Assim que confirmar o pagamento, o sistema envia para o seu E-mail E também para o seu WHATSAPP na hora. Você já abre a lista no celular e começa a chamar os fornecedores."
+    question: "Como funcionam os kits de revenda?",
+    answer: "Nós selecionamos as maquiagens que mais vendem no momento (tendências de TikTok e Instagram) e montamos kits estratégicos de 5, 9 ou 15 itens. Você recebe o kit pronto na sua casa e só precisa começar a oferecer. O lucro médio é de 200% a 300%."
   },
   {
-    question: "O preço vai baixar mais na Black Friday?",
-    answer: "Não, amor! Esse é o MENOR preço da história (R$ 6,49). É literalmente preço de custo para você começar agora."
+    question: "Quais marcas vêm nos kits?",
+    answer: "Trabalhamos com as queridinhas do público: Vivai, Febella, Max Love, Face Beautiful e outras marcas que entregam qualidade e preço baixo."
   },
   {
-    question: "Tenho medo de comprar e não receber, é seguro?",
-    answer: "Minha filha, eu te entendo. A internet tá cheia de golpe. Mas aqui a gente usa a Kirvano, que é a plataforma mais segura do Brasil. O dinheiro nem vem pra mim agora, fica guardado lá. Se você não gostar, é só apertar um botão."
+    question: "Como eu escolho o melhor kit para mim?",
+    answer: "Basta clicar no botão e falar com uma de nossas consultoras. Ela vai entender seu objetivo (vender online, em banca, ou para amigas) e te indicar se o melhor para o seu momento é o kit de 5, 9 ou 15 itens."
   },
   {
-    question: "Os fornecedores vendem pra CPF ou só CNPJ?",
-    answer: "Graças a Deus eles vendem pra CPF também! A maioria das meninas começa comprando com o CPF mesmo, de pouquinho em pouquinho, até conseguir formalizar. Fica tranquila."
+    question: "Vocês enviam para todo o Brasil?",
+    answer: "Sim! Enviamos via transportadora ou Correios com seguro total. Seu kit chega lacrado e pronto para ser vendido."
   },
   {
-    question: "Tem pedido mínimo muito alto?",
-    answer: "Tem fornecedor nessa lista que vende a partir de R$50,00! Eu selecionei a dedo justamente quem ajuda quem tá começando de baixo, como eu comecei."
-  },
-  {
-    question: "Serve pra quem mora no interior?",
-    answer: "Serve sim, meu amor! Todos enviam pelos Correios ou transportadora pra qualquer lugar do Brasil. Chega direitinho na sua porta."
-  },
-  {
-    question: "A lista está atualizada?",
-    answer: "Atualizadíssima! Eu mesma ligo pra cada um todo mês pra saber se os preços continuam bons. Você não vai pegar número que não existe, eu garanto."
-  },
-  {
-    question: "E se eu não gostar?",
-    answer: "Se você não gostar, eu devolvo seus R$ 6,49. Eu assumo o risco porque sei que funciona."
+    question: "Precisa de CNPJ para comprar?",
+    answer: "Não! Você pode começar sua jornada empreendedora como pessoa física. Facilitamos o caminho para você crescer."
   }
 ];
 
 export const TESTIMONIALS = [
-  { name: "Carla Dias", img: "https://i.postimg.cc/pV5zHkzQ/image.png", text: "Mal recebi a lista e já tô acessando agora mesmo! Chocada com a rapidez.", type: "photo" },
-  { name: "Bruna S.", img: "https://i.postimg.cc/DycFDkjw/image.png", text: "Comecei com medo, mas investi pouquinho e olha a qualidade das mercadorias! Apaixonada.", type: "photo" },
-  { name: "Jessica Alves", img: "https://i.postimg.cc/3RQjg2Xq/image.png", text: "Simplesmente apaixonada! Chegou tudo certinho e as vendas estão bombando.", type: "photo" },
-  { name: "Renata F.", img: "https://i.postimg.cc/Zq58Gd8B/image.png", text: "Eu achava que era golpe, paguei pra ver e agora não para de chegar encomenda aqui em casa.", type: "photo" },
-  { name: "Larissa B.", img: "https://i.postimg.cc/x8tsY8V2/image.png", text: "Peguei o dinheiro do lanche, investi na lista e já tô montando meu império!", type: "photo" },
-  { name: "Juliana M.", img: "https://i.postimg.cc/j5rtmxb6/image.png", text: "Arrumando tudo pra vender amanhã! É sobre não dar desculpas e fazer acontecer.", type: "photo" },
-  { name: "Amanda Souza", img: "https://i.postimg.cc/Bb7mX9xL/582333586-813971864892131-8108173947280786291-n-(1).jpg", text: "Garanti a lista hoje cedo e já chamei os fornecedores. Bora vencer!", type: "photo" },
-  { name: "Patrícia Gomes", img: "https://i.postimg.cc/9FKjnsv4/Captura-de-tela-2025-11-17-101009.png", text: "Gente, olha essa banca! Tudo montado com os fornecedores de R$ 2,00 da lista. Surreal!", type: "photo" },
-  { name: "Dani Ferreira", img: "https://i.postimg.cc/FzCT75jk/582148552-868423898872479-3396241599108394350-n.jpg", text: "Tava ansiosa, mas o acesso chegou no Zap, abri a lista e já tô faturando!", type: "photo" },
-  { name: "Mariana Costa", img: "https://i.postimg.cc/R0BwbW0b/image.png", text: "Olha o tanto de coisa que comprei com o dinheiro que sobrou. Melhor investimento!", type: "photo" },
+  { 
+    name: "Mariana Silva", 
+    type: "whatsapp-dark",
+    conversation: [
+      { side: "left", text: "Oi! O acesso aos fornecedores chegou?", time: "09:15" },
+      { side: "right", text: "Chegou sim! Já tô aqui olhando os preços, tô chocada que o gloss é R$ 2,50 real kkkk", time: "09:17" },
+      { side: "right", text: "Vou montar meu primeiro kit hoje mesmo!", time: "09:18" }
+    ]
+  },
+  { 
+    name: "Aline Souza", 
+    type: "photo",
+    img: "https://i.postimg.cc/PqS0MpbC/Gemini-Generated-Image-z7xi7xz7xi7xz7xi.png",
+    text: "Meu pedido chegou hoje! Tudo lacrado e os fornecedores são super atenciosos. Já vendi 3 kits pra vizinhas."
+  },
+  { 
+    name: "Priscila M.", 
+    type: "whatsapp",
+    text: "Gente, pode comprar sem medo! Eu estava com receio mas o suporte me ajudou em tudo. Fornecedores nota 10."
+  },
+  { 
+    name: "Juliana Santos", 
+    type: "photo",
+    img: "https://i.postimg.cc/d3QNyWCf/Gemini-Generated-Image-vutdtyvutdtyvutd.png",
+    text: "Minha lojinha de 10 reais tá bombando com essas makes. O segredo é realmente o fornecedor certo!"
+  }
 ];
