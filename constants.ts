@@ -121,12 +121,28 @@ export const SHOPEE_KITS = [
 
 export const FAQ_ITEMS = [
   {
-    question: "Como funcionam os kits de revenda?",
-    answer: "Nós selecionamos as maquiagens que mais vendem no momento (tendências de TikTok e Instagram) e montamos kits estratégicos. Você recebe o link direto dos melhores fornecedores da Shopee que já testamos e aprovamos."
+    question: "Como recebo o acesso aos fornecedores?",
+    answer: "O acesso é imediato! Assim que seu pagamento for confirmado, você receberá um e-mail com todos os links e também uma mensagem automática no seu WhatsApp para não perder nada."
   },
   {
-    question: "As marcas são boas?",
-    answer: "Sim! Trabalhamos com Vivai, Febella, Max Love, Face Beautiful e outras que as clientes já conhecem e amam."
+    question: "Preciso de CNPJ para comprar?",
+    answer: "De jeito nenhum! Todos os fornecedores da nossa lista e dos nossos kits aceitam compras via CPF. É perfeito para quem está começando do zero em casa."
+  },
+  {
+    question: "As marcas são boas? Minhas clientes vão gostar?",
+    answer: "Sim! Só trabalhamos com marcas 'queridinhas' que bombam no TikTok e Instagram, como Vivai, Febella, Max Love e Face Beautiful. São produtos com alta pigmentação e embalagens lindas que vendem sozinhas."
+  },
+  {
+    question: "Qual o lucro médio que eu vou ter?",
+    answer: "Comprando pela nossa Lista VIP de Importadoras, seu lucro pode chegar a 400%. Nos Kits Prontos, a margem média é de 150% a 250%. É o melhor retorno do mercado de beleza hoje."
+  },
+  {
+    question: "E se eu tiver dúvidas após a compra?",
+    answer: "Você não estará sozinha! Temos um suporte humanizado via WhatsApp para te ajudar em qualquer dificuldade com os pedidos ou com os fornecedores."
+  },
+  {
+    question: "Os fornecedores são realmente de confiança?",
+    answer: "Sim, todos foram testados e validados por nós. Já realizamos dezenas de pedidos com cada um para garantir que entregam no prazo e com a qualidade prometida."
   }
 ];
 

@@ -15,7 +15,10 @@ import {
   Zap,
   MousePointer2,
   Lock,
-  DollarSign
+  DollarSign,
+  Plus,
+  Minus,
+  HelpCircle
 } from 'lucide-react';
 import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
@@ -25,11 +28,16 @@ import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, SUPPORT_LINK, SUPPLIER_LIST_OFFER, S
 
 export default function App() {
   const [view, setView] = useState<'landing' | 'catalog'>('landing');
+  const [openFaq, setOpenFaq] = useState<number | null>(0); // Primeira aberta por padrão
 
   const goToCatalog = (e?: React.MouseEvent) => {
     if (e) e.preventDefault();
     setView('catalog');
     window.scrollTo(0, 0);
+  };
+
+  const toggleFaq = (idx: number) => {
+    setOpenFaq(openFaq === idx ? null : idx);
   };
 
   if (view === 'catalog') {
@@ -411,6 +419,73 @@ export default function App() {
                  LISTA IMPORTADORAS
               </a>
            </div>
+        </div>
+      </section>
+
+      {/* --- FAQ SECTION --- */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-brand-pink/10 text-brand-pink px-4 py-1 rounded-full font-black text-xs uppercase mb-4">
+              <HelpCircle size={14} />
+              Dúvidas Frequentes
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase italic">
+              Ainda com <span className="text-brand-pink">dúvidas?</span>
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {FAQ_ITEMS.map((faq, idx) => (
+              <div 
+                key={idx} 
+                className={`bg-white rounded-3xl overflow-hidden border transition-all duration-300 ${
+                  openFaq === idx ? 'border-brand-pink shadow-lg' : 'border-gray-200 shadow-sm'
+                }`}
+              >
+                <button 
+                  onClick={() => toggleFaq(idx)}
+                  className="w-full px-6 py-5 flex items-center justify-between text-left group"
+                >
+                  <span className={`font-bold text-base md:text-lg transition-colors ${
+                    openFaq === idx ? 'text-brand-pink' : 'text-gray-800'
+                  }`}>
+                    {faq.question}
+                  </span>
+                  <div className={`shrink-0 ml-4 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`}>
+                    {openFaq === idx ? (
+                      <Minus size={20} className="text-brand-pink" />
+                    ) : (
+                      <Plus size={20} className="text-gray-400 group-hover:text-brand-pink" />
+                    )}
+                  </div>
+                </button>
+                
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    openFaq === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="px-6 pb-6 text-gray-600 leading-relaxed font-medium">
+                    {faq.answer}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+             <p className="text-gray-500 font-bold mb-6 italic">Não encontrou sua dúvida aqui?</p>
+             <a 
+               href={SUPPORT_LINK}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="inline-flex items-center gap-2 text-brand-pink font-black uppercase tracking-widest hover:underline"
+             >
+                <MessageCircle size={18} />
+                Falar com suporte no WhatsApp
+             </a>
+          </div>
         </div>
       </section>
 
