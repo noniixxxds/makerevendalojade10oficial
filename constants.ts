@@ -75,7 +75,13 @@ export const TESTIMONIALS = [
     name: "Letícia R.", 
     type: "photo",
     img: "https://i.postimg.cc/3RQjg2Xq/image.png",
-    text: "Meninas, surreal! O kit chegou muito rápido e as marcas são maravilhosas. Só de postar no status do zap já tem 3 amigas querendo reservar as bases. É o empurrão que eu precisava!"
+    text: "Meninas, surreal! O kit chegou muito rápido e as marcas são maravilhoras. Só de postar no status do zap já tem 3 amigas querendo reservar as bases. É o empurrão que eu precisava!"
+  },
+  { 
+    name: "Bruna Medeiros", 
+    type: "photo",
+    img: "https://i.postimg.cc/DycFDkjw/image.png",
+    text: "Gente, acabei de abrir meu kit e estou sem palavras! A qualidade das bases e dos batons é de outro mundo. Veio tudo lacradinho. Já vou montar as cestinhas pra começar a vender amanhã cedo!"
   },
   { 
     name: "Aline Souza", 
