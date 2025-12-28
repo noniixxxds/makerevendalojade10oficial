@@ -78,14 +78,34 @@ export const TESTIMONIALS = [
     text: "Meu pedido chegou hoje! Tudo lacrado e os fornecedores são super atenciosos. Já vendi 3 kits pra vizinhas."
   },
   { 
-    name: "Priscila M.", 
+    name: "Camila Fernandes", 
     type: "whatsapp",
-    text: "Gente, pode comprar sem medo! Eu estava com receio mas o suporte me ajudou em tudo. Fornecedores nota 10."
+    text: "Gente, eu tava morrendo de medo de investir e não vender. Comecei com o Kit de 5 itens e vendi tudo em 4 horas! Já quero o de 15 agora."
   },
   { 
     name: "Juliana Santos", 
     type: "photo",
     img: "https://i.postimg.cc/d3QNyWCf/Gemini-Generated-Image-vutdtyvutdtyvutd.png",
     text: "Minha lojinha de 10 reais tá bombando com essas makes. O segredo é realmente o fornecedor certo!"
+  },
+  { 
+    name: "Beatriz Lemos", 
+    type: "photo",
+    img: "https://i.postimg.cc/PqS0MpbC/Gemini-Generated-Image-z7xi7xz7xi7xz7xi.png",
+    text: "Sou mãe de dois e precisava de algo pra fazer em casa. Esse kit foi a minha salvação, já tirei o lucro da semana no primeiro dia!"
+  },
+  { 
+    name: "Renata G.", 
+    type: "whatsapp-dark",
+    conversation: [
+      { side: "left", text: "As marcas são boas mesmo?", time: "14:20" },
+      { side: "right", text: "Amiga, veio Vivai e Max Love! As clientes piram kkkk", time: "14:22" },
+      { side: "right", text: "Vendi 4 rímeis só no story do insta em 10 min", time: "14:25" }
+    ]
+  },
+  { 
+    name: "Fernanda S.", 
+    type: "whatsapp",
+    text: "O suporte de vocês é maravilhoso. Me ajudaram a escolher o kit que mais combinava com o que as minhas clientes pediam. Nota mil!"
   }
 ];

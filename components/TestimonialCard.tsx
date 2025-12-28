@@ -156,7 +156,7 @@ export const TestimonialCard: React.FC<TestimonialProps> = ({ name, text, type, 
                 <div>
                     <p className="font-bold text-gray-800 text-xs leading-tight">{name}</p>
                     <div className="flex items-center gap-1">
-                        <span className="text-[9px] text-gray-500">Aluna verificada</span>
+                        <span className="text-[9px] text-gray-500"></span>
                         <div className="bg-green-500 rounded-full p-[1px]"><CheckCircle size={6} className="text-white" /></div>
                     </div>
                 </div>
