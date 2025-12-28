@@ -72,27 +72,27 @@ export const TESTIMONIALS = [
     ]
   },
   { 
+    name: "Letícia R.", 
+    type: "photo",
+    img: "https://i.postimg.cc/3RQjg2Xq/image.png",
+    text: "Meninas, surreal! O kit chegou muito rápido e as marcas são maravilhosas. Só de postar no status do zap já tem 3 amigas querendo reservar as bases. É o empurrão que eu precisava!"
+  },
+  { 
     name: "Aline Souza", 
     type: "photo",
     img: "https://i.postimg.cc/PqS0MpbC/Gemini-Generated-Image-z7xi7xz7xi7xz7xi.png",
     text: "Meu pedido chegou hoje! Tudo lacrado e os fornecedores são super atenciosos. Já vendi 3 kits pra vizinhas."
   },
   { 
+    name: "Gisele Oliveira", 
+    type: "photo",
+    img: "https://i.postimg.cc/d3QNyWCf/Gemini-Generated-Image-vutdtyvutdtyvutd.png",
+    text: "Confesso que tive muito medo no começo. Comprei o Kit de 9 itens e em 3 dias já tinha vendido tudo e recuperado o investimento. É a minha melhor decisão do ano!"
+  },
+  { 
     name: "Camila Fernandes", 
     type: "whatsapp",
     text: "Gente, eu tava morrendo de medo de investir e não vender. Comecei com o Kit de 5 itens e vendi tudo em 4 horas! Já quero o de 15 agora."
-  },
-  { 
-    name: "Juliana Santos", 
-    type: "photo",
-    img: "https://i.postimg.cc/d3QNyWCf/Gemini-Generated-Image-vutdtyvutdtyvutd.png",
-    text: "Minha lojinha de 10 reais tá bombando com essas makes. O segredo é realmente o fornecedor certo!"
-  },
-  { 
-    name: "Beatriz Lemos", 
-    type: "photo",
-    img: "https://i.postimg.cc/PqS0MpbC/Gemini-Generated-Image-z7xi7xz7xi7xz7xi.png",
-    text: "Sou mãe de dois e precisava de algo pra fazer em casa. Esse kit foi a minha salvação, já tirei o lucro da semana no primeiro dia!"
   },
   { 
     name: "Renata G.", 
