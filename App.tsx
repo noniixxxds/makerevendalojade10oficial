@@ -194,7 +194,7 @@ export default function App() {
                     </li>
                     <li className="flex items-center gap-3 text-gray-700 font-bold">
                        <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
-                       Links Diretos da Shopee
+                       Fornecedores 100% Confiáveis
                     </li>
                     <li className="flex items-center gap-3 text-gray-700 font-bold">
                        <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
@@ -315,28 +315,6 @@ export default function App() {
                         <h3 className="font-heading text-3xl md:text-5xl font-black text-white mb-6 uppercase italic leading-tight">
                           Sua lista entregue <span className="text-brand-pink">em tempo real!</span>
                         </h3>
-                        <p className="text-base md:text-xl text-white/80 font-medium mb-8 leading-relaxed">
-                          Nada de esperar dias ou horas. Nosso sistema é 100% automatizado: pagou, recebeu o link direto no seu e-mail e WhatsApp. 
-                        </p>
-                        
-                        <div className="grid grid-cols-2 gap-4 mb-8">
-                           <div className="bg-white/5 border border-white/10 p-4 rounded-2xl">
-                              <p className="text-yellow-400 font-black text-2xl md:text-3xl">100%</p>
-                              <p className="text-[10px] text-white/60 font-bold uppercase tracking-widest">Seguro & Vitalício</p>
-                           </div>
-                           <div className="bg-white/5 border border-white/10 p-4 rounded-2xl">
-                              <p className="text-brand-pink font-black text-2xl md:text-3xl">INSTANT</p>
-                              <p className="text-[10px] text-white/60 font-bold uppercase tracking-widest">Entrega Automática</p>
-                           </div>
-                        </div>
-
-                        <a 
-                          href={SUPPLIER_LIST_CHECKOUT}
-                          className="inline-flex items-center gap-3 bg-yellow-400 text-brand-dark font-black px-8 py-5 rounded-full text-lg shadow-xl hover:bg-yellow-500 transition-all transform hover:scale-105 border-b-4 border-yellow-700"
-                        >
-                           GARANTIR MEU ACESSO
-                           <ArrowRight size={20} />
-                        </a>
                      </div>
 
                      <div className="flex-1 w-full flex justify-center lg:justify-end">
