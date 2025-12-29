@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { ShoppingCart, ArrowLeft, ExternalLink, ShieldCheck, Truck } from 'lucide-react';
-import { SHOPEE_KITS, SUPPORT_LINK } from '../constants';
+import { ArrowLeft, Globe, ShieldCheck, Truck, Sparkles, Star } from 'lucide-react';
+import { SHOPEE_KITS, SUPPORT_LINK, SUPPLIER_LIST_CHECKOUT } from '../constants';
 
 interface CatalogViewProps {
   onBack: () => void;
@@ -24,69 +24,64 @@ export const CatalogView: React.FC<CatalogViewProps> = ({ onBack }) => {
             <h1 className="font-heading font-black text-brand-dark text-lg md:text-xl uppercase italic leading-none">
               Catálogo de <span className="text-brand-pink">Ouro</span>
             </h1>
-            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Kits Direto da Shopee</p>
+            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Exemplos Reais da Lista</p>
           </div>
-          <a href={SUPPORT_LINK} className="text-brand-pink">
-             <ShoppingCart size={22} />
-          </a>
+          <div className="w-10"></div> {/* Spacer para centralizar */}
         </div>
       </header>
 
       {/* Banner de Aviso */}
-      <div className="bg-brand-pink text-white py-3 px-4 text-center">
+      <div className="bg-brand-dark text-white py-3 px-4 text-center">
          <p className="text-xs md:text-sm font-black uppercase tracking-wider flex items-center justify-center gap-2">
-            <Truck size={16} className="animate-bounce" />
-            FRETE GRÁTIS DISPONÍVEL NOS LINKS ABAIXO!
+            <Sparkles size={16} className="text-yellow-400 animate-pulse" />
+            PRODUTOS DISPONÍVEIS NA LISTA VIP COM ATÉ 400% DE LUCRO!
          </p>
       </div>
 
       <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <div className="mb-8 text-center">
-           <h2 className="text-2xl font-black text-gray-800 mb-2 italic uppercase">Escolha seu estoque inicial</h2>
-           <p className="text-gray-500 text-sm">Clique no botão para ver o preço atualizado e as avaliações na Shopee.</p>
+        <div className="mb-10 text-center">
+           <h2 className="text-2xl md:text-3xl font-black text-gray-800 mb-3 italic uppercase">O que você vai encontrar lá dentro?</h2>
+           <p className="text-gray-500 text-sm font-medium max-w-xl mx-auto leading-relaxed">
+             Estes são apenas alguns exemplos dos milhares de produtos que você poderá comprar direto das importadoras usando nossa Lista VIP.
+           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {SHOPEE_KITS.map((kit) => (
-            <div key={kit.id} className="bg-white rounded-3xl overflow-hidden shadow-md border border-gray-100 flex flex-col group hover:shadow-xl transition-shadow">
-              <div className="relative h-48 bg-gray-100 overflow-hidden">
+            <div key={kit.id} className="bg-white rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 flex flex-col group hover:shadow-2xl transition-all duration-300">
+              <div className="relative h-56 bg-white overflow-hidden">
                  <img 
                    src={kit.img} 
                    alt={kit.name} 
-                   className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                   className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-500"
                  />
                  <div className="absolute top-4 left-4">
-                    <span className="bg-yellow-400 text-black text-[10px] font-black px-3 py-1 rounded-full uppercase shadow-sm">
-                       {kit.tag}
+                    <span className="bg-yellow-400 text-black text-[10px] font-black px-4 py-1.5 rounded-full uppercase shadow-lg flex items-center gap-1">
+                       <Star size={10} className="fill-black" />
+                       ITEM DISPONÍVEL
                     </span>
                  </div>
               </div>
               
-              <div className="p-6 flex flex-col flex-grow">
-                 <h3 className="font-heading font-black text-xl text-gray-800 mb-2 uppercase leading-tight">{kit.name}</h3>
-                 <p className="text-gray-500 text-xs mb-6 flex-grow">{kit.description}</p>
+              <div className="p-8 flex flex-col flex-grow">
+                 <h3 className="font-heading font-black text-xl text-gray-800 mb-3 uppercase leading-tight">{kit.name}</h3>
+                 <p className="text-gray-500 text-xs mb-8 flex-grow leading-relaxed font-medium">{kit.description}</p>
                  
-                 <div className="flex items-center justify-between mb-6">
-                    <div>
-                       <p className="text-[10px] text-gray-400 font-bold uppercase">A partir de</p>
-                       <p className="text-2xl font-black text-brand-pink">{kit.price}</p>
+                 <div className="mb-8 p-4 bg-brand-light/30 rounded-2xl border border-brand-light/50">
+                    <div className="flex items-center gap-2 text-brand-pink font-black text-[10px] uppercase tracking-widest mb-1">
+                       <Truck size={14} /> Fornecedor Validado
                     </div>
-                    <div className="flex flex-col items-end">
-                       <div className="flex items-center gap-1 text-green-600 font-bold text-[10px] uppercase">
-                          <ShieldCheck size={12} />
-                          Vendedor Premium
-                       </div>
-                    </div>
+                    <p className="text-gray-700 font-bold text-xs italic">Preço de custo exclusivo para alunas.</p>
                  </div>
 
                  <a 
-                   href={kit.shopeeUrl}
+                   href={SUPPLIER_LIST_CHECKOUT}
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="w-full bg-[#EE4D2D] hover:bg-[#d73211] text-white font-black py-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-orange-100 transition-all transform active:scale-95"
+                   className="w-full bg-brand-pink hover:bg-brand-dark text-white font-black py-5 rounded-2xl flex items-center justify-center gap-3 shadow-xl shadow-pink-100 transition-all transform active:scale-95 text-lg border-b-4 border-brand-dark"
                  >
-                   VER NA SHOPEE
-                   <ExternalLink size={18} />
+                   ADQUIRIR LISTA COMPLETA
+                   <Globe size={20} />
                  </a>
               </div>
             </div>
@@ -94,11 +89,32 @@ export const CatalogView: React.FC<CatalogViewProps> = ({ onBack }) => {
         </div>
 
         {/* Footer Info */}
-        <div className="mt-12 bg-white p-6 rounded-3xl border border-gray-200 text-center">
-           <p className="text-gray-600 text-sm font-medium leading-relaxed mb-4">
-             "Esses links levam aos vendedores que eu pessoalmente utilizo para abastecer minha loja. São os preços mais baixos que você vai encontrar com essa qualidade."
-           </p>
-           <p className="font-hand text-3xl text-brand-pink">- Sua Mentora de Sucesso</p>
+        <div className="mt-16 bg-brand-dark p-8 md:p-12 rounded-[3.5rem] text-center shadow-2xl relative overflow-hidden">
+           <div className="absolute top-0 right-0 p-10 opacity-10">
+              <Sparkles size={100} className="text-white" />
+           </div>
+           <div className="relative z-10">
+              <h3 className="text-white font-black text-2xl md:text-3xl uppercase italic mb-4">Acesso Vitalício + Bônus</h3>
+              <p className="text-white/80 text-sm md:text-base font-medium leading-relaxed mb-8 max-w-2xl mx-auto">
+                Não perca tempo procurando. Tenha em mãos os contatos de quem realmente manda as mercadorias para as maiores lojas de maquiagem do Brasil.
+              </p>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+                 <a 
+                   href={SUPPLIER_LIST_CHECKOUT}
+                   className="w-full md:w-auto bg-yellow-400 text-brand-dark font-black px-10 py-5 rounded-full text-xl shadow-xl hover:bg-yellow-500 transition-all"
+                 >
+                   QUERO MINHA LISTA AGORA
+                 </a>
+                 <a 
+                   href={SUPPORT_LINK}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="text-white/60 hover:text-white font-bold text-xs uppercase tracking-widest"
+                 >
+                   Ainda tenho dúvidas
+                 </a>
+              </div>
+           </div>
         </div>
       </main>
     </div>
