@@ -73,8 +73,8 @@ export const ProfitSimulator: React.FC = () => {
             </div>
 
             <div>
-              <label className="text-xs font-black text-gray-400 uppercase tracking-widest mb-4 block">
-                2. Quantas você vende por dia?
+              <label className="text-xs font-black text-gray-400 uppercase tracking-widest mb-4 block leading-relaxed">
+                2. Qual sua meta diária? Diga quantos você venderia por dia:
               </label>
               <div className="flex items-center gap-6 bg-gray-50 p-4 rounded-3xl w-fit mx-auto lg:mx-0 border border-gray-100">
                 <button 
