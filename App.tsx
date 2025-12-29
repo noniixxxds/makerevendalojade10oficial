@@ -72,15 +72,9 @@ export default function App() {
 
                 {/* GIF DE PROVA REAL NO HERO */}
                 <div className="mt-10 w-full max-w-[340px] rounded-3xl overflow-hidden shadow-2xl border-4 border-brand-pink relative group bg-black aspect-[9/16]">
-                   <div className="absolute top-0 left-0 w-full bg-brand-pink/90 py-1.5 px-3 text-white font-black text-[10px] md:text-xs uppercase tracking-widest flex items-center justify-center gap-2 z-10 shadow-md">
-                      <Sparkles size={12} className="text-yellow-300" />
-                      INAUGURAÇÃO LOJA 10
-                      <Sparkles size={12} className="text-yellow-300" />
-                   </div>
-                   
                    <img 
                      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN215eWl6Nmthdm4xaHpvbGJhc3oyY2R2MDNsNGdrZzEwM2Z5aW0yMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qf1og8TmCIbVD5giqa/giphy.gif" 
-                     alt="Inauguração Loja 10"
+                     alt="Prova de Sucesso"
                      className="w-full h-full object-cover block"
                    />
                 </div>
