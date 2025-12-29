@@ -25,6 +25,7 @@ import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
 import { SalesNotification } from './components/SalesNotification';
 import { CatalogView } from './components/CatalogView';
+import { ProfitSimulator } from './components/ProfitSimulator';
 import { PRODUCTS, FAQ_ITEMS, TESTIMONIALS, SUPPORT_LINK, SUPPLIER_LIST_OFFER, SUPPLIER_LIST_CHECKOUT, PROFIT_DATA } from './constants';
 
 export default function App() {
@@ -132,28 +133,8 @@ export default function App() {
             ))}
           </div>
 
-          <div className="mt-16 bg-white p-6 md:p-12 rounded-[3.5rem] shadow-2xl relative overflow-hidden">
-             <div className="absolute top-0 right-0 p-6 opacity-10">
-                <TrendingUp size={80} className="text-brand-pink" />
-             </div>
-             <div className="flex flex-col md:flex-row items-center gap-8 relative z-10">
-                <div className="bg-brand-pink/10 p-5 rounded-3xl border border-brand-pink/20">
-                   <TrendingUp size={48} className="text-brand-pink" />
-                </div>
-                <div className="flex-1 text-center md:text-left">
-                   <p className="text-gray-900 font-black text-2xl md:text-3xl leading-tight">
-                     Vendendo apenas 3 gloss por dia, seu lucro mensal ultrapassa <span className="text-brand-pink">R$ 1.100,00!</span>
-                   </p>
-                   <p className="text-gray-500 font-bold text-lg mt-3">Imagine quando você estiver vendendo o kit completo...</p>
-                </div>
-                <a 
-                  href={SUPPLIER_LIST_CHECKOUT}
-                  className="bg-brand-dark text-white font-black px-10 py-5 rounded-full shadow-xl hover:bg-black transition-all transform hover:scale-105"
-                >
-                   QUERO ESSES PREÇOS
-                </a>
-             </div>
-          </div>
+          {/* SIMULADOR INTERATIVO (Substituindo o estático) */}
+          <ProfitSimulator />
         </div>
       </section>
 
