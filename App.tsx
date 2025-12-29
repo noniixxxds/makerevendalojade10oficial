@@ -18,7 +18,8 @@ import {
   DollarSign,
   Plus,
   Minus,
-  HelpCircle
+  HelpCircle,
+  Gift
 } from 'lucide-react';
 import { TestimonialCard } from './components/TestimonialCard';
 import { StickyCTA } from './components/StickyCTA';
@@ -69,137 +70,24 @@ export default function App() {
                    </span>
                 </div>
 
-                <p className="font-bold text-gray-800 text-sm md:text-base mt-6 leading-tight">
-                  KITS DE 5, 9 E 15 ITENS PARA<br/>
-                  COMEÇAR HOJE! 💄✨
-                </p>
-
-                <div className="mt-8 w-full rounded-2xl overflow-hidden shadow-inner border-2 border-brand-pink/20 relative group bg-gray-50">
+                {/* GIF DE PROVA REAL NO HERO */}
+                <div className="mt-10 w-full max-w-[340px] rounded-3xl overflow-hidden shadow-2xl border-4 border-brand-pink relative group bg-black aspect-[9/16]">
                    <div className="absolute top-0 left-0 w-full bg-brand-pink/90 py-1.5 px-3 text-white font-black text-[10px] md:text-xs uppercase tracking-widest flex items-center justify-center gap-2 z-10 shadow-md">
                       <Sparkles size={12} className="text-yellow-300" />
-                      O SEGREDO DAS LOJAS LOTADAS
+                      INAUGURAÇÃO LOJA 10
                       <Sparkles size={12} className="text-yellow-300" />
                    </div>
+                   
                    <img 
-                     src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXJqaWVjdGh2amRncXRuNXdldHk2NzZ4MWNlZ3J2eXExa2JqZDhkcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qf1og8TmCIbVD5giqa/giphy.gif" 
-                     alt="Loja Lotada" 
-                     className="w-full h-auto object-contain block"
+                     src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN215eWl6Nmthdm4xaHpvbGJhc3oyY2R2MDNsNGdrZzEwM2Z5aW0yMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qf1og8TmCIbVD5giqa/giphy.gif" 
+                     alt="Inauguração Loja 10"
+                     className="w-full h-full object-cover block"
                    />
                 </div>
              </div>
           </div>
         </div>
       </header>
-
-      {/* --- DUAL OFFER SECTION --- */}
-      <section className="py-20 bg-white relative">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-16">
-             <h2 className="font-heading text-3xl md:text-5xl font-black text-gray-900 uppercase italic mb-4 leading-tight">
-               Como você quer <span className="text-brand-pink">começar seu império?</span>
-             </h2>
-             <p className="text-gray-500 font-medium text-lg max-w-2xl mx-auto">
-               Escolha o caminho que melhor se adapta ao seu momento hoje.
-             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            
-            {/* OFFER 1: KITS PRONTOS */}
-            <div className="relative group bg-gray-50 rounded-[3.5rem] p-8 md:p-12 border-2 border-dashed border-gray-200 hover:border-brand-pink transition-all duration-500 hover:bg-white hover:shadow-2xl">
-               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white px-6 py-2 rounded-full border-2 border-gray-200 text-xs font-black uppercase tracking-widest text-gray-500 group-hover:text-brand-pink group-hover:border-brand-pink">
-                 Praticidade Total
-               </div>
-               
-               <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 bg-brand-light rounded-full flex items-center justify-center mb-8 shadow-inner">
-                     <Package size={48} className="text-brand-pink" />
-                  </div>
-                  
-                  <h3 className="font-heading text-3xl font-black text-brand-dark uppercase mb-4 italic">Kits Prontos para Revenda</h3>
-                  <p className="text-gray-600 mb-8 font-medium leading-relaxed">
-                    A forma mais fácil de começar. Receba kits montados com as makes que mais vendem na Shopee. Sem complicação, pronto para postar e vender.
-                  </p>
-                  
-                  <ul className="space-y-4 mb-10 w-full text-left">
-                    <li className="flex items-center gap-3 text-gray-700 font-bold">
-                       <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
-                       Seleção Expert (Só o que vende)
-                    </li>
-                    <li className="flex items-center gap-3 text-gray-700 font-bold">
-                       <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
-                       Links Diretos da Shopee
-                    </li>
-                    <li className="flex items-center gap-3 text-gray-700 font-bold">
-                       <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
-                       Menor investimento inicial
-                    </li>
-                  </ul>
-
-                  <button 
-                    onClick={goToCatalog}
-                    className="w-full bg-brand-pink hover:bg-brand-dark text-white font-black py-6 rounded-full text-xl shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 border-b-8 border-brand-dark"
-                  >
-                    VER KITS DISPONÍVEIS
-                    <ArrowRight size={24} />
-                  </button>
-               </div>
-            </div>
-
-            {/* OFFER 2: SUPLLIER LIST */}
-            <div className="relative group bg-brand-dark rounded-[3.5rem] p-8 md:p-12 border-4 border-yellow-400 shadow-[0_30px_60px_rgba(0,0,0,0.3)] transform md:scale-105 z-10">
-               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-yellow-400 px-6 py-2 rounded-full text-black text-xs font-black uppercase tracking-widest animate-pulse">
-                 LUCRO MÁXIMO (VIPS)
-               </div>
-               
-               <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mb-8 shadow-inner border border-white/20">
-                     <Globe size={48} className="text-yellow-400" />
-                  </div>
-                  
-                  <h3 className="font-heading text-3xl font-black text-white uppercase mb-4 italic">Lista de Importadoras</h3>
-                  <p className="text-white/80 mb-8 font-medium leading-relaxed">
-                    O segredo das lojistas que pagam centavos. Compre direto das maiores importadoras do Brasil. Preços até 40% menores que os kits.
-                  </p>
-                  
-                  <ul className="space-y-4 mb-10 w-full text-left">
-                    <li className="flex items-center gap-3 text-white font-bold">
-                       <div className="bg-yellow-400/20 p-1 rounded-full"><Zap size={16} className="text-yellow-400 fill-yellow-400" /></div>
-                       Preço de Custo Real (Sem Intermédio)
-                    </li>
-                    <li className="flex items-center gap-3 text-white font-bold">
-                       <div className="bg-yellow-400/20 p-1 rounded-full"><Zap size={16} className="text-yellow-400 fill-yellow-400" /></div>
-                       Contatos de WhatsApp das Importadoras
-                    </li>
-                    <li className="flex items-center gap-3 text-white font-bold">
-                       <div className="bg-yellow-400/20 p-1 rounded-full"><Zap size={16} className="text-yellow-400 fill-yellow-400" /></div>
-                       Até 400% de Lucro em cada peça
-                    </li>
-                  </ul>
-
-                  <div className="mb-8 flex flex-col items-center">
-                     <span className="text-white/60 line-through text-sm font-bold">DE R$ 197,00</span>
-                     <div className="flex items-baseline gap-2">
-                        <span className="text-white text-5xl font-black">R$ 25,90</span>
-                        <span className="text-yellow-400 text-xs font-black uppercase">Taxa Única</span>
-                     </div>
-                  </div>
-
-                  <a 
-                    href={SUPPLIER_LIST_CHECKOUT}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full bg-yellow-400 hover:bg-yellow-500 text-brand-dark font-black py-6 rounded-full text-xl shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 border-b-8 border-yellow-700"
-                  >
-                    COMPRAR LISTA VIP
-                    <Star size={24} className="fill-brand-dark" />
-                  </a>
-               </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       {/* --- PROFIT COMPARISON SECTION --- */}
       <section className="py-20 bg-brand-dark relative overflow-hidden">
@@ -219,7 +107,6 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {PROFIT_DATA.map((item, idx) => (
                <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 flex flex-col items-center group hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2">
-                  {/* Imagem do Produto */}
                   <div className="w-full aspect-square bg-white rounded-3xl mb-6 p-4 relative overflow-hidden shadow-inner">
                      <img 
                        src={item.img} 
@@ -276,6 +163,118 @@ export default function App() {
         </div>
       </section>
 
+      {/* --- DUAL OFFER SECTION --- */}
+      <section className="py-20 bg-white relative">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-16">
+             <h2 className="font-heading text-3xl md:text-5xl font-black text-gray-900 uppercase italic mb-4 leading-tight">
+               Como você quer <span className="text-brand-pink">começar seu império?</span>
+             </h2>
+             <p className="text-gray-500 font-medium text-lg max-w-2xl mx-auto">
+               Escolha o caminho que melhor se adapta ao seu momento hoje.
+             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            
+            {/* OFFER 1: KITS PRONTOS */}
+            <div className="relative group bg-gray-50 rounded-[3.5rem] p-8 md:p-12 border-2 border-dashed border-gray-200 hover:border-brand-pink transition-all duration-500 hover:bg-white hover:shadow-2xl">
+               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white px-6 py-2 rounded-full border-2 border-gray-200 text-xs font-black uppercase tracking-widest text-gray-500 group-hover:text-brand-pink group-hover:border-brand-pink">
+                 Praticidade Total
+               </div>
+               
+               <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 bg-brand-light rounded-full flex items-center justify-center mb-8 shadow-inner">
+                     <Package size={48} className="text-brand-pink" />
+                  </div>
+                  
+                  <h3 className="font-heading text-3xl font-black text-brand-dark uppercase mb-4 italic">Kits Prontos para Revenda</h3>
+                  <p className="text-gray-600 mb-8 font-medium leading-relaxed">
+                    A forma mais fácil de começar. Receba kits montados com as makes que mais vendem na Shopee. Sem complicação, pronto para postar e vender.
+                  </p>
+                  
+                  <ul className="space-y-4 mb-10 w-full text-left">
+                    <li className="flex items-center gap-3 text-gray-700 font-bold">
+                       <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
+                       Seleção Expert (Só o que vende)
+                    </li>
+                    <li className="flex items-center gap-3 text-gray-700 font-bold">
+                       <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
+                       Links Diretos da Shopee
+                    </li>
+                    <li className="flex items-center gap-3 text-gray-700 font-bold">
+                       <div className="bg-green-100 p-1 rounded-full"><CheckCircle2 size={16} className="text-green-600" /></div>
+                       Menor investimento inicial
+                    </li>
+                  </ul>
+
+                  <button 
+                    onClick={goToCatalog}
+                    className="w-full bg-brand-pink hover:bg-brand-dark text-white font-black py-6 rounded-full text-xl shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 border-b-8 border-brand-dark"
+                  >
+                    VER KITS DISPONÍVEIS
+                    <ArrowRight size={24} />
+                  </button>
+               </div>
+            </div>
+
+            {/* OFFER 2: LISTA FORNECEDORES VIP */}
+            <div className="relative group bg-brand-dark rounded-[3.5rem] p-8 md:p-12 border-4 border-yellow-400 shadow-[0_30px_60px_rgba(0,0,0,0.3)] transform md:scale-105 z-10">
+               <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-yellow-400 px-6 py-2 rounded-full text-black text-xs font-black uppercase tracking-widest animate-pulse">
+                 LUCRO MÁXIMO + BÔNUS
+               </div>
+               
+               <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mb-8 shadow-inner border border-white/20">
+                     <Globe size={48} className="text-yellow-400" />
+                  </div>
+                  
+                  <h3 className="font-heading text-3xl font-black text-white uppercase mb-4 italic">{SUPPLIER_LIST_OFFER.title}</h3>
+                  <p className="text-white/80 mb-8 font-medium leading-relaxed">
+                    O caminho das lojistas profissionais. Compre direto das maiores importadoras e receba todo o treinamento para vender.
+                  </p>
+                  
+                  {/* BÔNUS HIGHLIGHT */}
+                  <div className="w-full space-y-3 mb-8">
+                     <p className="text-yellow-400 font-black text-xs uppercase tracking-widest mb-4 flex items-center justify-center gap-2">
+                        <Gift size={16} /> VOCÊ TAMBÉM LEVA HOJE:
+                     </p>
+                     {SUPPLIER_LIST_OFFER.bonuses.map((bonus, idx) => (
+                        <div key={idx} className="bg-white/5 border border-white/10 p-3 rounded-2xl text-left flex items-start gap-3">
+                           <div className="bg-yellow-400/20 p-1.5 rounded-lg shrink-0">
+                              <Star size={14} className="text-yellow-400 fill-yellow-400" />
+                           </div>
+                           <div>
+                              <p className="text-white font-black text-xs uppercase italic">{bonus.title}</p>
+                              <p className="text-white/60 text-[10px] leading-tight">{bonus.desc}</p>
+                           </div>
+                        </div>
+                     ))}
+                  </div>
+
+                  <div className="mb-8 flex flex-col items-center">
+                     <span className="text-white/60 line-through text-sm font-bold">DE {SUPPLIER_LIST_OFFER.originalPrice}</span>
+                     <div className="flex items-baseline gap-2">
+                        <span className="text-white text-5xl font-black">{SUPPLIER_LIST_OFFER.price}</span>
+                        <span className="text-yellow-400 text-xs font-black uppercase tracking-tighter">Taxa Única</span>
+                     </div>
+                  </div>
+
+                  <a 
+                    href={SUPPLIER_LIST_CHECKOUT}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-yellow-400 hover:bg-yellow-500 text-brand-dark font-black py-6 rounded-full text-xl shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 border-b-8 border-yellow-700"
+                  >
+                    GARANTIR LISTA + BÔNUS
+                    <ArrowRight size={24} className="fill-brand-dark" />
+                  </a>
+               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* --- VALUE PROPOSITION --- */}
       <section className="py-14 bg-gray-50 border-y border-gray-200">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -309,7 +308,6 @@ export default function App() {
               <div className="h-1.5 w-20 bg-brand-pink mx-auto rounded-full"></div>
             </div>
 
-            {/* --- PROVA DE ENTREGA EM TEMPO REAL --- */}
             <div className="max-w-4xl mx-auto mb-20">
                <div className="bg-brand-dark rounded-[2.5rem] md:rounded-[3.5rem] p-6 md:p-12 relative overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.4)] border-4 border-white/5">
                   <div className="absolute top-0 right-0 w-80 h-80 bg-brand-pink rounded-full blur-[120px] opacity-20 -mr-40 -mt-40"></div>
@@ -380,7 +378,6 @@ export default function App() {
                </div>
             </div>
             
-            {/* --- GRID DE TESTEMUNHOS --- */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                {TESTIMONIALS.map((t, i) => (
                  <TestimonialCard key={i} {...t} />
@@ -416,7 +413,7 @@ export default function App() {
                 className="w-full md:w-auto inline-flex items-center justify-center gap-4 bg-[#25D366] hover:bg-green-600 text-white font-black py-6 px-12 rounded-full shadow-2xl text-2xl transition-all transform hover:scale-105 border-b-8 border-green-800"
               >
                  <Globe size={32} />
-                 LISTA IMPORTADORAS
+                 LISTA FORNECEDORES VIP
               </a>
            </div>
         </div>

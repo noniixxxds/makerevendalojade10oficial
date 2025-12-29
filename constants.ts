@@ -5,11 +5,16 @@ export const SUPPORT_LINK = "https://wa.me/5511980219977?text=Olá!+Quero+saber+
 export const SUPPLIER_LIST_CHECKOUT = "https://pay.kirvano.com/a39cd2c2-492c-42f6-b29e-f4046aaf666c"; 
 
 export const SUPPLIER_LIST_OFFER = {
-  title: "Acesso VIP: Lista das Importadoras",
+  title: "Lista Fornecedores VIP",
   description: "Acesso direto aos contatos que as grandes lojas escondem de você. Pague preço de custo real e lucre até 400%.",
-  price: "R$ 25,90",
+  price: "R$ 6,49",
   originalPrice: "R$ 197,00",
-  benefit: "Preços 40% menores que os Kits"
+  benefit: "Preços 40% menores que os Kits",
+  bonuses: [
+    { title: "Manual Instagram que Vende", desc: "Como criar seu perfil do zero e atrair seguidoras compradoras." },
+    { title: "Scripts de Venda WhatsApp", desc: "O que falar para fechar vendas no automático todos os dias." },
+    { title: "Guia Unboxing Encantador", desc: "Aprenda a fazer embalagens que fazem a cliente postar e marcar sua loja." }
+  ]
 };
 
 export const PROFIT_DATA = [
