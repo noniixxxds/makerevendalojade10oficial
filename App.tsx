@@ -102,7 +102,7 @@ export default function App() {
              <h2 className="font-heading text-3xl md:text-5xl font-black text-white uppercase italic leading-tight mb-4">
                Quanto você vai <span className="text-brand-pink">lucrar?</span>
              </h2>
-             <p className="text-white/60 font-medium">Veja os preços que você pagará diretamente nas Importadoras da Lista VIP:</p>
+             <p className="text-white/60 font-medium">Veja os preços que você pagará diretamente nas Importadoras da Lista de Fornecedores:</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -196,7 +196,7 @@ export default function App() {
                </div>
             </div>
 
-            {/* OFFER 2: LISTA FORNECEDORES VIP */}
+            {/* OFFER 2: LISTA DE FORNECEDORES */}
             <div className="relative group bg-brand-dark rounded-[3.5rem] p-8 md:p-12 border-4 border-yellow-400 shadow-[0_30px_60px_rgba(0,0,0,0.3)] transform md:scale-105 z-10">
                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-yellow-400 px-6 py-2 rounded-full text-black text-xs font-black uppercase tracking-widest animate-pulse">
                  LUCRO MÁXIMO + BÔNUS
@@ -369,7 +369,7 @@ export default function App() {
                 className="w-full md:w-auto inline-flex items-center justify-center gap-4 bg-[#25D366] hover:bg-green-600 text-white font-black py-6 px-12 rounded-full shadow-2xl text-2xl transition-all transform hover:scale-105 border-b-8 border-green-800"
               >
                  <Globe size={32} />
-                 LISTA FORNECEDORES VIP
+                 LISTA FORNECEDORES
               </a>
            </div>
         </div>

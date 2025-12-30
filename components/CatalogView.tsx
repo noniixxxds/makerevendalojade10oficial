@@ -34,7 +34,7 @@ export const CatalogView: React.FC<CatalogViewProps> = ({ onBack }) => {
       <div className="bg-brand-dark text-white py-3 px-4 text-center">
          <p className="text-xs md:text-sm font-black uppercase tracking-wider flex items-center justify-center gap-2">
             <Sparkles size={16} className="text-yellow-400 animate-pulse" />
-            PRODUTOS DISPONÍVEIS NA LISTA VIP COM ATÉ 400% DE LUCRO!
+            PRODUTOS DISPONÍVEIS NA LISTA DE FORNECEDORES COM ATÉ 400% DE LUCRO!
          </p>
       </div>
 
@@ -42,7 +42,7 @@ export const CatalogView: React.FC<CatalogViewProps> = ({ onBack }) => {
         <div className="mb-10 text-center">
            <h2 className="text-2xl md:text-3xl font-black text-gray-800 mb-3 italic uppercase">O que você vai encontrar lá dentro?</h2>
            <p className="text-gray-500 text-sm font-medium max-w-xl mx-auto leading-relaxed">
-             Estes são apenas alguns exemplos dos milhares de produtos que você poderá comprar direto das importadoras usando nossa Lista VIP.
+             Estes são apenas alguns exemplos dos milhares de produtos que você poderá comprar direto das importadoras usando nossa Lista de Fornecedores.
            </p>
         </div>
 

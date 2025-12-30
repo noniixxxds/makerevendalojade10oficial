@@ -5,7 +5,7 @@ export const SUPPORT_LINK = "https://wa.me/5511980219977?text=Olá!+Quero+saber+
 export const SUPPLIER_LIST_CHECKOUT = "https://pay.kirvano.com/a39cd2c2-492c-42f6-b29e-f4046aaf666c"; 
 
 export const SUPPLIER_LIST_OFFER = {
-  title: "Lista Fornecedores VIP",
+  title: "Lista de Fornecedores",
   description: "Acesso direto aos contatos que as grandes lojas escondem de você. Pague preço de custo real e lucre até 400%.",
   price: "R$ 6,49",
   originalPrice: "R$ 197,00",
@@ -139,7 +139,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Qual o lucro médio que eu vou ter?",
-    answer: "Comprando pela nossa Lista VIP de Importadoras, seu lucro pode chegar a 400%. Nos Kits Prontos, a margem média é de 150% a 250%. É o melhor retorno do mercado de beleza hoje."
+    answer: "Comprando pela nossa Lista de Fornecedores, seu lucro pode chegar a 400%. Nos Kits Prontos, a margem média é de 150% a 250%. É o melhor retorno do mercado de beleza hoje."
   },
   {
     question: "E se eu tiver dúvidas após a compra?",

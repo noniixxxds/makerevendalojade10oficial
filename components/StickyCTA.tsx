@@ -42,13 +42,13 @@ export const StickyCTA: React.FC<StickyCTAProps> = ({ onAction }) => {
            VER OS KITS
         </button>
 
-        {/* Botão LISTA VIP (Foco em quem quer importar direto e pagar mais barato) */}
+        {/* Botão LISTA FORNECEDORES (Foco em quem quer importar direto e pagar mais barato) */}
         <a 
           href={SUPPLIER_LIST_CHECKOUT}
-          className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-brand-dark font-black py-4 px-2 rounded-2xl shadow-lg flex items-center justify-center gap-2 text-[11px] border-b-4 border-yellow-700 transition-all uppercase tracking-tighter active:translate-y-1 active:border-b-0"
+          className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-brand-dark font-black py-4 px-2 rounded-2xl shadow-lg flex items-center justify-center gap-2 text-[10px] border-b-4 border-yellow-700 transition-all uppercase tracking-tighter active:translate-y-1 active:border-b-0"
         >
            <Globe size={14} className="animate-pulse" />
-           LISTA VIP
+           LISTA FORNECEDORES
         </a>
       </div>
     </div>
