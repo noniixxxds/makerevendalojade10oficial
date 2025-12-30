@@ -88,6 +88,12 @@ export default function App() {
       <section className="py-20 bg-brand-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          
+          {/* SIMULADOR INTERATIVO (Agora no topo da seção) */}
+          <div className="mb-20">
+            <ProfitSimulator />
+          </div>
+
           <div className="text-center mb-16">
              <div className="inline-flex items-center gap-2 bg-yellow-400 text-brand-dark px-4 py-1 rounded-full font-black text-xs uppercase mb-4 shadow-lg">
                 <DollarSign size={14} />
@@ -132,9 +138,6 @@ export default function App() {
                </div>
             ))}
           </div>
-
-          {/* SIMULADOR INTERATIVO (Substituindo o estático) */}
-          <ProfitSimulator />
         </div>
       </section>
 
