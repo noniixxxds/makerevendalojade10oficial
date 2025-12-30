@@ -93,7 +93,7 @@ export const ProfitSimulator: React.FC = () => {
           <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-400 via-white to-yellow-400"></div>
           
           <div className="mb-6">
-            <span className="text-[11px] font-black text-yellow-400 uppercase tracking-[0.3em] block mb-2">LUCRO NO SEU BOLSO:</span>
+            <span className="text-[11px] font-black text-yellow-400 uppercase tracking-[0.2em] block mb-2">LUCRO FIM DO MÊS NO SEU BOLSO:</span>
             <div className="flex items-baseline justify-center gap-2">
               <span className="text-2xl font-bold opacity-50">R$</span>
               <span className="text-6xl md:text-7xl font-black text-white drop-shadow-[0_5px_15px_rgba(255,0,127,0.5)]">
