@@ -14,21 +14,21 @@ const NOTIFICATIONS = [
   { 
     id: 2,
     name: "Ana Claudia", 
-    text: "acabou de solicitar o catálogo de Kits", 
+    text: "acabou de receber a lista", 
     time: "Agora mesmo", 
     type: "person" 
   },
   { 
     id: 3,
     name: "Mariana Costa", 
-    text: "acabou de tirar dúvidas sobre o Kit Iniciante", 
+    text: "acabou de receber a lista", 
     time: "Há 2 minutos", 
     type: "person" 
   },
   { 
     id: 4,
     name: "Suelen Braga", 
-    text: "solicitou reserva de Kit Black", 
+    text: "acabou de receber a lista", 
     time: "Há 5 minutos", 
     type: "person" 
   }
