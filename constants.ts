@@ -1,5 +1,5 @@
 
-export const SUPPORT_LINK = "https://wa.me/5511980219977?text=Olá!+Quero+saber+mais+sobre+os+kits+de+revenda+de+maquiagem.";
+export const SUPPORT_LINK = "https://wa.me/5511980219977?text=Olá!+Quero+saber+mais+sobre+a+lista+de+fornecedores.";
 
 // Link para compra da lista (Checkout Kirvano conforme solicitado)
 export const SUPPLIER_LIST_CHECKOUT = "https://pay.kirvano.com/a39cd2c2-492c-42f6-b29e-f4046aaf666c"; 
@@ -139,7 +139,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Qual o lucro médio que eu vou ter?",
-    answer: "Comprando pela nossa Lista de Fornecedores, seu lucro pode chegar a 400%. Nos Kits Prontos, a margem média é de 150% a 250%. É o melhor retorno do mercado de beleza hoje."
+    answer: "Comprando pela nossa Lista de Fornecedores, seu lucro pode chegar a 400%. É o melhor retorno do mercado de beleza hoje."
   },
   {
     question: "E se eu tiver dúvidas após a compra?",
@@ -153,39 +153,39 @@ export const FAQ_ITEMS = [
 
 export const TESTIMONIALS = [
   { 
+    name: "Priscila Silva", 
+    type: "photo",
+    img: "https://i.postimg.cc/RVHbG0b1/image.png",
+    text: "Obrigada por tudo! Os produtos chegaram hoje e eu já estou apaixonada pela qualidade de cada um. Os fornecedores foram super atenciosos."
+  },
+  { 
+    name: "Viviane Soares", 
+    type: "photo",
+    img: "https://i.postimg.cc/CMDQs12m/image.png",
+    text: "Meninas, acabou de chegar! Olha a quantidade de mercadoria que consegui comprar com o valor que eu antes comprava só 5 itens no shopping. Tô chocada!"
+  },
+  { 
+    name: "Marina Duarte", 
+    type: "photo",
+    img: "https://i.postimg.cc/qM2HqQ0v/image.png",
+    text: "Olha o atendimento desse fornecedor! Responde rápido e já fechamos o primeiro pedido de R$ 300,00. Muito seguro."
+  },
+  { 
     name: "Letícia R.", 
     type: "photo",
     img: "https://i.postimg.cc/3RQjg2Xq/image.png",
-    text: "Meninas, surreal! O kit chegou muito rápido e as marcas são maravilhoras. Só de postar no status do zap já tem 3 amigas querendo reservar as bases. É o empurrão que eu precisava!"
+    text: "Meninas, surreal! O acesso chegou muito rápido e as marcas são maravilhosas. Só de postar no status do zap já tem 3 amigas querendo reservar as bases."
   },
   { 
     name: "Bruna Medeiros", 
     type: "photo",
     img: "https://i.postimg.cc/DycFDkjw/image.png",
-    text: "Gente, acabei de abrir meu kit e estou sem palavras! A qualidade das bases e dos batons é de outro mundo. Veio tudo lacradinho. Já vou montar as cestinhas pra começar a vender amanhã cedo!"
+    text: "Gente, acabei de abrir meu primeiro pedido e estou sem palavras! A qualidade das bases e dos batons é de outro mundo. Veio tudo lacradinho."
   },
   { 
     name: "Renata S.", 
     type: "photo",
     img: "https://i.postimg.cc/QMG2xfyG/image.png",
-    text: "Gente, olha a perfeição desses produtos! Chegou tudo impecável. Já comecei a divulgar e o feedback está sendo incrível. É lucro na certa!"
-  },
-  { 
-    name: "Juliana M.", 
-    type: "photo",
-    img: "https://i.postimg.cc/pV5zHkzQ/image.png",
-    text: "Chegou tudo certinho! Os mimos que vieram no kit são um diferencial enorme para as clientes. Já estou preparando as entregas da semana!"
-  },
-  { 
-    name: "Camila V.", 
-    type: "photo",
-    img: "https://i.postimg.cc/hPN8H6Xv/image.png",
-    text: "Gente, nem acredito! Fiz minha primeira venda hoje mesmo seguindo os fornecedores da lista. Tô muito feliz com o resultado!"
-  },
-  { 
-    name: "Aline Souza", 
-    type: "photo",
-    img: "https://i.postimg.cc/PqS0MpbC/Gemini-Generated-Image-z7xi7xz7xi7xz7xi.png",
-    text: "Meu pedido chegou hoje! Tudo lacrado e os fornecedores são super atenciosos. Já vendi 3 kits pra vizinhas."
+    text: "Gente, olha a perfeição desses produtos que comprei direto do fornecedor da lista! Chegou tudo impecável. Já comecei a divulgar!"
   }
 ];
