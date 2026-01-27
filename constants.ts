@@ -7,7 +7,7 @@ export const SUPPLIER_LIST_CHECKOUT = "https://pay.kirvano.com/a39cd2c2-492c-42f
 export const SUPPLIER_LIST_OFFER = {
   title: "Lista de Fornecedores",
   description: "Acesso direto aos contatos que as grandes lojas escondem de você. Pague preço de custo real e lucre até 400%.",
-  price: "R$ 6,49",
+  price: "R$ 7,90",
   originalPrice: "R$ 197,00",
   benefit: "Preços 40% menores que os Kits",
   bonuses: [

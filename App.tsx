@@ -59,9 +59,9 @@ export default function App() {
         <div className="container mx-auto max-w-4xl relative z-10 flex flex-col items-center">
           <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.4)] max-w-lg w-full animate-bounce-in border-4 border-white">
              <div className="flex flex-col items-center">
-                <h1 className="font-heading text-3xl md:text-4xl font-black text-[#e62222] leading-tight flex flex-col uppercase italic tracking-tighter">
-                   <span>MONTE SUA</span>
-                   <span>PRÓPRIA LOJA</span>
+                <h1 className="font-heading text-3xl md:text-4xl font-black text-[#e62222] leading-tight flex flex-col uppercase italic tracking-tighter text-center">
+                   <span>ISSO VAI MUDAR</span>
+                   <span>A SUA VIDA</span>
                 </h1>
 
                 {/* GIF DE PROVA REAL NO HERO */}
@@ -199,7 +199,7 @@ export default function App() {
                    <span className="text-white/40 line-through text-lg font-bold">DE R$ 197,00</span>
                    <div className="flex flex-col items-center">
                       <div className="flex items-baseline gap-2">
-                         <span className="text-white text-7xl font-black drop-shadow-lg tracking-tighter">R$ 6,49</span>
+                         <span className="text-white text-7xl font-black drop-shadow-lg tracking-tighter">R$ 7,90</span>
                       </div>
                       <span className="bg-yellow-400 text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter mt-2">Taxa Única</span>
                    </div>
