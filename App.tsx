@@ -60,8 +60,8 @@ export default function App() {
           <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.4)] max-w-lg w-full animate-bounce-in border-4 border-white">
              <div className="flex flex-col items-center">
                 <h1 className="font-heading text-3xl md:text-4xl font-black text-[#e62222] leading-tight flex flex-col uppercase italic tracking-tighter text-center">
-                   <span>ISSO VAI MUDAR</span>
-                   <span>A SUA VIDA🙌🏼</span>
+                   <span>ISSO VAI MUDAR💵</span>
+                   <span>A SUA VIDA 🙌🏼</span>
                 </h1>
 
                 {/* GIF DE PROVA REAL NO HERO */}
