@@ -57,19 +57,20 @@ export default function App() {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
         
         <div className="container mx-auto max-w-4xl relative z-10 flex flex-col items-center">
-          <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.4)] max-w-lg w-full animate-bounce-in border-4 border-white">
+          <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.4)] max-w-lg w-full animate-bounce-in border-4 border-white gpu-boost">
              <div className="flex flex-col items-center">
                 <h1 className="font-heading text-3xl md:text-4xl font-black text-[#e62222] leading-tight flex flex-col uppercase italic tracking-tighter text-center">
                    <span>ISSO VAI MUDAR💵</span>
                    <span>SUA VIDA! 🙌🏼</span>
                 </h1>
 
-                {/* GIF DE PROVA REAL NO HERO */}
-                <div className="mt-8 w-full max-w-[340px] rounded-3xl overflow-hidden shadow-2xl border-4 border-brand-pink relative group bg-black aspect-[9/16]">
+                {/* GIF DE PROVA REAL NO HERO - OTIMIZADO */}
+                <div className="mt-8 w-full max-w-[340px] rounded-3xl overflow-hidden shadow-2xl border-4 border-brand-pink relative group bg-black aspect-[9/16] gpu-boost">
                    <img 
                      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN215eWl6Nmthdm4xaHpvbGJhc3oyY2R2MDNsNGdrZzEwM2Z5aW0yMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qf1og8TmCIbVD5giqa/giphy.gif" 
                      alt="Prova de Sucesso"
-                     className="w-full h-full object-cover block"
+                     className="w-full h-full object-cover block optimize-img gpu-boost"
+                     loading="eager"
                    />
                 </div>
              </div>
@@ -99,12 +100,12 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {PROFIT_DATA.map((item, idx) => (
-               <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 flex flex-col items-center group hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2">
+               <div key={idx} className="bg-white/5 border border-white/10 rounded-[2.5rem] p-6 flex flex-col items-center group hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-2 gpu-boost">
                   <div className="w-full aspect-square bg-white rounded-3xl mb-6 p-4 relative overflow-hidden shadow-inner">
                      <img 
                        src={item.img} 
                        alt={item.name} 
-                       className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+                       className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 optimize-img"
                      />
                      <div className="absolute top-2 right-2 bg-brand-pink text-white text-[9px] font-black px-2 py-1 rounded-full uppercase">
                         {item.profit} lucro
@@ -146,7 +147,7 @@ export default function App() {
           </div>
 
           {/* LISTA DE FORNECEDORES - SINGLE OFFER */}
-          <div className="relative group bg-brand-dark rounded-[3.5rem] p-8 md:p-12 border-4 border-yellow-400 shadow-[0_30px_60px_rgba(0,0,0,0.3)] z-10">
+          <div className="relative group bg-brand-dark rounded-[3.5rem] p-8 md:p-12 border-4 border-yellow-400 shadow-[0_30px_60px_rgba(0,0,0,0.3)] z-10 gpu-boost">
              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-yellow-400 px-6 py-2 rounded-full text-black text-xs font-black uppercase tracking-widest animate-pulse">
                LUCRO MÁXIMO + BÔNUS
              </div>
@@ -219,29 +220,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- VALUE PROPOSITION --- */}
-      <section className="py-14 bg-gray-50 border-y border-gray-200">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-            <div className="flex flex-col items-center p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
-              <Package className="w-14 h-14 text-brand-pink mb-4" />
-              <h3 className="font-black text-xl mb-2 uppercase text-brand-dark">Curadoria Expert</h3>
-              <p className="text-gray-600 font-medium">As makes que são tendência absoluta no TikTok e Instagram.</p>
-            </div>
-            <div className="flex flex-col items-center p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
-              <TrendingUp className="w-14 h-14 text-brand-pink mb-4" />
-              <h3 className="font-black text-xl mb-2 uppercase text-brand-dark">Lucro Real</h3>
-              <p className="text-gray-600 font-medium">Preço de atacado para você faturar até 300% de lucro.</p>
-            </div>
-            <div className="flex flex-col items-center p-8 bg-white rounded-3xl border border-gray-100 shadow-sm">
-              <CheckCircle2 className="w-14 h-14 text-brand-pink mb-4" />
-              <h3 className="font-black text-xl mb-2 uppercase text-brand-dark">Zero Burocracia</h3>
-              <p className="text-gray-600 font-medium">Não precisa de CNPJ. Comece agora mesmo.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* --- SOCIAL PROOF --- */}
       <section className="py-20 bg-white overflow-hidden">
          <div className="container mx-auto px-4">
@@ -253,8 +231,8 @@ export default function App() {
             </div>
 
             <div className="max-w-4xl mx-auto mb-20">
-               <div className="bg-brand-dark rounded-[2.5rem] md:rounded-[3.5rem] p-6 md:p-12 relative overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.4)] border-4 border-white/5">
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-brand-pink rounded-full blur-[120px] opacity-20 -mr-40 -mt-40"></div>
+               <div className="bg-brand-dark rounded-[2.5rem] md:rounded-[3.5rem] p-6 md:p-12 relative overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.4)] border-4 border-white/5 gpu-boost">
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-brand-pink rounded-full blur-[80px] opacity-20 -mr-40 -mt-40"></div>
                   
                   <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
                      <div className="flex-1 text-center lg:text-left">
@@ -268,12 +246,13 @@ export default function App() {
                      </div>
 
                      <div className="flex-1 w-full flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-[420px]">
-                           <div className="relative bg-white rounded-[2rem] p-2 shadow-2xl overflow-hidden aspect-[16/10] md:aspect-auto">
+                        <div className="relative w-full max-w-[420px] gpu-boost">
+                           <div className="relative bg-white rounded-[2rem] p-2 shadow-2xl overflow-hidden aspect-[16/10] md:aspect-auto gpu-boost">
                               <img 
                                 src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWNmNmI0MHdwczNoeXlvYjJucTZqbTZ4djk5YnI1dHM5d2JkeHhvOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sQDYXzIfNEzsXbxgX4/giphy.gif" 
                                 alt="Prova de entrega em tempo real" 
-                                className="w-full h-full object-cover rounded-[1.5rem]"
+                                className="w-full h-full object-cover rounded-[1.5rem] optimize-img gpu-boost"
+                                loading="lazy"
                               />
                               <div className="absolute top-4 left-4 right-4 flex justify-between items-start pointer-events-none">
                                  <div className="bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 flex items-center gap-2">
@@ -283,7 +262,7 @@ export default function App() {
                               </div>
                            </div>
                            
-                           <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-4 rounded-2xl shadow-2xl border border-gray-100 animate-bounce max-w-[200px] hidden md:block">
+                           <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-4 rounded-2xl shadow-2xl border border-gray-100 animate-bounce max-w-[200px] hidden md:block gpu-boost">
                               <div className="flex items-center gap-3">
                                  <div className="bg-green-100 p-2 rounded-full">
                                     <CheckCircle2 size={24} className="text-green-600" />
@@ -312,7 +291,7 @@ export default function App() {
       <section className="py-24 bg-brand-dark text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
-           <div className="inline-block bg-white/10 p-6 rounded-full mb-10">
+           <div className="inline-block bg-white/10 p-6 rounded-full mb-10 gpu-boost">
               <Gem className="w-16 h-16 text-yellow-400" />
            </div>
            <h2 className="font-heading text-4xl md:text-7xl font-black mb-8 leading-tight italic uppercase">
