@@ -61,7 +61,7 @@ export default function App() {
              <div className="flex flex-col items-center">
                 <h1 className="font-heading text-3xl md:text-4xl font-black text-[#e62222] leading-tight flex flex-col uppercase italic tracking-tighter text-center">
                    <span>ISSO VAI MUDAR💵</span>
-                   <span>A SUA VIDA 🙌🏼</span>
+                   <span>SUA VIDA! 🙌🏼</span>
                 </h1>
 
                 {/* GIF DE PROVA REAL NO HERO */}
