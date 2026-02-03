@@ -13,7 +13,7 @@ export const StickyCTA: React.FC<StickyCTAProps> = ({ onAction }) => {
       <div className="flex items-center justify-between px-1">
          <div className="flex flex-col leading-tight items-start">
              <span className="text-[13px] font-black text-gray-800 tracking-tight flex items-center gap-1">
-                Lista de Fornecedores 💎
+                Lista de Fornecedores
              </span>
              <span className="text-[10px] text-brand-pink font-black uppercase tracking-widest">
                 ACESSO LIBERADO POR R$ 7,90

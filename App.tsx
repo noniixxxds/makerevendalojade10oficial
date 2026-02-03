@@ -47,43 +47,63 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-brand-bg font-sans text-gray-800 pb-24 md:pb-0 selection:bg-brand-pink selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-white font-sans text-gray-800 pb-24 md:pb-0 selection:bg-brand-pink selection:text-white overflow-x-hidden">
       
       <SalesNotification />
       <StickyCTA onAction={goToCatalog} />
 
-      {/* --- HERO SECTION --- */}
-      <header className="bg-gradient-to-b from-[#d9006b] to-[#800040] pt-12 pb-24 px-4 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
-        
-        <div className="container mx-auto max-w-4xl relative z-10 flex flex-col items-center">
-          <div className="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.4)] max-w-lg w-full animate-bounce-in border-4 border-white gpu-boost">
-             <div className="flex flex-col items-center">
-                <h1 className="font-heading text-3xl md:text-4xl font-black text-[#e62222] leading-tight flex flex-col uppercase italic tracking-tighter text-center">
-                   <span>ISSO VAI MUDAR💵</span>
-                   <span>SUA VIDA! 🙌🏼</span>
-                </h1>
+      {/* --- HERO SECTION REFORMULADA (STYLE: META ADVANTAGE+) --- */}
+      <header className="bg-[#fafafa] pt-20 pb-28 px-4 text-center relative overflow-hidden border-b border-gray-100">
+        <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center">
+          
+          {/* Badge Discreta de Autoridade */}
+          <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-500 px-4 py-1 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] mb-10 gpu-boost">
+             <ShieldCheck size={12} />
+             Acesso VIP para Lojistas
+          </div>
 
-                {/* GIF DE PROVA REAL NO HERO - OTIMIZADO */}
-                <div className="mt-8 w-full max-w-[340px] rounded-3xl overflow-hidden shadow-2xl border-4 border-brand-pink relative group bg-black aspect-[9/16] gpu-boost">
-                   <img 
-                     src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN215eWl6Nmthdm4xaHpvbGJhc3oyY2R2MDNsNGdrZzEwM2Z5aW0yMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qf1og8TmCIbVD5giqa/giphy.gif" 
-                     alt="Prova de Sucesso"
-                     className="w-full h-full object-cover block optimize-img gpu-boost"
-                     loading="eager"
-                   />
+          <h1 className="font-heading text-4xl md:text-7xl font-[900] text-gray-900 leading-[1.1] mb-14 uppercase tracking-tighter text-center flex flex-col items-center">
+             <span className="opacity-90">ELA NÃO TEM SORTE.</span>
+             <span className="text-brand-pink flex items-center gap-2">
+                ELA TEM FORNECEDOR.
+             </span>
+          </h1>
+
+          {/* ÁREA DE VÍDEO / GIF DE LOJA CHEIA - MÁXIMO IMPACTO */}
+          <div className="w-full max-w-4xl rounded-[3rem] overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.15)] border-[12px] border-white gpu-boost relative group">
+             <div className="absolute inset-0 bg-black/5 pointer-events-none z-10"></div>
+             <img 
+               src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExN215eWl6Nmthdm4xaHpvbGJhc3oyY2R2MDNsNGdrZzEwM2Z5aW0yMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qf1og8TmCIbVD5giqa/giphy.gif" 
+               alt="Loja cheia e estoque girando"
+               className="w-full h-full object-cover block optimize-img gpu-boost"
+               loading="eager"
+             />
+             
+             {/* Overlay de Demanda */}
+             <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end z-20">
+                <div className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-2xl shadow-xl border border-white/20">
+                   <p className="text-xs font-black text-gray-900 uppercase tracking-tighter">ESTOQUE ESGOTANDO EM</p>
+                   <p className="text-2xl font-black text-brand-pink font-mono">04:12</p>
+                </div>
+                <div className="bg-[#25D366] text-white px-5 py-2 rounded-xl shadow-lg flex items-center gap-2 font-black text-xs uppercase animate-pulse">
+                   <div className="w-2 h-2 bg-white rounded-full"></div>
+                   Demanda Alta
                 </div>
              </div>
           </div>
+          
+          <p className="mt-12 text-gray-400 font-bold italic text-lg max-w-xl">
+             "O segredo das lojas que faturam R$ 10.000+ por mês não é sorte, é o contato direto com a fonte."
+          </p>
         </div>
       </header>
 
       {/* --- PROFIT COMPARISON SECTION --- */}
-      <section className="py-20 bg-brand-dark relative overflow-hidden">
+      <section className="py-24 bg-brand-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           
-          <div className="mb-20">
+          <div className="mb-24">
             <ProfitSimulator />
           </div>
 
@@ -92,10 +112,10 @@ export default function App() {
                 <DollarSign size={14} />
                 A MATEMÁTICA DO SUCESSO
              </div>
-             <h2 className="font-heading text-3xl md:text-5xl font-black text-white uppercase italic leading-tight mb-4">
+             <h2 className="font-heading text-3xl md:text-5xl font-black text-white uppercase italic leading-tight mb-4 tracking-tighter">
                Quanto você vai <span className="text-brand-pink">lucrar?</span>
              </h2>
-             <p className="text-white/60 font-medium">Veja os preços que você pagará diretamente nas Importadoras da Lista de Fornecedores:</p>
+             <p className="text-white/60 font-medium">Veja os preços que você pagará diretamente nas Importadoras da Lista:</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -135,18 +155,17 @@ export default function App() {
       </section>
 
       {/* --- UNIQUE OFFER SECTION --- */}
-      <section className="py-20 bg-white relative">
+      <section className="py-24 bg-white relative">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-             <h2 className="font-heading text-3xl md:text-5xl font-black text-gray-900 uppercase italic mb-4 leading-tight">
+          <div className="text-center mb-16">
+             <h2 className="font-heading text-3xl md:text-5xl font-black text-gray-900 uppercase italic mb-4 leading-tight tracking-tighter">
                Comece seu <span className="text-brand-pink">império hoje!</span>
              </h2>
              <p className="text-gray-500 font-medium text-lg max-w-2xl mx-auto">
-               O caminho das lojistas profissionais. Compre direto das maiores importadoras e receba todo o treinamento para vender.
+               Pare de pagar caro em kits prontos. Compre direto das maiores importadoras do Brasil.
              </p>
           </div>
 
-          {/* LISTA DE FORNECEDORES - SINGLE OFFER */}
           <div className="relative group bg-brand-dark rounded-[3.5rem] p-8 md:p-12 border-4 border-yellow-400 shadow-[0_30px_60px_rgba(0,0,0,0.3)] z-10 gpu-boost">
              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-yellow-400 px-6 py-2 rounded-full text-black text-xs font-black uppercase tracking-widest animate-pulse">
                LUCRO MÁXIMO + BÔNUS
@@ -157,41 +176,30 @@ export default function App() {
                    <Globe size={48} className="text-yellow-400" />
                 </div>
                 
-                <h3 className="font-heading text-4xl font-black text-white uppercase mb-4 italic">Lista de Fornecedores</h3>
+                <h3 className="font-heading text-4xl font-black text-white uppercase mb-4 italic tracking-tighter">Lista de Fornecedores</h3>
                 
-                {/* BÔNUS HIGHLIGHT */}
                 <div className="w-full space-y-4 mb-10 max-w-md mx-auto">
                    <p className="text-yellow-400 font-black text-xs uppercase tracking-widest mb-4 flex items-center justify-center gap-2">
                       <Gift size={16} /> VOCÊ TAMBÉM LEVA HOJE:
                    </p>
                    
-                   <div className="bg-white/5 border border-white/10 p-4 rounded-2xl text-left flex items-start gap-4">
+                   <div className="bg-white/5 border border-white/10 p-4 rounded-2xl text-left flex items-start gap-4 transition-all hover:bg-white/10 cursor-default">
                       <div className="bg-yellow-400/20 p-2 rounded-xl shrink-0">
                          <Star size={18} className="text-yellow-400 fill-yellow-400" />
                       </div>
                       <div>
                          <p className="text-white font-black text-sm uppercase italic">Manual Instagram que Vende</p>
-                         <p className="text-white/60 text-xs leading-relaxed">Como criar seu perfil do zero e atrair seguidoras compradoras.</p>
+                         <p className="text-white/60 text-xs leading-relaxed">Aprenda a atrair seguidoras que compram todos os dias.</p>
                       </div>
                    </div>
 
-                   <div className="bg-white/5 border border-white/10 p-4 rounded-2xl text-left flex items-start gap-4">
+                   <div className="bg-white/5 border border-white/10 p-4 rounded-2xl text-left flex items-start gap-4 transition-all hover:bg-white/10 cursor-default">
                       <div className="bg-yellow-400/20 p-2 rounded-xl shrink-0">
                          <MessageCircle size={18} className="text-yellow-400 fill-yellow-400" />
                       </div>
                       <div>
                          <p className="text-white font-black text-sm uppercase italic">Scripts de Venda WhatsApp</p>
-                         <p className="text-white/60 text-xs leading-relaxed">O que falar para fechar vendas no automático todos os dias.</p>
-                      </div>
-                   </div>
-
-                   <div className="bg-white/5 border border-white/10 p-4 rounded-2xl text-left flex items-start gap-4">
-                      <div className="bg-yellow-400/20 p-2 rounded-xl shrink-0">
-                         <Package size={18} className="text-yellow-400 fill-yellow-400" />
-                      </div>
-                      <div>
-                         <p className="text-white font-black text-sm uppercase italic">Guia Unboxing Encantador</p>
-                         <p className="text-white/60 text-xs leading-relaxed">Aprenda a fazer embalagens que fazem a cliente postar e marcar sua loja.</p>
+                         <p className="text-white/60 text-xs leading-relaxed">O que falar para fechar vendas no automático.</p>
                       </div>
                    </div>
                 </div>
@@ -221,57 +229,40 @@ export default function App() {
       </section>
 
       {/* --- SOCIAL PROOF --- */}
-      <section className="py-20 bg-white overflow-hidden">
+      <section className="py-24 bg-white overflow-hidden">
          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="font-heading text-4xl font-black text-gray-800 mb-4 uppercase italic">
+            <div className="text-center mb-20">
+              <h2 className="font-heading text-4xl font-black text-gray-800 mb-4 uppercase italic tracking-tighter">
                 Quem já acessou, <span className="text-brand-pink">está lucrando!</span>
               </h2>
               <div className="h-1.5 w-20 bg-brand-pink mx-auto rounded-full"></div>
             </div>
 
             <div className="max-w-4xl mx-auto mb-20">
-               <div className="bg-brand-dark rounded-[2.5rem] md:rounded-[3.5rem] p-6 md:p-12 relative overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.4)] border-4 border-white/5 gpu-boost">
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-brand-pink rounded-full blur-[80px] opacity-20 -mr-40 -mt-40"></div>
+               <div className="bg-brand-dark rounded-[3rem] md:rounded-[4rem] p-6 md:p-14 relative overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.4)] border-4 border-white/5 gpu-boost">
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-brand-pink rounded-full blur-[100px] opacity-20 -mr-40 -mt-40"></div>
                   
-                  <div className="flex flex-col lg:flex-row items-center gap-10 relative z-10">
+                  <div className="flex flex-col lg:flex-row items-center gap-14 relative z-10">
                      <div className="flex-1 text-center lg:text-left">
-                        <div className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-1.5 rounded-full font-black text-[10px] md:text-xs uppercase mb-6 shadow-lg border border-white/20">
+                        <div className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-2 rounded-full font-black text-[10px] md:text-xs uppercase mb-8 shadow-lg border border-white/20">
                            <Zap size={14} className="fill-white" />
                            Acesso Imediato Liberado
                         </div>
-                        <h3 className="font-heading text-3xl md:text-5xl font-black text-white mb-6 uppercase italic leading-tight">
-                          Sua lista entregue <span className="text-brand-pink">em tempo real!</span>
+                        <h3 className="font-heading text-3xl md:text-5xl font-black text-white mb-6 uppercase italic leading-tight tracking-tighter">
+                          Sua lista entregue <span className="text-brand-pink">em segundos!</span>
                         </h3>
+                        <p className="text-white/60 font-medium">Você paga agora e recebe os contatos no mesmo minuto via e-mail e WhatsApp.</p>
                      </div>
 
                      <div className="flex-1 w-full flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-[420px] gpu-boost">
-                           <div className="relative bg-white rounded-[2rem] p-2 shadow-2xl overflow-hidden aspect-[16/10] md:aspect-auto gpu-boost">
+                        <div className="relative w-full max-w-[440px] gpu-boost">
+                           <div className="relative bg-white rounded-[2.5rem] p-2 shadow-2xl overflow-hidden aspect-[16/10] md:aspect-auto gpu-boost border-8 border-white/10">
                               <img 
                                 src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWNmNmI0MHdwczNoeXlvYjJucTZqbTZ4djk5YnI1dHM5d2JkeHhvOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sQDYXzIfNEzsXbxgX4/giphy.gif" 
-                                alt="Prova de entrega em tempo real" 
-                                className="w-full h-full object-cover rounded-[1.5rem] optimize-img gpu-boost"
+                                alt="Prova de entrega" 
+                                className="w-full h-full object-cover rounded-[2rem] optimize-img gpu-boost"
                                 loading="lazy"
                               />
-                              <div className="absolute top-4 left-4 right-4 flex justify-between items-start pointer-events-none">
-                                 <div className="bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 flex items-center gap-2">
-                                    <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                                    <span className="text-[10px] text-white font-black uppercase">LIVE PROOF</span>
-                                 </div>
-                              </div>
-                           </div>
-                           
-                           <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-4 rounded-2xl shadow-2xl border border-gray-100 animate-bounce max-w-[200px] hidden md:block gpu-boost">
-                              <div className="flex items-center gap-3">
-                                 <div className="bg-green-100 p-2 rounded-full">
-                                    <CheckCircle2 size={24} className="text-green-600" />
-                                 </div>
-                                 <div className="flex flex-col">
-                                    <span className="text-xs font-black text-gray-800">Sucesso!</span>
-                                    <span className="text-[10px] text-gray-500 font-medium">Link enviado com sucesso.</span>
-                                 </div>
-                              </div>
                            </div>
                         </div>
                      </div>
@@ -288,66 +279,66 @@ export default function App() {
       </section>
 
       {/* --- FINAL CALL TO ACTION --- */}
-      <section className="py-24 bg-brand-dark text-white relative overflow-hidden">
+      <section className="py-32 bg-brand-dark text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10 text-center max-w-4xl">
-           <div className="inline-block bg-white/10 p-6 rounded-full mb-10 gpu-boost">
-              <Gem className="w-16 h-16 text-yellow-400" />
+           <div className="inline-block bg-white/10 p-8 rounded-full mb-12 gpu-boost">
+              <Gem className="w-20 h-20 text-yellow-400" />
            </div>
-           <h2 className="font-heading text-4xl md:text-7xl font-black mb-8 leading-tight italic uppercase">
-             Sua independência <span className="text-brand-pink">financeira</span> começa hoje!
+           <h2 className="font-heading text-4xl md:text-7xl font-black mb-8 leading-tight italic uppercase tracking-tighter">
+             Sua independência <span className="text-brand-pink">financeira</span> começa aqui!
            </h2>
-           <p className="text-xl md:text-2xl text-pink-100 mb-12 leading-relaxed font-medium">
-             Pare de adiar seu sonho. Essa é a sua chance de ter acesso direto à fonte das grandes lojistas.
+           <p className="text-xl md:text-2xl text-pink-100 mb-14 leading-relaxed font-medium">
+             Pare de adiar. Essa é a única diferença entre quem fatura e quem só observa: o acesso à fonte.
            </p>
 
            <div className="flex flex-col items-center justify-center gap-6">
               <a 
                 href={SUPPLIER_LIST_CHECKOUT}
-                className="w-full md:w-auto inline-flex items-center justify-center gap-4 bg-yellow-400 hover:bg-yellow-500 text-brand-dark font-black py-8 px-16 rounded-full shadow-2xl text-3xl transition-all transform hover:scale-105 border-b-8 border-yellow-700"
+                className="w-full md:w-auto inline-flex items-center justify-center gap-5 bg-yellow-400 hover:bg-yellow-500 text-brand-dark font-black py-10 px-20 rounded-full shadow-2xl text-4xl transition-all transform hover:scale-105 border-b-8 border-yellow-700 active:border-b-0 active:translate-y-1 tracking-tighter"
               >
-                 <Globe size={40} />
-                 GARANTIR MINHA LISTA AGORA
+                 <Globe size={48} />
+                 QUERO ACESSO AGORA
               </a>
            </div>
         </div>
       </section>
 
       {/* --- FAQ SECTION --- */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-3xl">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-brand-pink/10 text-brand-pink px-4 py-1 rounded-full font-black text-xs uppercase mb-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-brand-pink/10 text-brand-pink px-4 py-1 rounded-full font-black text-xs uppercase mb-4 tracking-widest">
               <HelpCircle size={14} />
               Dúvidas Frequentes
             </div>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase italic">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 uppercase italic tracking-tighter">
               Ainda com <span className="text-brand-pink">dúvidas?</span>
             </h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-5">
             {FAQ_ITEMS.map((faq, idx) => (
               <div 
                 key={idx} 
-                className={`bg-white rounded-3xl overflow-hidden border transition-all duration-300 ${
-                  openFaq === idx ? 'border-brand-pink shadow-lg' : 'border-gray-200 shadow-sm'
+                className={`bg-white rounded-[2rem] overflow-hidden border transition-all duration-300 ${
+                  openFaq === idx ? 'border-brand-pink shadow-xl' : 'border-gray-200 shadow-sm'
                 }`}
               >
                 <button 
                   onClick={() => toggleFaq(idx)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left group"
+                  className="w-full px-8 py-7 flex items-center justify-between text-left group"
                 >
-                  <span className={`font-bold text-base md:text-lg transition-colors ${
+                  <span className={`font-bold text-lg md:text-xl transition-colors ${
                     openFaq === idx ? 'text-brand-pink' : 'text-gray-800'
                   }`}>
                     {faq.question}
                   </span>
                   <div className={`shrink-0 ml-4 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`}>
                     {openFaq === idx ? (
-                      <Minus size={20} className="text-brand-pink" />
+                      <Minus size={24} className="text-brand-pink" />
                     ) : (
-                      <Plus size={20} className="text-gray-400 group-hover:text-brand-pink" />
+                      <Plus size={24} className="text-gray-400 group-hover:text-brand-pink" />
                     )}
                   </div>
                 </button>
@@ -357,33 +348,20 @@ export default function App() {
                     openFaq === idx ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="px-6 pb-6 text-gray-600 leading-relaxed font-medium">
+                  <div className="px-8 pb-8 text-gray-600 leading-relaxed font-medium text-lg">
                     {faq.answer}
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
-          <div className="mt-12 text-center">
-             <p className="text-gray-500 font-bold mb-6 italic">Não encontrou sua dúvida aqui?</p>
-             <a 
-               href={SUPPORT_LINK}
-               target="_blank"
-               rel="noopener noreferrer"
-               className="inline-flex items-center gap-2 text-brand-pink font-black uppercase tracking-widest hover:underline"
-             >
-                <MessageCircle size={18} />
-                Falar com suporte no WhatsApp
-             </a>
-          </div>
         </div>
       </section>
 
-      <footer className="bg-[#0f0005] text-white py-16 text-center border-t border-brand-dark/20">
+      <footer className="bg-[#0f0005] text-white py-20 text-center border-t border-brand-dark/20">
          <div className="container mx-auto px-4">
-            <h3 className="font-hand text-5xl mb-6 text-brand-pink">O sucesso é uma escolha!</h3>
-            <p className="mb-10 opacity-40 text-sm max-w-md mx-auto">
+            <h3 className="font-hand text-6xl mb-8 text-brand-pink">O sucesso é uma escolha!</h3>
+            <p className="mb-10 opacity-30 text-sm max-w-md mx-auto font-medium">
                Make Revenda © 2024. Todos os direitos reservados.
             </p>
          </div>
