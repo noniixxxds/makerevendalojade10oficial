@@ -7,8 +7,8 @@ export const SUPPLIER_LIST_CHECKOUT = "https://pay.kirvano.com/a39cd2c2-492c-42f
 export const SUPPLIER_LIST_OFFER = {
   title: "Lista de Fornecedores",
   description: "Acesso direto aos contatos que as grandes lojas escondem de você. Pague preço de custo real e lucre até 400%.",
-  price: "R$ 7,90",
-  originalPrice: "R$ 197,00",
+  price: "R$ 6,40",
+  originalPrice: "R$ 19,89",
   benefit: "Preços 40% menores que os Kits",
   bonuses: [
     { title: "Manual Instagram que Vende", desc: "Como criar seu perfil do zero e atrair seguidoras compradoras." },
@@ -174,7 +174,7 @@ export const TESTIMONIALS = [
     name: "Letícia R.", 
     type: "photo",
     img: "https://i.postimg.cc/3RQjg2Xq/image.png",
-    text: "Meninas, surreal! O acesso chegou muito rápido e as marcas são maravilhosas. Só de postar no status do zap já tem 3 amigas querendo reservar as bases."
+    text: "Meninas, surreal! O acesso chegou muito rápido e as marcas são maravilhoras. Só de postar no status do zap já tem 3 amigas querendo reservar as bases."
   },
   { 
     name: "Bruna Medeiros", 
@@ -193,5 +193,17 @@ export const TESTIMONIALS = [
     type: "photo",
     img: "https://i.postimg.cc/zXGsqc6C/image.png",
     text: "Sem acreditar no lucro que estou tendo! Comprei a lista e em menos de uma semana já recuperei o investimento e estou com estoque renovado. Melhor decisão!"
+  },
+  { 
+    name: "Daniela Santos", 
+    type: "photo",
+    img: "https://i.postimg.cc/j2L4FP3Q/image.png",
+    text: "Simplesmente apaixonada! Chegou tudo super rápido e a qualidade é indiscutível. Já estou montando meu segundo pedido com os fornecedores da lista!"
+  },
+  { 
+    name: "Isabela Mendes", 
+    type: "photo",
+    img: "https://i.postimg.cc/R0gfxqtM/image.png",
+    text: "Meninas, estou em choque com a qualidade! Já fiz as contas aqui e vou lucrar mais de 300% em cima desse primeiro pedido. A lista vale cada centavo!"
   }
 ];

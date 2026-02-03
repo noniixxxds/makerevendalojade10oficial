@@ -205,10 +205,10 @@ export default function App() {
                 </div>
 
                 <div className="mb-10 flex flex-col items-center">
-                   <span className="text-white/40 line-through text-lg font-bold">DE R$ 197,00</span>
+                   <span className="text-white/40 line-through text-lg font-bold">DE R$ 19,89</span>
                    <div className="flex flex-col items-center">
                       <div className="flex items-baseline gap-2">
-                         <span className="text-white text-7xl font-black drop-shadow-lg tracking-tighter">R$ 7,90</span>
+                         <span className="text-white text-7xl font-black drop-shadow-lg tracking-tighter">R$ 6,40</span>
                       </div>
                       <span className="bg-yellow-400 text-black text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-tighter mt-2">Taxa Única</span>
                    </div>
