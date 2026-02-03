@@ -16,7 +16,7 @@ export const StickyCTA: React.FC<StickyCTAProps> = ({ onAction }) => {
                 Lista de Fornecedores
              </span>
              <span className="text-[10px] text-brand-pink font-black uppercase tracking-widest">
-                ACESSO LIBERADO POR R$ 6,40
+                ACESSO LIBERADO POR R$ 9,99
              </span>
          </div>
          <div className="flex items-center gap-1.5">
