@@ -56,10 +56,10 @@ export default function App() {
       <header className="bg-[#fafafa] pt-20 pb-28 px-4 text-center relative overflow-hidden border-b border-gray-100">
         <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center">
           
-          {/* Badge Discreta de Autoridade */}
-          <div className="inline-flex items-center gap-2 bg-gray-100 text-gray-500 px-4 py-1 rounded-full font-bold text-[10px] uppercase tracking-[0.2em] mb-10 gpu-boost">
-             <ShieldCheck size={12} />
-             Acesso VIP para Lojistas
+          {/* Selo Discreto de Autoridade - Reforço Neutro */}
+          <div className="inline-flex items-center gap-1.5 border border-gray-200 text-gray-400 px-3 py-1 rounded-full font-medium text-[8px] md:text-[9px] uppercase tracking-[0.25em] mb-20 opacity-60 gpu-boost">
+             <ShieldCheck size={10} strokeWidth={1.5} />
+             Acesso VIP pra Lojistas
           </div>
 
           <h1 className="font-heading text-4xl md:text-7xl font-[900] text-gray-900 leading-[1.1] mb-14 uppercase tracking-tighter text-center flex flex-col items-center">
@@ -302,7 +302,7 @@ export default function App() {
               </a>
            </div>
         </div>
-      </section>
+      </header>
 
       {/* --- FAQ SECTION --- */}
       <section className="py-24 bg-gray-50">
