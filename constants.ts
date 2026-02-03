@@ -187,5 +187,11 @@ export const TESTIMONIALS = [
     type: "photo",
     img: "https://i.postimg.cc/QMG2xfyG/image.png",
     text: "Gente, olha a perfeição desses produtos que comprei direto do fornecedor da lista! Chegou tudo impecável. Já comecei a divulgar!"
+  },
+  { 
+    name: "Camila Ferreira", 
+    type: "photo",
+    img: "https://i.postimg.cc/zXGsqc6C/image.png",
+    text: "Sem acreditar no lucro que estou tendo! Comprei a lista e em menos de uma semana já recuperei o investimento e estou com estoque renovado. Melhor decisão!"
   }
 ];
