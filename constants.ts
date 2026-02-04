@@ -7,7 +7,7 @@ export const SUPPLIER_LIST_CHECKOUT = "https://pay.kirvano.com/a39cd2c2-492c-42f
 export const SUPPLIER_LIST_OFFER = {
   title: "Lista de Fornecedores",
   description: "Acesso direto aos contatos que as grandes lojas escondem de você. Pague preço de custo real e lucre até 400%.",
-  price: "R$ 9,99",
+  price: "R$ 7,99",
   originalPrice: "R$ 19,89",
   benefit: "Preços 40% menores que os Kits",
   bonuses: [
@@ -192,7 +192,7 @@ export const TESTIMONIALS = [
     name: "Camila Ferreira", 
     type: "photo",
     img: "https://i.postimg.cc/zXGsqc6C/image.png",
-    text: "Sem acreditar no lucro que estou tendo! Comprei a lista e em menos de uma semana já recuperei o investimento e estou com estoque renovado. Melhor decisão!"
+    text: "Sem acreditar no lucro que estou tendo! Comprar a lista e em menos de uma semana já recuperei o investimento e estou com estoque renovado. Melhor decisão!"
   },
   { 
     name: "Daniela Santos", 
